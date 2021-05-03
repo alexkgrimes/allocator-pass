@@ -1,0 +1,771 @@
+The system is: Linux - 4.18.0-240.15.1.el8_3.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /project/extra/llvm/9.0.0/release/bin/clang 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/3.11.4/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /project/extra/llvm/9.0.0/release/bin/clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is Clang, found in "/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/3.11.4/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e52e5/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e52e5.dir/build.make CMakeFiles/cmTC_e52e5.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e52e5.dir/testCCompiler.c.o
+/project/extra/llvm/9.0.0/release/bin/clang    -o CMakeFiles/cmTC_e52e5.dir/testCCompiler.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_e52e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e52e5.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_e52e5.dir/testCCompiler.c.o  -o cmTC_e52e5 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_793ea/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_793ea.dir/build.make CMakeFiles/cmTC_793ea.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o
+/project/extra/llvm/9.0.0/release/bin/clang    -o CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_793ea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_793ea.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang     -v CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o  -o cmTC_793ea 
+clang version 9.0.0 (git@github.com:scampanoni/LLVM_installer.git 713d2f6594d9a0b77e7f9a120aaa7c917715a640)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /project/extra/llvm/9.0.0/release/bin
+Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_793ea /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_793ea/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_793ea.dir/build.make CMakeFiles/cmTC_793ea.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang    -o CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_793ea]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_793ea.dir/link.txt --verbose=1]
+  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang     -v CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o  -o cmTC_793ea ]
+  ignore line: [clang version 9.0.0 (git@github.com:scampanoni/LLVM_installer.git 713d2f6594d9a0b77e7f9a120aaa7c917715a640)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /project/extra/llvm/9.0.0/release/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/8]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Candidate multilib: 32]
+  ignore line: [@m32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_793ea /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_793ea] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..]
+    arg [-L/project/extra/llvm/9.0.0/release/bin/../lib] ==> dir [/project/extra/llvm/9.0.0/release/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8] ==> [/usr/lib/gcc/x86_64-redhat-linux/8]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> [/usr/lib]
+  collapse library dir [/project/extra/llvm/9.0.0/release/bin/../lib] ==> [/project/extra/llvm/9.0.0/release/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/8;/usr/lib64;/lib64;/usr/lib;/project/extra/llvm/9.0.0/release/lib;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_6843a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_6843a.dir/build.make CMakeFiles/cmTC_6843a.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6843a.dir/feature_tests.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -std=c11 -o CMakeFiles/cmTC_6843a.dir/feature_tests.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_6843a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6843a.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_6843a.dir/feature_tests.c.o  -o cmTC_6843a 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_86faa/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_86faa.dir/build.make CMakeFiles/cmTC_86faa.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_86faa.dir/feature_tests.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -std=c99 -o CMakeFiles/cmTC_86faa.dir/feature_tests.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_86faa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86faa.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_86faa.dir/feature_tests.c.o  -o cmTC_86faa 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_d8f5f/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d8f5f.dir/build.make CMakeFiles/cmTC_d8f5f.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d8f5f.dir/feature_tests.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -std=c90 -o CMakeFiles/cmTC_d8f5f.dir/feature_tests.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d8f5f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8f5f.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_d8f5f.dir/feature_tests.c.o  -o cmTC_d8f5f 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_42932/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_42932.dir/build.make CMakeFiles/cmTC_42932.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_42932.dir/testCXXCompiler.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++     -o CMakeFiles/cmTC_42932.dir/testCXXCompiler.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_42932
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42932.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_42932.dir/testCXXCompiler.cxx.o  -o cmTC_42932 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_9eccb/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_9eccb.dir/build.make CMakeFiles/cmTC_9eccb.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o
+/project/extra/llvm/9.0.0/release/bin/clang++     -o CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_9eccb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9eccb.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++      -v CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9eccb 
+clang version 9.0.0 (git@github.com:scampanoni/LLVM_installer.git 713d2f6594d9a0b77e7f9a120aaa7c917715a640)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /project/extra/llvm/9.0.0/release/bin
+Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9eccb /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_9eccb/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_9eccb.dir/build.make CMakeFiles/cmTC_9eccb.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang++     -o CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_9eccb]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9eccb.dir/link.txt --verbose=1]
+  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang++      -v CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9eccb ]
+  ignore line: [clang version 9.0.0 (git@github.com:scampanoni/LLVM_installer.git 713d2f6594d9a0b77e7f9a120aaa7c917715a640)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /project/extra/llvm/9.0.0/release/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/8]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Candidate multilib: 32]
+  ignore line: [@m32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9eccb /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_9eccb] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..]
+    arg [-L/project/extra/llvm/9.0.0/release/bin/../lib] ==> dir [/project/extra/llvm/9.0.0/release/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8] ==> [/usr/lib/gcc/x86_64-redhat-linux/8]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> [/usr/lib]
+  collapse library dir [/project/extra/llvm/9.0.0/release/bin/../lib] ==> [/project/extra/llvm/9.0.0/release/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/8;/usr/lib64;/lib64;/usr/lib;/project/extra/llvm/9.0.0/release/lib;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_631bd/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_631bd.dir/build.make CMakeFiles/cmTC_631bd.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_631bd.dir/feature_tests.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++1z -o CMakeFiles/cmTC_631bd.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_631bd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_631bd.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_631bd.dir/feature_tests.cxx.o  -o cmTC_631bd 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_01a4a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_01a4a.dir/build.make CMakeFiles/cmTC_01a4a.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_01a4a.dir/feature_tests.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++14 -o CMakeFiles/cmTC_01a4a.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_01a4a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01a4a.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_01a4a.dir/feature_tests.cxx.o  -o cmTC_01a4a 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_99e06/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_99e06.dir/build.make CMakeFiles/cmTC_99e06.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_99e06.dir/feature_tests.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++11 -o CMakeFiles/cmTC_99e06.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_99e06
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99e06.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_99e06.dir/feature_tests.cxx.o  -o cmTC_99e06 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_f22b1/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_f22b1.dir/build.make CMakeFiles/cmTC_f22b1.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f22b1.dir/feature_tests.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++98 -o CMakeFiles/cmTC_f22b1.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f22b1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f22b1.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_f22b1.dir/feature_tests.cxx.o  -o cmTC_f22b1 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Performing C++ SOURCE FILE Test LLVM_LIBSTDCXX_MIN succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_41b8b/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_41b8b.dir/build.make CMakeFiles/cmTC_41b8b.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_41b8b.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -DLLVM_LIBSTDCXX_MIN  -std=c++0x   -o CMakeFiles/cmTC_41b8b.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_41b8b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41b8b.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -DLLVM_LIBSTDCXX_MIN  -std=c++0x    CMakeFiles/cmTC_41b8b.dir/src.cxx.o  -o cmTC_41b8b 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <iosfwd>
+#if defined(__GLIBCXX__)
+#if __GLIBCXX__ < 20130322
+#error Unsupported libstdc++ version
+#endif
+#endif
+#if defined(__GLIBCXX__)
+extern const char _ZNKSt17bad_function_call4whatEv[];
+const char *chk = _ZNKSt17bad_function_call4whatEv;
+#else
+const char *chk = "";
+#endif
+int main() { ++chk; return 0; }
+
+Performing C++ SOURCE FILE Test LLVM_LIBSTDCXX_SOFT_ERROR succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_09362/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_09362.dir/build.make CMakeFiles/cmTC_09362.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_09362.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -DLLVM_LIBSTDCXX_SOFT_ERROR  -std=c++0x   -o CMakeFiles/cmTC_09362.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_09362
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09362.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -DLLVM_LIBSTDCXX_SOFT_ERROR  -std=c++0x    CMakeFiles/cmTC_09362.dir/src.cxx.o  -o cmTC_09362 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <iosfwd>
+#if defined(__GLIBCXX__)
+#if __GLIBCXX__ < 20150422
+#error Unsupported libstdc++ version
+#endif
+#endif
+#if defined(__GLIBCXX__)
+#include <ios>
+void foo(void) { (void) std::iostream_category(); }
+#endif
+int main() { return 0; }
+
+Performing C SOURCE FILE Test C_SUPPORTS_FPIC succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_b9c95/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b9c95.dir/build.make CMakeFiles/cmTC_b9c95.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b9c95.dir/src.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -DC_SUPPORTS_FPIC   -Werror -fPIC -o CMakeFiles/cmTC_b9c95.dir/src.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b9c95
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9c95.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang  -DC_SUPPORTS_FPIC    CMakeFiles/cmTC_b9c95.dir/src.c.o  -o cmTC_b9c95 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_FPIC succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_244b2/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_244b2.dir/build.make CMakeFiles/cmTC_244b2.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_244b2.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -DCXX_SUPPORTS_FPIC   -Werror -fPIC -o CMakeFiles/cmTC_244b2.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_244b2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_244b2.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -DCXX_SUPPORTS_FPIC    CMakeFiles/cmTC_244b2.dir/src.cxx.o  -o cmTC_244b2 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_6cdfe/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_6cdfe.dir/build.make CMakeFiles/cmTC_6cdfe.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6cdfe.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_6cdfe.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6cdfe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6cdfe.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG    CMakeFiles/cmTC_6cdfe.dir/src.cxx.o  -o cmTC_6cdfe 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WERROR_DATE_TIME succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_72c8a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_72c8a.dir/build.make CMakeFiles/cmTC_72c8a.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72c8a.dir/src.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -fPIC -DC_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_72c8a.dir/src.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_72c8a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72c8a.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang  -fPIC -DC_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_72c8a.dir/src.c.o  -o cmTC_72c8a 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_WERROR_DATE_TIME succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_b89cf/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b89cf.dir/build.make CMakeFiles/cmTC_b89cf.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b89cf.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_b89cf.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b89cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b89cf.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_b89cf.dir/src.cxx.o  -o cmTC_b89cf 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_c25b2/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_c25b2.dir/build.make CMakeFiles/cmTC_c25b2.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c25b2.dir/src.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -fPIC -Werror=date-time -DC_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW   -Werror -Werror=unguarded-availability-new -o CMakeFiles/cmTC_c25b2.dir/src.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c25b2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c25b2.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang  -fPIC -Werror=date-time -DC_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW    CMakeFiles/cmTC_c25b2.dir/src.c.o  -o cmTC_c25b2 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_236fb/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_236fb.dir/build.make CMakeFiles/cmTC_236fb.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_236fb.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW   -Werror -Werror=unguarded-availability-new -o CMakeFiles/cmTC_236fb.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_236fb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_236fb.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW    CMakeFiles/cmTC_236fb.dir/src.cxx.o  -o cmTC_236fb 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_CXX_STD succeeded with the following output:
+Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_3632e/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_3632e.dir/build.make CMakeFiles/cmTC_3632e.dir/build
+gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3632e.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -DCXX_SUPPORTS_CXX_STD   -std=c++11 -o CMakeFiles/cmTC_3632e.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3632e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3632e.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -DCXX_SUPPORTS_CXX_STD    CMakeFiles/cmTC_3632e.dir/src.cxx.o  -o cmTC_3632e 
+gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }

@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/akg434/noelle/examples/passes/allocator-pass/build/src",
+  "command": "/project/extra/llvm/9.0.0/release/bin/clang++  -DGTEST_HAS_RTTI=0 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/project/extra/llvm/9.0.0/release/include -I/home/akg434/noelle/examples/passes/allocator-pass/src/../../../../install/include -I/home/akg434/noelle/examples/passes/allocator-pass/src/../../../../install/include/svf   -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -std=c++11 -w -g -O0 -g -Weverything -fPIC   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-rtti  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs` -o CMakeFiles/CAT.dir/BasicPass.cpp.o -c /home/akg434/noelle/examples/passes/allocator-pass/src/BasicPass.cpp",
+  "file": "/home/akg434/noelle/examples/passes/allocator-pass/src/BasicPass.cpp"
+},
+{
+  "directory": "/home/akg434/noelle/examples/passes/allocator-pass/build/src",
+  "command": "/project/extra/llvm/9.0.0/release/bin/clang++  -DGTEST_HAS_RTTI=0 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/project/extra/llvm/9.0.0/release/include -I/home/akg434/noelle/examples/passes/allocator-pass/src/../../../../install/include -I/home/akg434/noelle/examples/passes/allocator-pass/src/../../../../install/include/svf   -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -std=c++11 -w -g -O0 -g -Weverything -fPIC   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-rtti  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs` -o CMakeFiles/CAT.dir/Synthesizer.cpp.o -c /home/akg434/noelle/examples/passes/allocator-pass/src/Synthesizer.cpp",
+  "file": "/home/akg434/noelle/examples/passes/allocator-pass/src/Synthesizer.cpp"
+}
+]
