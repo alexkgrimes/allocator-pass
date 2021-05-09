@@ -9,1384 +9,1094 @@ target triple = "x86_64-unknown-linux-gnu"
 @.str.1 = private unnamed_addr constant [9 x i8] c"Nuha Ali\00", align 1
 @.str.2 = private unnamed_addr constant [23 x i8] c"C Programming Tutorial\00", align 1
 
-; Function Attrs: noinline nounwind optnone uwtable
+; Function Attrs: nounwind uwtable
 define dso_local i32 @main() #0 {
-  %1 = alloca i32, align 4
-  %2 = alloca i32, align 4
-  %3 = alloca i8*, align 8
-  %4 = alloca i64, align 8
-  %5 = alloca i32, align 4
-  %6 = alloca %struct.Book*, align 8
-  %7 = alloca i32, align 4
-  %8 = alloca i32, align 4
-  %9 = alloca %struct.Book*, align 8
-  %10 = alloca i32, align 4
-  %11 = alloca i32, align 4
-  %12 = alloca %struct.Book*, align 8
-  %13 = alloca i32, align 4
-  %14 = alloca i32, align 4
-  %15 = alloca %struct.Book*, align 8
-  %16 = alloca i32, align 4
-  %17 = alloca i32, align 4
-  %18 = alloca %struct.Book*, align 8
-  %19 = alloca i32, align 4
-  %20 = alloca i32, align 4
-  %21 = alloca %struct.Book*, align 8
-  %22 = alloca i32, align 4
-  %23 = alloca i32, align 4
-  %24 = alloca %struct.Book*, align 8
-  %25 = alloca i32, align 4
-  %26 = alloca i32, align 4
-  %27 = alloca %struct.Book*, align 8
-  %28 = alloca i32, align 4
-  %29 = alloca i32, align 4
-  %30 = alloca %struct.Book*, align 8
-  %31 = alloca i32, align 4
-  %32 = alloca i32, align 4
-  %33 = alloca %struct.Book*, align 8
-  %34 = alloca i32, align 4
-  %35 = alloca i32, align 4
-  %36 = alloca %struct.Book*, align 8
-  %37 = alloca i32, align 4
-  %38 = alloca i32, align 4
-  %39 = alloca %struct.Book*, align 8
-  %40 = alloca i32, align 4
-  %41 = alloca i32, align 4
-  %42 = alloca %struct.Book*, align 8
-  %43 = alloca i32, align 4
-  %44 = alloca i32, align 4
-  %45 = alloca %struct.Book*, align 8
-  %46 = alloca i32, align 4
-  %47 = alloca i32, align 4
-  %48 = alloca %struct.Book*, align 8
-  %49 = alloca i32, align 4
-  %50 = alloca i32, align 4
-  %51 = alloca %struct.Book*, align 8
-  %52 = alloca i32, align 4
-  %53 = alloca i32, align 4
-  %54 = alloca %struct.Book*, align 8
-  %55 = alloca i32, align 4
-  %56 = alloca i32, align 4
-  %57 = alloca %struct.Book*, align 8
-  %58 = alloca i32, align 4
-  store i32 0, i32* %1, align 4
-  store i32 1000000, i32* %2, align 4
-  %59 = load i32, i32* %2, align 4
-  %60 = zext i32 %59 to i64
-  %61 = call i8* @llvm.stacksave()
-  store i8* %61, i8** %3, align 8
-  %62 = alloca %struct.Book*, i64 %60, align 16
-  store i64 %60, i64* %4, align 8
-  store i32 0, i32* %5, align 4
+  %1 = zext i32 1000000 to i64
+  %2 = call i8* @llvm.stacksave()
+  %3 = alloca %struct.Book*, i64 %1, align 16
+  br label %4
+
+4:                                                ; preds = %23, %0
+  %indvars.iv120 = phi i64 [ %indvars.iv.next121, %23 ], [ 0, %0 ]
+  %exitcond122 = icmp ne i64 %indvars.iv120, 1000000
+  br i1 %exitcond122, label %6, label %5
+
+5:                                                ; preds = %4
+  br label %24
+
+6:                                                ; preds = %4
+  %7 = call noalias i8* @malloc(i64 204) #2
+  %8 = bitcast i8* %7 to %struct.Book*
+  %9 = getelementptr inbounds %struct.Book, %struct.Book* %8, i32 0, i32 0
+  %10 = getelementptr inbounds [50 x i8], [50 x i8]* %9, i64 0, i64 0
+  %11 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %12 = call i8* @strcpy(i8* %10, i8* %11) #2
+  %13 = getelementptr inbounds %struct.Book, %struct.Book* %8, i32 0, i32 1
+  %14 = getelementptr inbounds [50 x i8], [50 x i8]* %13, i64 0, i64 0
+  %15 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %16 = call i8* @strcpy(i8* %14, i8* %15) #2
+  %17 = getelementptr inbounds %struct.Book, %struct.Book* %8, i32 0, i32 2
+  %18 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 0
+  %19 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %20 = call i8* @strcpy(i8* %18, i8* %19) #2
+  %21 = getelementptr inbounds %struct.Book, %struct.Book* %8, i32 0, i32 3
+  store i32 6495407, i32* %21, align 4, !tbaa !2
+  %22 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv120
+  store %struct.Book* %8, %struct.Book** %22, align 8, !tbaa !7
+  br label %23
+
+23:                                               ; preds = %6
+  %indvars.iv.next121 = add nuw nsw i64 %indvars.iv120, 1
+  br label %4
+
+24:                                               ; preds = %5
+  br label %25
+
+25:                                               ; preds = %32, %24
+  %indvars.iv118 = phi i64 [ %indvars.iv.next119, %32 ], [ 999999, %24 ]
+  %26 = icmp sge i64 %indvars.iv118, 0
+  br i1 %26, label %28, label %27
+
+27:                                               ; preds = %25
+  br label %33
+
+28:                                               ; preds = %25
+  %29 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv118
+  %30 = load %struct.Book*, %struct.Book** %29, align 8, !tbaa !7
+  %31 = bitcast %struct.Book* %30 to i8*
+  call void @free(i8* %31) #2
+  br label %32
+
+32:                                               ; preds = %28
+  %indvars.iv.next119 = add nsw i64 %indvars.iv118, -1
+  br label %25
+
+33:                                               ; preds = %27
+  br label %34
+
+34:                                               ; preds = %53, %33
+  %indvars.iv115 = phi i64 [ %indvars.iv.next116, %53 ], [ 0, %33 ]
+  %exitcond117 = icmp ne i64 %indvars.iv115, 1000000
+  br i1 %exitcond117, label %36, label %35
+
+35:                                               ; preds = %34
+  br label %54
+
+36:                                               ; preds = %34
+  %37 = call noalias i8* @malloc(i64 204) #2
+  %38 = bitcast i8* %37 to %struct.Book*
+  %39 = getelementptr inbounds %struct.Book, %struct.Book* %38, i32 0, i32 0
+  %40 = getelementptr inbounds [50 x i8], [50 x i8]* %39, i64 0, i64 0
+  %41 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %42 = call i8* @strcpy(i8* %40, i8* %41) #2
+  %43 = getelementptr inbounds %struct.Book, %struct.Book* %38, i32 0, i32 1
+  %44 = getelementptr inbounds [50 x i8], [50 x i8]* %43, i64 0, i64 0
+  %45 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %46 = call i8* @strcpy(i8* %44, i8* %45) #2
+  %47 = getelementptr inbounds %struct.Book, %struct.Book* %38, i32 0, i32 2
+  %48 = getelementptr inbounds [100 x i8], [100 x i8]* %47, i64 0, i64 0
+  %49 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %50 = call i8* @strcpy(i8* %48, i8* %49) #2
+  %51 = getelementptr inbounds %struct.Book, %struct.Book* %38, i32 0, i32 3
+  store i32 6495407, i32* %51, align 4, !tbaa !2
+  %52 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv115
+  store %struct.Book* %38, %struct.Book** %52, align 8, !tbaa !7
+  br label %53
+
+53:                                               ; preds = %36
+  %indvars.iv.next116 = add nuw nsw i64 %indvars.iv115, 1
+  br label %34
+
+54:                                               ; preds = %35
+  br label %55
+
+55:                                               ; preds = %62, %54
+  %indvars.iv113 = phi i64 [ %indvars.iv.next114, %62 ], [ 999999, %54 ]
+  %56 = icmp sge i64 %indvars.iv113, 0
+  br i1 %56, label %58, label %57
+
+57:                                               ; preds = %55
   br label %63
 
-63:                                               ; preds = %91, %0
-  %64 = load i32, i32* %5, align 4
-  %65 = load i32, i32* %2, align 4
-  %66 = icmp slt i32 %64, %65
-  br i1 %66, label %67, label %94
+58:                                               ; preds = %55
+  %59 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv113
+  %60 = load %struct.Book*, %struct.Book** %59, align 8, !tbaa !7
+  %61 = bitcast %struct.Book* %60 to i8*
+  call void @free(i8* %61) #2
+  br label %62
 
-67:                                               ; preds = %63
-  %68 = call i8* @dlmalloc(i64 204)
-  %69 = bitcast i8* %68 to %struct.Book*
-  store %struct.Book* %69, %struct.Book** %6, align 8
-  %70 = load %struct.Book*, %struct.Book** %6, align 8
-  %71 = getelementptr inbounds %struct.Book, %struct.Book* %70, i32 0, i32 0
-  %72 = getelementptr inbounds [50 x i8], [50 x i8]* %71, i64 0, i64 0
-  %73 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %74 = call i8* @strcpy(i8* %72, i8* %73) #1
-  %75 = load %struct.Book*, %struct.Book** %6, align 8
-  %76 = getelementptr inbounds %struct.Book, %struct.Book* %75, i32 0, i32 1
-  %77 = getelementptr inbounds [50 x i8], [50 x i8]* %76, i64 0, i64 0
-  %78 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %79 = call i8* @strcpy(i8* %77, i8* %78) #1
-  %80 = load %struct.Book*, %struct.Book** %6, align 8
-  %81 = getelementptr inbounds %struct.Book, %struct.Book* %80, i32 0, i32 2
-  %82 = getelementptr inbounds [100 x i8], [100 x i8]* %81, i64 0, i64 0
-  %83 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %84 = call i8* @strcpy(i8* %82, i8* %83) #1
-  %85 = load %struct.Book*, %struct.Book** %6, align 8
-  %86 = getelementptr inbounds %struct.Book, %struct.Book* %85, i32 0, i32 3
-  store i32 6495407, i32* %86, align 4
-  %87 = load %struct.Book*, %struct.Book** %6, align 8
-  %88 = load i32, i32* %5, align 4
-  %89 = sext i32 %88 to i64
-  %90 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %89
-  store %struct.Book* %87, %struct.Book** %90, align 8
-  br label %91
+62:                                               ; preds = %58
+  %indvars.iv.next114 = add nsw i64 %indvars.iv113, -1
+  br label %55
 
-91:                                               ; preds = %67
-  %92 = load i32, i32* %5, align 4
-  %93 = add nsw i32 %92, 1
-  store i32 %93, i32* %5, align 4
-  br label %63
+63:                                               ; preds = %57
+  br label %64
 
-94:                                               ; preds = %63
-  %95 = load i32, i32* %2, align 4
-  %96 = sub nsw i32 %95, 1
-  store i32 %96, i32* %7, align 4
-  br label %97
+64:                                               ; preds = %83, %63
+  %indvars.iv110 = phi i64 [ %indvars.iv.next111, %83 ], [ 0, %63 ]
+  %exitcond112 = icmp ne i64 %indvars.iv110, 1000000
+  br i1 %exitcond112, label %66, label %65
 
-97:                                               ; preds = %106, %94
-  %98 = load i32, i32* %7, align 4
-  %99 = icmp sge i32 %98, 0
-  br i1 %99, label %100, label %109
+65:                                               ; preds = %64
+  br label %84
 
-100:                                              ; preds = %97
-  %101 = load i32, i32* %7, align 4
-  %102 = sext i32 %101 to i64
-  %103 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %102
-  %104 = load %struct.Book*, %struct.Book** %103, align 8
-  %105 = bitcast %struct.Book* %104 to i8*
-  call void @dlfree(i8* %105)
-  br label %106
+66:                                               ; preds = %64
+  %67 = call noalias i8* @malloc(i64 204) #2
+  %68 = bitcast i8* %67 to %struct.Book*
+  %69 = getelementptr inbounds %struct.Book, %struct.Book* %68, i32 0, i32 0
+  %70 = getelementptr inbounds [50 x i8], [50 x i8]* %69, i64 0, i64 0
+  %71 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %72 = call i8* @strcpy(i8* %70, i8* %71) #2
+  %73 = getelementptr inbounds %struct.Book, %struct.Book* %68, i32 0, i32 1
+  %74 = getelementptr inbounds [50 x i8], [50 x i8]* %73, i64 0, i64 0
+  %75 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %76 = call i8* @strcpy(i8* %74, i8* %75) #2
+  %77 = getelementptr inbounds %struct.Book, %struct.Book* %68, i32 0, i32 2
+  %78 = getelementptr inbounds [100 x i8], [100 x i8]* %77, i64 0, i64 0
+  %79 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %80 = call i8* @strcpy(i8* %78, i8* %79) #2
+  %81 = getelementptr inbounds %struct.Book, %struct.Book* %68, i32 0, i32 3
+  store i32 6495407, i32* %81, align 4, !tbaa !2
+  %82 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv110
+  store %struct.Book* %68, %struct.Book** %82, align 8, !tbaa !7
+  br label %83
 
-106:                                              ; preds = %100
-  %107 = load i32, i32* %7, align 4
-  %108 = add nsw i32 %107, -1
-  store i32 %108, i32* %7, align 4
-  br label %97
+83:                                               ; preds = %66
+  %indvars.iv.next111 = add nuw nsw i64 %indvars.iv110, 1
+  br label %64
 
-109:                                              ; preds = %97
-  store i32 0, i32* %8, align 4
-  br label %110
+84:                                               ; preds = %65
+  br label %85
 
-110:                                              ; preds = %138, %109
-  %111 = load i32, i32* %8, align 4
-  %112 = load i32, i32* %2, align 4
-  %113 = icmp slt i32 %111, %112
-  br i1 %113, label %114, label %141
+85:                                               ; preds = %92, %84
+  %indvars.iv108 = phi i64 [ %indvars.iv.next109, %92 ], [ 999999, %84 ]
+  %86 = icmp sge i64 %indvars.iv108, 0
+  br i1 %86, label %88, label %87
 
-114:                                              ; preds = %110
-  %115 = call i8* @dlmalloc(i64 204)
-  %116 = bitcast i8* %115 to %struct.Book*
-  store %struct.Book* %116, %struct.Book** %9, align 8
-  %117 = load %struct.Book*, %struct.Book** %9, align 8
-  %118 = getelementptr inbounds %struct.Book, %struct.Book* %117, i32 0, i32 0
-  %119 = getelementptr inbounds [50 x i8], [50 x i8]* %118, i64 0, i64 0
-  %120 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %121 = call i8* @strcpy(i8* %119, i8* %120) #1
-  %122 = load %struct.Book*, %struct.Book** %9, align 8
-  %123 = getelementptr inbounds %struct.Book, %struct.Book* %122, i32 0, i32 1
-  %124 = getelementptr inbounds [50 x i8], [50 x i8]* %123, i64 0, i64 0
-  %125 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %126 = call i8* @strcpy(i8* %124, i8* %125) #1
-  %127 = load %struct.Book*, %struct.Book** %9, align 8
-  %128 = getelementptr inbounds %struct.Book, %struct.Book* %127, i32 0, i32 2
-  %129 = getelementptr inbounds [100 x i8], [100 x i8]* %128, i64 0, i64 0
-  %130 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %131 = call i8* @strcpy(i8* %129, i8* %130) #1
-  %132 = load %struct.Book*, %struct.Book** %9, align 8
-  %133 = getelementptr inbounds %struct.Book, %struct.Book* %132, i32 0, i32 3
-  store i32 6495407, i32* %133, align 4
-  %134 = load %struct.Book*, %struct.Book** %9, align 8
-  %135 = load i32, i32* %8, align 4
-  %136 = sext i32 %135 to i64
-  %137 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %136
-  store %struct.Book* %134, %struct.Book** %137, align 8
-  br label %138
+87:                                               ; preds = %85
+  br label %93
 
-138:                                              ; preds = %114
-  %139 = load i32, i32* %8, align 4
-  %140 = add nsw i32 %139, 1
-  store i32 %140, i32* %8, align 4
-  br label %110
+88:                                               ; preds = %85
+  %89 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv108
+  %90 = load %struct.Book*, %struct.Book** %89, align 8, !tbaa !7
+  %91 = bitcast %struct.Book* %90 to i8*
+  call void @free(i8* %91) #2
+  br label %92
 
-141:                                              ; preds = %110
-  %142 = load i32, i32* %2, align 4
-  %143 = sub nsw i32 %142, 1
-  store i32 %143, i32* %10, align 4
+92:                                               ; preds = %88
+  %indvars.iv.next109 = add nsw i64 %indvars.iv108, -1
+  br label %85
+
+93:                                               ; preds = %87
+  br label %94
+
+94:                                               ; preds = %113, %93
+  %indvars.iv105 = phi i64 [ %indvars.iv.next106, %113 ], [ 0, %93 ]
+  %exitcond107 = icmp ne i64 %indvars.iv105, 1000000
+  br i1 %exitcond107, label %96, label %95
+
+95:                                               ; preds = %94
+  br label %114
+
+96:                                               ; preds = %94
+  %97 = call noalias i8* @malloc(i64 204) #2
+  %98 = bitcast i8* %97 to %struct.Book*
+  %99 = getelementptr inbounds %struct.Book, %struct.Book* %98, i32 0, i32 0
+  %100 = getelementptr inbounds [50 x i8], [50 x i8]* %99, i64 0, i64 0
+  %101 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %102 = call i8* @strcpy(i8* %100, i8* %101) #2
+  %103 = getelementptr inbounds %struct.Book, %struct.Book* %98, i32 0, i32 1
+  %104 = getelementptr inbounds [50 x i8], [50 x i8]* %103, i64 0, i64 0
+  %105 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %106 = call i8* @strcpy(i8* %104, i8* %105) #2
+  %107 = getelementptr inbounds %struct.Book, %struct.Book* %98, i32 0, i32 2
+  %108 = getelementptr inbounds [100 x i8], [100 x i8]* %107, i64 0, i64 0
+  %109 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %110 = call i8* @strcpy(i8* %108, i8* %109) #2
+  %111 = getelementptr inbounds %struct.Book, %struct.Book* %98, i32 0, i32 3
+  store i32 6495407, i32* %111, align 4, !tbaa !2
+  %112 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv105
+  store %struct.Book* %98, %struct.Book** %112, align 8, !tbaa !7
+  br label %113
+
+113:                                              ; preds = %96
+  %indvars.iv.next106 = add nuw nsw i64 %indvars.iv105, 1
+  br label %94
+
+114:                                              ; preds = %95
+  br label %115
+
+115:                                              ; preds = %122, %114
+  %indvars.iv103 = phi i64 [ %indvars.iv.next104, %122 ], [ 999999, %114 ]
+  %116 = icmp sge i64 %indvars.iv103, 0
+  br i1 %116, label %118, label %117
+
+117:                                              ; preds = %115
+  br label %123
+
+118:                                              ; preds = %115
+  %119 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv103
+  %120 = load %struct.Book*, %struct.Book** %119, align 8, !tbaa !7
+  %121 = bitcast %struct.Book* %120 to i8*
+  call void @free(i8* %121) #2
+  br label %122
+
+122:                                              ; preds = %118
+  %indvars.iv.next104 = add nsw i64 %indvars.iv103, -1
+  br label %115
+
+123:                                              ; preds = %117
+  br label %124
+
+124:                                              ; preds = %143, %123
+  %indvars.iv100 = phi i64 [ %indvars.iv.next101, %143 ], [ 0, %123 ]
+  %exitcond102 = icmp ne i64 %indvars.iv100, 1000000
+  br i1 %exitcond102, label %126, label %125
+
+125:                                              ; preds = %124
   br label %144
 
-144:                                              ; preds = %153, %141
-  %145 = load i32, i32* %10, align 4
-  %146 = icmp sge i32 %145, 0
-  br i1 %146, label %147, label %156
+126:                                              ; preds = %124
+  %127 = call noalias i8* @malloc(i64 204) #2
+  %128 = bitcast i8* %127 to %struct.Book*
+  %129 = getelementptr inbounds %struct.Book, %struct.Book* %128, i32 0, i32 0
+  %130 = getelementptr inbounds [50 x i8], [50 x i8]* %129, i64 0, i64 0
+  %131 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %132 = call i8* @strcpy(i8* %130, i8* %131) #2
+  %133 = getelementptr inbounds %struct.Book, %struct.Book* %128, i32 0, i32 1
+  %134 = getelementptr inbounds [50 x i8], [50 x i8]* %133, i64 0, i64 0
+  %135 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %136 = call i8* @strcpy(i8* %134, i8* %135) #2
+  %137 = getelementptr inbounds %struct.Book, %struct.Book* %128, i32 0, i32 2
+  %138 = getelementptr inbounds [100 x i8], [100 x i8]* %137, i64 0, i64 0
+  %139 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %140 = call i8* @strcpy(i8* %138, i8* %139) #2
+  %141 = getelementptr inbounds %struct.Book, %struct.Book* %128, i32 0, i32 3
+  store i32 6495407, i32* %141, align 4, !tbaa !2
+  %142 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv100
+  store %struct.Book* %128, %struct.Book** %142, align 8, !tbaa !7
+  br label %143
 
-147:                                              ; preds = %144
-  %148 = load i32, i32* %10, align 4
-  %149 = sext i32 %148 to i64
-  %150 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %149
-  %151 = load %struct.Book*, %struct.Book** %150, align 8
-  %152 = bitcast %struct.Book* %151 to i8*
-  call void @dlfree(i8* %152)
+143:                                              ; preds = %126
+  %indvars.iv.next101 = add nuw nsw i64 %indvars.iv100, 1
+  br label %124
+
+144:                                              ; preds = %125
+  br label %145
+
+145:                                              ; preds = %152, %144
+  %indvars.iv98 = phi i64 [ %indvars.iv.next99, %152 ], [ 999999, %144 ]
+  %146 = icmp sge i64 %indvars.iv98, 0
+  br i1 %146, label %148, label %147
+
+147:                                              ; preds = %145
   br label %153
 
+148:                                              ; preds = %145
+  %149 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv98
+  %150 = load %struct.Book*, %struct.Book** %149, align 8, !tbaa !7
+  %151 = bitcast %struct.Book* %150 to i8*
+  call void @free(i8* %151) #2
+  br label %152
+
+152:                                              ; preds = %148
+  %indvars.iv.next99 = add nsw i64 %indvars.iv98, -1
+  br label %145
+
 153:                                              ; preds = %147
-  %154 = load i32, i32* %10, align 4
-  %155 = add nsw i32 %154, -1
-  store i32 %155, i32* %10, align 4
-  br label %144
+  br label %154
 
-156:                                              ; preds = %144
-  store i32 0, i32* %11, align 4
-  br label %157
+154:                                              ; preds = %173, %153
+  %indvars.iv95 = phi i64 [ %indvars.iv.next96, %173 ], [ 0, %153 ]
+  %exitcond97 = icmp ne i64 %indvars.iv95, 1000000
+  br i1 %exitcond97, label %156, label %155
 
-157:                                              ; preds = %185, %156
-  %158 = load i32, i32* %11, align 4
-  %159 = load i32, i32* %2, align 4
-  %160 = icmp slt i32 %158, %159
-  br i1 %160, label %161, label %188
+155:                                              ; preds = %154
+  br label %174
 
-161:                                              ; preds = %157
-  %162 = call i8* @dlmalloc(i64 204)
-  %163 = bitcast i8* %162 to %struct.Book*
-  store %struct.Book* %163, %struct.Book** %12, align 8
-  %164 = load %struct.Book*, %struct.Book** %12, align 8
-  %165 = getelementptr inbounds %struct.Book, %struct.Book* %164, i32 0, i32 0
-  %166 = getelementptr inbounds [50 x i8], [50 x i8]* %165, i64 0, i64 0
-  %167 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %168 = call i8* @strcpy(i8* %166, i8* %167) #1
-  %169 = load %struct.Book*, %struct.Book** %12, align 8
-  %170 = getelementptr inbounds %struct.Book, %struct.Book* %169, i32 0, i32 1
-  %171 = getelementptr inbounds [50 x i8], [50 x i8]* %170, i64 0, i64 0
-  %172 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %173 = call i8* @strcpy(i8* %171, i8* %172) #1
-  %174 = load %struct.Book*, %struct.Book** %12, align 8
-  %175 = getelementptr inbounds %struct.Book, %struct.Book* %174, i32 0, i32 2
-  %176 = getelementptr inbounds [100 x i8], [100 x i8]* %175, i64 0, i64 0
-  %177 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %178 = call i8* @strcpy(i8* %176, i8* %177) #1
-  %179 = load %struct.Book*, %struct.Book** %12, align 8
-  %180 = getelementptr inbounds %struct.Book, %struct.Book* %179, i32 0, i32 3
-  store i32 6495407, i32* %180, align 4
-  %181 = load %struct.Book*, %struct.Book** %12, align 8
-  %182 = load i32, i32* %11, align 4
-  %183 = sext i32 %182 to i64
-  %184 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %183
-  store %struct.Book* %181, %struct.Book** %184, align 8
-  br label %185
+156:                                              ; preds = %154
+  %157 = call noalias i8* @malloc(i64 204) #2
+  %158 = bitcast i8* %157 to %struct.Book*
+  %159 = getelementptr inbounds %struct.Book, %struct.Book* %158, i32 0, i32 0
+  %160 = getelementptr inbounds [50 x i8], [50 x i8]* %159, i64 0, i64 0
+  %161 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %162 = call i8* @strcpy(i8* %160, i8* %161) #2
+  %163 = getelementptr inbounds %struct.Book, %struct.Book* %158, i32 0, i32 1
+  %164 = getelementptr inbounds [50 x i8], [50 x i8]* %163, i64 0, i64 0
+  %165 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %166 = call i8* @strcpy(i8* %164, i8* %165) #2
+  %167 = getelementptr inbounds %struct.Book, %struct.Book* %158, i32 0, i32 2
+  %168 = getelementptr inbounds [100 x i8], [100 x i8]* %167, i64 0, i64 0
+  %169 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %170 = call i8* @strcpy(i8* %168, i8* %169) #2
+  %171 = getelementptr inbounds %struct.Book, %struct.Book* %158, i32 0, i32 3
+  store i32 6495407, i32* %171, align 4, !tbaa !2
+  %172 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv95
+  store %struct.Book* %158, %struct.Book** %172, align 8, !tbaa !7
+  br label %173
 
-185:                                              ; preds = %161
-  %186 = load i32, i32* %11, align 4
-  %187 = add nsw i32 %186, 1
-  store i32 %187, i32* %11, align 4
-  br label %157
+173:                                              ; preds = %156
+  %indvars.iv.next96 = add nuw nsw i64 %indvars.iv95, 1
+  br label %154
 
-188:                                              ; preds = %157
-  %189 = load i32, i32* %2, align 4
-  %190 = sub nsw i32 %189, 1
-  store i32 %190, i32* %13, align 4
-  br label %191
+174:                                              ; preds = %155
+  br label %175
 
-191:                                              ; preds = %200, %188
-  %192 = load i32, i32* %13, align 4
-  %193 = icmp sge i32 %192, 0
-  br i1 %193, label %194, label %203
+175:                                              ; preds = %182, %174
+  %indvars.iv93 = phi i64 [ %indvars.iv.next94, %182 ], [ 999999, %174 ]
+  %176 = icmp sge i64 %indvars.iv93, 0
+  br i1 %176, label %178, label %177
 
-194:                                              ; preds = %191
-  %195 = load i32, i32* %13, align 4
-  %196 = sext i32 %195 to i64
-  %197 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %196
-  %198 = load %struct.Book*, %struct.Book** %197, align 8
-  %199 = bitcast %struct.Book* %198 to i8*
-  call void @dlfree(i8* %199)
-  br label %200
+177:                                              ; preds = %175
+  br label %183
 
-200:                                              ; preds = %194
-  %201 = load i32, i32* %13, align 4
-  %202 = add nsw i32 %201, -1
-  store i32 %202, i32* %13, align 4
-  br label %191
+178:                                              ; preds = %175
+  %179 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv93
+  %180 = load %struct.Book*, %struct.Book** %179, align 8, !tbaa !7
+  %181 = bitcast %struct.Book* %180 to i8*
+  call void @free(i8* %181) #2
+  br label %182
 
-203:                                              ; preds = %191
-  store i32 0, i32* %14, align 4
+182:                                              ; preds = %178
+  %indvars.iv.next94 = add nsw i64 %indvars.iv93, -1
+  br label %175
+
+183:                                              ; preds = %177
+  br label %184
+
+184:                                              ; preds = %203, %183
+  %indvars.iv90 = phi i64 [ %indvars.iv.next91, %203 ], [ 0, %183 ]
+  %exitcond92 = icmp ne i64 %indvars.iv90, 1000000
+  br i1 %exitcond92, label %186, label %185
+
+185:                                              ; preds = %184
   br label %204
 
-204:                                              ; preds = %232, %203
-  %205 = load i32, i32* %14, align 4
-  %206 = load i32, i32* %2, align 4
-  %207 = icmp slt i32 %205, %206
-  br i1 %207, label %208, label %235
+186:                                              ; preds = %184
+  %187 = call noalias i8* @malloc(i64 204) #2
+  %188 = bitcast i8* %187 to %struct.Book*
+  %189 = getelementptr inbounds %struct.Book, %struct.Book* %188, i32 0, i32 0
+  %190 = getelementptr inbounds [50 x i8], [50 x i8]* %189, i64 0, i64 0
+  %191 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %192 = call i8* @strcpy(i8* %190, i8* %191) #2
+  %193 = getelementptr inbounds %struct.Book, %struct.Book* %188, i32 0, i32 1
+  %194 = getelementptr inbounds [50 x i8], [50 x i8]* %193, i64 0, i64 0
+  %195 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %196 = call i8* @strcpy(i8* %194, i8* %195) #2
+  %197 = getelementptr inbounds %struct.Book, %struct.Book* %188, i32 0, i32 2
+  %198 = getelementptr inbounds [100 x i8], [100 x i8]* %197, i64 0, i64 0
+  %199 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %200 = call i8* @strcpy(i8* %198, i8* %199) #2
+  %201 = getelementptr inbounds %struct.Book, %struct.Book* %188, i32 0, i32 3
+  store i32 6495407, i32* %201, align 4, !tbaa !2
+  %202 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv90
+  store %struct.Book* %188, %struct.Book** %202, align 8, !tbaa !7
+  br label %203
 
-208:                                              ; preds = %204
-  %209 = call i8* @dlmalloc(i64 204)
-  %210 = bitcast i8* %209 to %struct.Book*
-  store %struct.Book* %210, %struct.Book** %15, align 8
-  %211 = load %struct.Book*, %struct.Book** %15, align 8
-  %212 = getelementptr inbounds %struct.Book, %struct.Book* %211, i32 0, i32 0
-  %213 = getelementptr inbounds [50 x i8], [50 x i8]* %212, i64 0, i64 0
-  %214 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %215 = call i8* @strcpy(i8* %213, i8* %214) #1
-  %216 = load %struct.Book*, %struct.Book** %15, align 8
-  %217 = getelementptr inbounds %struct.Book, %struct.Book* %216, i32 0, i32 1
-  %218 = getelementptr inbounds [50 x i8], [50 x i8]* %217, i64 0, i64 0
-  %219 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %220 = call i8* @strcpy(i8* %218, i8* %219) #1
-  %221 = load %struct.Book*, %struct.Book** %15, align 8
-  %222 = getelementptr inbounds %struct.Book, %struct.Book* %221, i32 0, i32 2
-  %223 = getelementptr inbounds [100 x i8], [100 x i8]* %222, i64 0, i64 0
-  %224 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %225 = call i8* @strcpy(i8* %223, i8* %224) #1
-  %226 = load %struct.Book*, %struct.Book** %15, align 8
-  %227 = getelementptr inbounds %struct.Book, %struct.Book* %226, i32 0, i32 3
-  store i32 6495407, i32* %227, align 4
-  %228 = load %struct.Book*, %struct.Book** %15, align 8
-  %229 = load i32, i32* %14, align 4
-  %230 = sext i32 %229 to i64
-  %231 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %230
-  store %struct.Book* %228, %struct.Book** %231, align 8
-  br label %232
+203:                                              ; preds = %186
+  %indvars.iv.next91 = add nuw nsw i64 %indvars.iv90, 1
+  br label %184
 
-232:                                              ; preds = %208
-  %233 = load i32, i32* %14, align 4
-  %234 = add nsw i32 %233, 1
-  store i32 %234, i32* %14, align 4
-  br label %204
+204:                                              ; preds = %185
+  br label %205
 
-235:                                              ; preds = %204
-  %236 = load i32, i32* %2, align 4
-  %237 = sub nsw i32 %236, 1
-  store i32 %237, i32* %16, align 4
-  br label %238
+205:                                              ; preds = %212, %204
+  %indvars.iv88 = phi i64 [ %indvars.iv.next89, %212 ], [ 999999, %204 ]
+  %206 = icmp sge i64 %indvars.iv88, 0
+  br i1 %206, label %208, label %207
 
-238:                                              ; preds = %247, %235
-  %239 = load i32, i32* %16, align 4
-  %240 = icmp sge i32 %239, 0
-  br i1 %240, label %241, label %250
+207:                                              ; preds = %205
+  br label %213
 
-241:                                              ; preds = %238
-  %242 = load i32, i32* %16, align 4
-  %243 = sext i32 %242 to i64
-  %244 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %243
-  %245 = load %struct.Book*, %struct.Book** %244, align 8
-  %246 = bitcast %struct.Book* %245 to i8*
-  call void @dlfree(i8* %246)
-  br label %247
+208:                                              ; preds = %205
+  %209 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv88
+  %210 = load %struct.Book*, %struct.Book** %209, align 8, !tbaa !7
+  %211 = bitcast %struct.Book* %210 to i8*
+  call void @free(i8* %211) #2
+  br label %212
 
-247:                                              ; preds = %241
-  %248 = load i32, i32* %16, align 4
-  %249 = add nsw i32 %248, -1
-  store i32 %249, i32* %16, align 4
-  br label %238
+212:                                              ; preds = %208
+  %indvars.iv.next89 = add nsw i64 %indvars.iv88, -1
+  br label %205
 
-250:                                              ; preds = %238
-  store i32 0, i32* %17, align 4
-  br label %251
+213:                                              ; preds = %207
+  br label %214
 
-251:                                              ; preds = %279, %250
-  %252 = load i32, i32* %17, align 4
-  %253 = load i32, i32* %2, align 4
-  %254 = icmp slt i32 %252, %253
-  br i1 %254, label %255, label %282
+214:                                              ; preds = %233, %213
+  %indvars.iv85 = phi i64 [ %indvars.iv.next86, %233 ], [ 0, %213 ]
+  %exitcond87 = icmp ne i64 %indvars.iv85, 1000000
+  br i1 %exitcond87, label %216, label %215
 
-255:                                              ; preds = %251
-  %256 = call i8* @dlmalloc(i64 204)
-  %257 = bitcast i8* %256 to %struct.Book*
-  store %struct.Book* %257, %struct.Book** %18, align 8
-  %258 = load %struct.Book*, %struct.Book** %18, align 8
-  %259 = getelementptr inbounds %struct.Book, %struct.Book* %258, i32 0, i32 0
-  %260 = getelementptr inbounds [50 x i8], [50 x i8]* %259, i64 0, i64 0
-  %261 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %262 = call i8* @strcpy(i8* %260, i8* %261) #1
-  %263 = load %struct.Book*, %struct.Book** %18, align 8
-  %264 = getelementptr inbounds %struct.Book, %struct.Book* %263, i32 0, i32 1
-  %265 = getelementptr inbounds [50 x i8], [50 x i8]* %264, i64 0, i64 0
-  %266 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %267 = call i8* @strcpy(i8* %265, i8* %266) #1
-  %268 = load %struct.Book*, %struct.Book** %18, align 8
-  %269 = getelementptr inbounds %struct.Book, %struct.Book* %268, i32 0, i32 2
-  %270 = getelementptr inbounds [100 x i8], [100 x i8]* %269, i64 0, i64 0
-  %271 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %272 = call i8* @strcpy(i8* %270, i8* %271) #1
-  %273 = load %struct.Book*, %struct.Book** %18, align 8
-  %274 = getelementptr inbounds %struct.Book, %struct.Book* %273, i32 0, i32 3
-  store i32 6495407, i32* %274, align 4
-  %275 = load %struct.Book*, %struct.Book** %18, align 8
-  %276 = load i32, i32* %17, align 4
-  %277 = sext i32 %276 to i64
-  %278 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %277
-  store %struct.Book* %275, %struct.Book** %278, align 8
-  br label %279
+215:                                              ; preds = %214
+  br label %234
 
-279:                                              ; preds = %255
-  %280 = load i32, i32* %17, align 4
-  %281 = add nsw i32 %280, 1
-  store i32 %281, i32* %17, align 4
-  br label %251
+216:                                              ; preds = %214
+  %217 = call noalias i8* @malloc(i64 204) #2
+  %218 = bitcast i8* %217 to %struct.Book*
+  %219 = getelementptr inbounds %struct.Book, %struct.Book* %218, i32 0, i32 0
+  %220 = getelementptr inbounds [50 x i8], [50 x i8]* %219, i64 0, i64 0
+  %221 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %222 = call i8* @strcpy(i8* %220, i8* %221) #2
+  %223 = getelementptr inbounds %struct.Book, %struct.Book* %218, i32 0, i32 1
+  %224 = getelementptr inbounds [50 x i8], [50 x i8]* %223, i64 0, i64 0
+  %225 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %226 = call i8* @strcpy(i8* %224, i8* %225) #2
+  %227 = getelementptr inbounds %struct.Book, %struct.Book* %218, i32 0, i32 2
+  %228 = getelementptr inbounds [100 x i8], [100 x i8]* %227, i64 0, i64 0
+  %229 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %230 = call i8* @strcpy(i8* %228, i8* %229) #2
+  %231 = getelementptr inbounds %struct.Book, %struct.Book* %218, i32 0, i32 3
+  store i32 6495407, i32* %231, align 4, !tbaa !2
+  %232 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv85
+  store %struct.Book* %218, %struct.Book** %232, align 8, !tbaa !7
+  br label %233
 
-282:                                              ; preds = %251
-  %283 = load i32, i32* %2, align 4
-  %284 = sub nsw i32 %283, 1
-  store i32 %284, i32* %19, align 4
-  br label %285
+233:                                              ; preds = %216
+  %indvars.iv.next86 = add nuw nsw i64 %indvars.iv85, 1
+  br label %214
 
-285:                                              ; preds = %294, %282
-  %286 = load i32, i32* %19, align 4
-  %287 = icmp sge i32 %286, 0
-  br i1 %287, label %288, label %297
+234:                                              ; preds = %215
+  br label %235
 
-288:                                              ; preds = %285
-  %289 = load i32, i32* %19, align 4
-  %290 = sext i32 %289 to i64
-  %291 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %290
-  %292 = load %struct.Book*, %struct.Book** %291, align 8
-  %293 = bitcast %struct.Book* %292 to i8*
-  call void @dlfree(i8* %293)
+235:                                              ; preds = %242, %234
+  %indvars.iv83 = phi i64 [ %indvars.iv.next84, %242 ], [ 999999, %234 ]
+  %236 = icmp sge i64 %indvars.iv83, 0
+  br i1 %236, label %238, label %237
+
+237:                                              ; preds = %235
+  br label %243
+
+238:                                              ; preds = %235
+  %239 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv83
+  %240 = load %struct.Book*, %struct.Book** %239, align 8, !tbaa !7
+  %241 = bitcast %struct.Book* %240 to i8*
+  call void @free(i8* %241) #2
+  br label %242
+
+242:                                              ; preds = %238
+  %indvars.iv.next84 = add nsw i64 %indvars.iv83, -1
+  br label %235
+
+243:                                              ; preds = %237
+  br label %244
+
+244:                                              ; preds = %263, %243
+  %indvars.iv80 = phi i64 [ %indvars.iv.next81, %263 ], [ 0, %243 ]
+  %exitcond82 = icmp ne i64 %indvars.iv80, 1000000
+  br i1 %exitcond82, label %246, label %245
+
+245:                                              ; preds = %244
+  br label %264
+
+246:                                              ; preds = %244
+  %247 = call noalias i8* @malloc(i64 204) #2
+  %248 = bitcast i8* %247 to %struct.Book*
+  %249 = getelementptr inbounds %struct.Book, %struct.Book* %248, i32 0, i32 0
+  %250 = getelementptr inbounds [50 x i8], [50 x i8]* %249, i64 0, i64 0
+  %251 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %252 = call i8* @strcpy(i8* %250, i8* %251) #2
+  %253 = getelementptr inbounds %struct.Book, %struct.Book* %248, i32 0, i32 1
+  %254 = getelementptr inbounds [50 x i8], [50 x i8]* %253, i64 0, i64 0
+  %255 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %256 = call i8* @strcpy(i8* %254, i8* %255) #2
+  %257 = getelementptr inbounds %struct.Book, %struct.Book* %248, i32 0, i32 2
+  %258 = getelementptr inbounds [100 x i8], [100 x i8]* %257, i64 0, i64 0
+  %259 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %260 = call i8* @strcpy(i8* %258, i8* %259) #2
+  %261 = getelementptr inbounds %struct.Book, %struct.Book* %248, i32 0, i32 3
+  store i32 6495407, i32* %261, align 4, !tbaa !2
+  %262 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv80
+  store %struct.Book* %248, %struct.Book** %262, align 8, !tbaa !7
+  br label %263
+
+263:                                              ; preds = %246
+  %indvars.iv.next81 = add nuw nsw i64 %indvars.iv80, 1
+  br label %244
+
+264:                                              ; preds = %245
+  br label %265
+
+265:                                              ; preds = %272, %264
+  %indvars.iv78 = phi i64 [ %indvars.iv.next79, %272 ], [ 999999, %264 ]
+  %266 = icmp sge i64 %indvars.iv78, 0
+  br i1 %266, label %268, label %267
+
+267:                                              ; preds = %265
+  br label %273
+
+268:                                              ; preds = %265
+  %269 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv78
+  %270 = load %struct.Book*, %struct.Book** %269, align 8, !tbaa !7
+  %271 = bitcast %struct.Book* %270 to i8*
+  call void @free(i8* %271) #2
+  br label %272
+
+272:                                              ; preds = %268
+  %indvars.iv.next79 = add nsw i64 %indvars.iv78, -1
+  br label %265
+
+273:                                              ; preds = %267
+  br label %274
+
+274:                                              ; preds = %293, %273
+  %indvars.iv75 = phi i64 [ %indvars.iv.next76, %293 ], [ 0, %273 ]
+  %exitcond77 = icmp ne i64 %indvars.iv75, 1000000
+  br i1 %exitcond77, label %276, label %275
+
+275:                                              ; preds = %274
   br label %294
 
-294:                                              ; preds = %288
-  %295 = load i32, i32* %19, align 4
-  %296 = add nsw i32 %295, -1
-  store i32 %296, i32* %19, align 4
-  br label %285
+276:                                              ; preds = %274
+  %277 = call noalias i8* @malloc(i64 204) #2
+  %278 = bitcast i8* %277 to %struct.Book*
+  %279 = getelementptr inbounds %struct.Book, %struct.Book* %278, i32 0, i32 0
+  %280 = getelementptr inbounds [50 x i8], [50 x i8]* %279, i64 0, i64 0
+  %281 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %282 = call i8* @strcpy(i8* %280, i8* %281) #2
+  %283 = getelementptr inbounds %struct.Book, %struct.Book* %278, i32 0, i32 1
+  %284 = getelementptr inbounds [50 x i8], [50 x i8]* %283, i64 0, i64 0
+  %285 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %286 = call i8* @strcpy(i8* %284, i8* %285) #2
+  %287 = getelementptr inbounds %struct.Book, %struct.Book* %278, i32 0, i32 2
+  %288 = getelementptr inbounds [100 x i8], [100 x i8]* %287, i64 0, i64 0
+  %289 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %290 = call i8* @strcpy(i8* %288, i8* %289) #2
+  %291 = getelementptr inbounds %struct.Book, %struct.Book* %278, i32 0, i32 3
+  store i32 6495407, i32* %291, align 4, !tbaa !2
+  %292 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv75
+  store %struct.Book* %278, %struct.Book** %292, align 8, !tbaa !7
+  br label %293
 
-297:                                              ; preds = %285
-  store i32 0, i32* %20, align 4
-  br label %298
+293:                                              ; preds = %276
+  %indvars.iv.next76 = add nuw nsw i64 %indvars.iv75, 1
+  br label %274
 
-298:                                              ; preds = %326, %297
-  %299 = load i32, i32* %20, align 4
-  %300 = load i32, i32* %2, align 4
-  %301 = icmp slt i32 %299, %300
-  br i1 %301, label %302, label %329
+294:                                              ; preds = %275
+  br label %295
+
+295:                                              ; preds = %302, %294
+  %indvars.iv73 = phi i64 [ %indvars.iv.next74, %302 ], [ 999999, %294 ]
+  %296 = icmp sge i64 %indvars.iv73, 0
+  br i1 %296, label %298, label %297
+
+297:                                              ; preds = %295
+  br label %303
+
+298:                                              ; preds = %295
+  %299 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv73
+  %300 = load %struct.Book*, %struct.Book** %299, align 8, !tbaa !7
+  %301 = bitcast %struct.Book* %300 to i8*
+  call void @free(i8* %301) #2
+  br label %302
 
 302:                                              ; preds = %298
-  %303 = call i8* @dlmalloc(i64 204)
-  %304 = bitcast i8* %303 to %struct.Book*
-  store %struct.Book* %304, %struct.Book** %21, align 8
-  %305 = load %struct.Book*, %struct.Book** %21, align 8
-  %306 = getelementptr inbounds %struct.Book, %struct.Book* %305, i32 0, i32 0
-  %307 = getelementptr inbounds [50 x i8], [50 x i8]* %306, i64 0, i64 0
-  %308 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %309 = call i8* @strcpy(i8* %307, i8* %308) #1
-  %310 = load %struct.Book*, %struct.Book** %21, align 8
-  %311 = getelementptr inbounds %struct.Book, %struct.Book* %310, i32 0, i32 1
-  %312 = getelementptr inbounds [50 x i8], [50 x i8]* %311, i64 0, i64 0
-  %313 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %314 = call i8* @strcpy(i8* %312, i8* %313) #1
-  %315 = load %struct.Book*, %struct.Book** %21, align 8
-  %316 = getelementptr inbounds %struct.Book, %struct.Book* %315, i32 0, i32 2
-  %317 = getelementptr inbounds [100 x i8], [100 x i8]* %316, i64 0, i64 0
-  %318 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %319 = call i8* @strcpy(i8* %317, i8* %318) #1
-  %320 = load %struct.Book*, %struct.Book** %21, align 8
-  %321 = getelementptr inbounds %struct.Book, %struct.Book* %320, i32 0, i32 3
-  store i32 6495407, i32* %321, align 4
-  %322 = load %struct.Book*, %struct.Book** %21, align 8
-  %323 = load i32, i32* %20, align 4
-  %324 = sext i32 %323 to i64
-  %325 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %324
-  store %struct.Book* %322, %struct.Book** %325, align 8
-  br label %326
+  %indvars.iv.next74 = add nsw i64 %indvars.iv73, -1
+  br label %295
 
-326:                                              ; preds = %302
-  %327 = load i32, i32* %20, align 4
-  %328 = add nsw i32 %327, 1
-  store i32 %328, i32* %20, align 4
-  br label %298
+303:                                              ; preds = %297
+  br label %304
 
-329:                                              ; preds = %298
-  %330 = load i32, i32* %2, align 4
-  %331 = sub nsw i32 %330, 1
-  store i32 %331, i32* %22, align 4
+304:                                              ; preds = %323, %303
+  %indvars.iv70 = phi i64 [ %indvars.iv.next71, %323 ], [ 0, %303 ]
+  %exitcond72 = icmp ne i64 %indvars.iv70, 1000000
+  br i1 %exitcond72, label %306, label %305
+
+305:                                              ; preds = %304
+  br label %324
+
+306:                                              ; preds = %304
+  %307 = call noalias i8* @malloc(i64 204) #2
+  %308 = bitcast i8* %307 to %struct.Book*
+  %309 = getelementptr inbounds %struct.Book, %struct.Book* %308, i32 0, i32 0
+  %310 = getelementptr inbounds [50 x i8], [50 x i8]* %309, i64 0, i64 0
+  %311 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %312 = call i8* @strcpy(i8* %310, i8* %311) #2
+  %313 = getelementptr inbounds %struct.Book, %struct.Book* %308, i32 0, i32 1
+  %314 = getelementptr inbounds [50 x i8], [50 x i8]* %313, i64 0, i64 0
+  %315 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %316 = call i8* @strcpy(i8* %314, i8* %315) #2
+  %317 = getelementptr inbounds %struct.Book, %struct.Book* %308, i32 0, i32 2
+  %318 = getelementptr inbounds [100 x i8], [100 x i8]* %317, i64 0, i64 0
+  %319 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %320 = call i8* @strcpy(i8* %318, i8* %319) #2
+  %321 = getelementptr inbounds %struct.Book, %struct.Book* %308, i32 0, i32 3
+  store i32 6495407, i32* %321, align 4, !tbaa !2
+  %322 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv70
+  store %struct.Book* %308, %struct.Book** %322, align 8, !tbaa !7
+  br label %323
+
+323:                                              ; preds = %306
+  %indvars.iv.next71 = add nuw nsw i64 %indvars.iv70, 1
+  br label %304
+
+324:                                              ; preds = %305
+  br label %325
+
+325:                                              ; preds = %332, %324
+  %indvars.iv68 = phi i64 [ %indvars.iv.next69, %332 ], [ 999999, %324 ]
+  %326 = icmp sge i64 %indvars.iv68, 0
+  br i1 %326, label %328, label %327
+
+327:                                              ; preds = %325
+  br label %333
+
+328:                                              ; preds = %325
+  %329 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv68
+  %330 = load %struct.Book*, %struct.Book** %329, align 8, !tbaa !7
+  %331 = bitcast %struct.Book* %330 to i8*
+  call void @free(i8* %331) #2
   br label %332
 
-332:                                              ; preds = %341, %329
-  %333 = load i32, i32* %22, align 4
-  %334 = icmp sge i32 %333, 0
-  br i1 %334, label %335, label %344
+332:                                              ; preds = %328
+  %indvars.iv.next69 = add nsw i64 %indvars.iv68, -1
+  br label %325
 
-335:                                              ; preds = %332
-  %336 = load i32, i32* %22, align 4
-  %337 = sext i32 %336 to i64
-  %338 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %337
-  %339 = load %struct.Book*, %struct.Book** %338, align 8
-  %340 = bitcast %struct.Book* %339 to i8*
-  call void @dlfree(i8* %340)
-  br label %341
+333:                                              ; preds = %327
+  br label %334
 
-341:                                              ; preds = %335
-  %342 = load i32, i32* %22, align 4
-  %343 = add nsw i32 %342, -1
-  store i32 %343, i32* %22, align 4
-  br label %332
+334:                                              ; preds = %353, %333
+  %indvars.iv65 = phi i64 [ %indvars.iv.next66, %353 ], [ 0, %333 ]
+  %exitcond67 = icmp ne i64 %indvars.iv65, 1000000
+  br i1 %exitcond67, label %336, label %335
 
-344:                                              ; preds = %332
-  store i32 0, i32* %23, align 4
-  br label %345
+335:                                              ; preds = %334
+  br label %354
 
-345:                                              ; preds = %373, %344
-  %346 = load i32, i32* %23, align 4
-  %347 = load i32, i32* %2, align 4
-  %348 = icmp slt i32 %346, %347
-  br i1 %348, label %349, label %376
+336:                                              ; preds = %334
+  %337 = call noalias i8* @malloc(i64 204) #2
+  %338 = bitcast i8* %337 to %struct.Book*
+  %339 = getelementptr inbounds %struct.Book, %struct.Book* %338, i32 0, i32 0
+  %340 = getelementptr inbounds [50 x i8], [50 x i8]* %339, i64 0, i64 0
+  %341 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %342 = call i8* @strcpy(i8* %340, i8* %341) #2
+  %343 = getelementptr inbounds %struct.Book, %struct.Book* %338, i32 0, i32 1
+  %344 = getelementptr inbounds [50 x i8], [50 x i8]* %343, i64 0, i64 0
+  %345 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %346 = call i8* @strcpy(i8* %344, i8* %345) #2
+  %347 = getelementptr inbounds %struct.Book, %struct.Book* %338, i32 0, i32 2
+  %348 = getelementptr inbounds [100 x i8], [100 x i8]* %347, i64 0, i64 0
+  %349 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %350 = call i8* @strcpy(i8* %348, i8* %349) #2
+  %351 = getelementptr inbounds %struct.Book, %struct.Book* %338, i32 0, i32 3
+  store i32 6495407, i32* %351, align 4, !tbaa !2
+  %352 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv65
+  store %struct.Book* %338, %struct.Book** %352, align 8, !tbaa !7
+  br label %353
 
-349:                                              ; preds = %345
-  %350 = call i8* @dlmalloc(i64 204)
-  %351 = bitcast i8* %350 to %struct.Book*
-  store %struct.Book* %351, %struct.Book** %24, align 8
-  %352 = load %struct.Book*, %struct.Book** %24, align 8
-  %353 = getelementptr inbounds %struct.Book, %struct.Book* %352, i32 0, i32 0
-  %354 = getelementptr inbounds [50 x i8], [50 x i8]* %353, i64 0, i64 0
-  %355 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %356 = call i8* @strcpy(i8* %354, i8* %355) #1
-  %357 = load %struct.Book*, %struct.Book** %24, align 8
-  %358 = getelementptr inbounds %struct.Book, %struct.Book* %357, i32 0, i32 1
-  %359 = getelementptr inbounds [50 x i8], [50 x i8]* %358, i64 0, i64 0
-  %360 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %361 = call i8* @strcpy(i8* %359, i8* %360) #1
-  %362 = load %struct.Book*, %struct.Book** %24, align 8
-  %363 = getelementptr inbounds %struct.Book, %struct.Book* %362, i32 0, i32 2
-  %364 = getelementptr inbounds [100 x i8], [100 x i8]* %363, i64 0, i64 0
-  %365 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %366 = call i8* @strcpy(i8* %364, i8* %365) #1
-  %367 = load %struct.Book*, %struct.Book** %24, align 8
-  %368 = getelementptr inbounds %struct.Book, %struct.Book* %367, i32 0, i32 3
-  store i32 6495407, i32* %368, align 4
-  %369 = load %struct.Book*, %struct.Book** %24, align 8
-  %370 = load i32, i32* %23, align 4
-  %371 = sext i32 %370 to i64
-  %372 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %371
-  store %struct.Book* %369, %struct.Book** %372, align 8
-  br label %373
+353:                                              ; preds = %336
+  %indvars.iv.next66 = add nuw nsw i64 %indvars.iv65, 1
+  br label %334
 
-373:                                              ; preds = %349
-  %374 = load i32, i32* %23, align 4
-  %375 = add nsw i32 %374, 1
-  store i32 %375, i32* %23, align 4
-  br label %345
+354:                                              ; preds = %335
+  br label %355
 
-376:                                              ; preds = %345
-  %377 = load i32, i32* %2, align 4
-  %378 = sub nsw i32 %377, 1
-  store i32 %378, i32* %25, align 4
-  br label %379
+355:                                              ; preds = %362, %354
+  %indvars.iv63 = phi i64 [ %indvars.iv.next64, %362 ], [ 999999, %354 ]
+  %356 = icmp sge i64 %indvars.iv63, 0
+  br i1 %356, label %358, label %357
 
-379:                                              ; preds = %388, %376
-  %380 = load i32, i32* %25, align 4
-  %381 = icmp sge i32 %380, 0
-  br i1 %381, label %382, label %391
+357:                                              ; preds = %355
+  br label %363
 
-382:                                              ; preds = %379
-  %383 = load i32, i32* %25, align 4
-  %384 = sext i32 %383 to i64
-  %385 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %384
-  %386 = load %struct.Book*, %struct.Book** %385, align 8
-  %387 = bitcast %struct.Book* %386 to i8*
-  call void @dlfree(i8* %387)
-  br label %388
+358:                                              ; preds = %355
+  %359 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv63
+  %360 = load %struct.Book*, %struct.Book** %359, align 8, !tbaa !7
+  %361 = bitcast %struct.Book* %360 to i8*
+  call void @free(i8* %361) #2
+  br label %362
 
-388:                                              ; preds = %382
-  %389 = load i32, i32* %25, align 4
-  %390 = add nsw i32 %389, -1
-  store i32 %390, i32* %25, align 4
-  br label %379
+362:                                              ; preds = %358
+  %indvars.iv.next64 = add nsw i64 %indvars.iv63, -1
+  br label %355
 
-391:                                              ; preds = %379
-  store i32 0, i32* %26, align 4
+363:                                              ; preds = %357
+  br label %364
+
+364:                                              ; preds = %383, %363
+  %indvars.iv60 = phi i64 [ %indvars.iv.next61, %383 ], [ 0, %363 ]
+  %exitcond62 = icmp ne i64 %indvars.iv60, 1000000
+  br i1 %exitcond62, label %366, label %365
+
+365:                                              ; preds = %364
+  br label %384
+
+366:                                              ; preds = %364
+  %367 = call noalias i8* @malloc(i64 204) #2
+  %368 = bitcast i8* %367 to %struct.Book*
+  %369 = getelementptr inbounds %struct.Book, %struct.Book* %368, i32 0, i32 0
+  %370 = getelementptr inbounds [50 x i8], [50 x i8]* %369, i64 0, i64 0
+  %371 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %372 = call i8* @strcpy(i8* %370, i8* %371) #2
+  %373 = getelementptr inbounds %struct.Book, %struct.Book* %368, i32 0, i32 1
+  %374 = getelementptr inbounds [50 x i8], [50 x i8]* %373, i64 0, i64 0
+  %375 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %376 = call i8* @strcpy(i8* %374, i8* %375) #2
+  %377 = getelementptr inbounds %struct.Book, %struct.Book* %368, i32 0, i32 2
+  %378 = getelementptr inbounds [100 x i8], [100 x i8]* %377, i64 0, i64 0
+  %379 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %380 = call i8* @strcpy(i8* %378, i8* %379) #2
+  %381 = getelementptr inbounds %struct.Book, %struct.Book* %368, i32 0, i32 3
+  store i32 6495407, i32* %381, align 4, !tbaa !2
+  %382 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv60
+  store %struct.Book* %368, %struct.Book** %382, align 8, !tbaa !7
+  br label %383
+
+383:                                              ; preds = %366
+  %indvars.iv.next61 = add nuw nsw i64 %indvars.iv60, 1
+  br label %364
+
+384:                                              ; preds = %365
+  br label %385
+
+385:                                              ; preds = %392, %384
+  %indvars.iv58 = phi i64 [ %indvars.iv.next59, %392 ], [ 999999, %384 ]
+  %386 = icmp sge i64 %indvars.iv58, 0
+  br i1 %386, label %388, label %387
+
+387:                                              ; preds = %385
+  br label %393
+
+388:                                              ; preds = %385
+  %389 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv58
+  %390 = load %struct.Book*, %struct.Book** %389, align 8, !tbaa !7
+  %391 = bitcast %struct.Book* %390 to i8*
+  call void @free(i8* %391) #2
   br label %392
 
-392:                                              ; preds = %420, %391
-  %393 = load i32, i32* %26, align 4
-  %394 = load i32, i32* %2, align 4
-  %395 = icmp slt i32 %393, %394
-  br i1 %395, label %396, label %423
+392:                                              ; preds = %388
+  %indvars.iv.next59 = add nsw i64 %indvars.iv58, -1
+  br label %385
 
-396:                                              ; preds = %392
-  %397 = call i8* @dlmalloc(i64 204)
+393:                                              ; preds = %387
+  br label %394
+
+394:                                              ; preds = %413, %393
+  %indvars.iv55 = phi i64 [ %indvars.iv.next56, %413 ], [ 0, %393 ]
+  %exitcond57 = icmp ne i64 %indvars.iv55, 1000000
+  br i1 %exitcond57, label %396, label %395
+
+395:                                              ; preds = %394
+  br label %414
+
+396:                                              ; preds = %394
+  %397 = call noalias i8* @malloc(i64 204) #2
   %398 = bitcast i8* %397 to %struct.Book*
-  store %struct.Book* %398, %struct.Book** %27, align 8
-  %399 = load %struct.Book*, %struct.Book** %27, align 8
-  %400 = getelementptr inbounds %struct.Book, %struct.Book* %399, i32 0, i32 0
-  %401 = getelementptr inbounds [50 x i8], [50 x i8]* %400, i64 0, i64 0
-  %402 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %403 = call i8* @strcpy(i8* %401, i8* %402) #1
-  %404 = load %struct.Book*, %struct.Book** %27, align 8
-  %405 = getelementptr inbounds %struct.Book, %struct.Book* %404, i32 0, i32 1
-  %406 = getelementptr inbounds [50 x i8], [50 x i8]* %405, i64 0, i64 0
-  %407 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %408 = call i8* @strcpy(i8* %406, i8* %407) #1
-  %409 = load %struct.Book*, %struct.Book** %27, align 8
-  %410 = getelementptr inbounds %struct.Book, %struct.Book* %409, i32 0, i32 2
-  %411 = getelementptr inbounds [100 x i8], [100 x i8]* %410, i64 0, i64 0
-  %412 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %413 = call i8* @strcpy(i8* %411, i8* %412) #1
-  %414 = load %struct.Book*, %struct.Book** %27, align 8
-  %415 = getelementptr inbounds %struct.Book, %struct.Book* %414, i32 0, i32 3
-  store i32 6495407, i32* %415, align 4
-  %416 = load %struct.Book*, %struct.Book** %27, align 8
-  %417 = load i32, i32* %26, align 4
-  %418 = sext i32 %417 to i64
-  %419 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %418
-  store %struct.Book* %416, %struct.Book** %419, align 8
-  br label %420
+  %399 = getelementptr inbounds %struct.Book, %struct.Book* %398, i32 0, i32 0
+  %400 = getelementptr inbounds [50 x i8], [50 x i8]* %399, i64 0, i64 0
+  %401 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %402 = call i8* @strcpy(i8* %400, i8* %401) #2
+  %403 = getelementptr inbounds %struct.Book, %struct.Book* %398, i32 0, i32 1
+  %404 = getelementptr inbounds [50 x i8], [50 x i8]* %403, i64 0, i64 0
+  %405 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %406 = call i8* @strcpy(i8* %404, i8* %405) #2
+  %407 = getelementptr inbounds %struct.Book, %struct.Book* %398, i32 0, i32 2
+  %408 = getelementptr inbounds [100 x i8], [100 x i8]* %407, i64 0, i64 0
+  %409 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %410 = call i8* @strcpy(i8* %408, i8* %409) #2
+  %411 = getelementptr inbounds %struct.Book, %struct.Book* %398, i32 0, i32 3
+  store i32 6495407, i32* %411, align 4, !tbaa !2
+  %412 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv55
+  store %struct.Book* %398, %struct.Book** %412, align 8, !tbaa !7
+  br label %413
 
-420:                                              ; preds = %396
-  %421 = load i32, i32* %26, align 4
-  %422 = add nsw i32 %421, 1
-  store i32 %422, i32* %26, align 4
-  br label %392
+413:                                              ; preds = %396
+  %indvars.iv.next56 = add nuw nsw i64 %indvars.iv55, 1
+  br label %394
 
-423:                                              ; preds = %392
-  %424 = load i32, i32* %2, align 4
-  %425 = sub nsw i32 %424, 1
-  store i32 %425, i32* %28, align 4
-  br label %426
+414:                                              ; preds = %395
+  br label %415
 
-426:                                              ; preds = %435, %423
-  %427 = load i32, i32* %28, align 4
-  %428 = icmp sge i32 %427, 0
-  br i1 %428, label %429, label %438
+415:                                              ; preds = %422, %414
+  %indvars.iv53 = phi i64 [ %indvars.iv.next54, %422 ], [ 999999, %414 ]
+  %416 = icmp sge i64 %indvars.iv53, 0
+  br i1 %416, label %418, label %417
 
-429:                                              ; preds = %426
-  %430 = load i32, i32* %28, align 4
-  %431 = sext i32 %430 to i64
-  %432 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %431
-  %433 = load %struct.Book*, %struct.Book** %432, align 8
-  %434 = bitcast %struct.Book* %433 to i8*
-  call void @dlfree(i8* %434)
-  br label %435
+417:                                              ; preds = %415
+  br label %423
 
-435:                                              ; preds = %429
-  %436 = load i32, i32* %28, align 4
-  %437 = add nsw i32 %436, -1
-  store i32 %437, i32* %28, align 4
-  br label %426
+418:                                              ; preds = %415
+  %419 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv53
+  %420 = load %struct.Book*, %struct.Book** %419, align 8, !tbaa !7
+  %421 = bitcast %struct.Book* %420 to i8*
+  call void @free(i8* %421) #2
+  br label %422
 
-438:                                              ; preds = %426
-  store i32 0, i32* %29, align 4
-  br label %439
+422:                                              ; preds = %418
+  %indvars.iv.next54 = add nsw i64 %indvars.iv53, -1
+  br label %415
 
-439:                                              ; preds = %467, %438
-  %440 = load i32, i32* %29, align 4
-  %441 = load i32, i32* %2, align 4
-  %442 = icmp slt i32 %440, %441
-  br i1 %442, label %443, label %470
+423:                                              ; preds = %417
+  br label %424
 
-443:                                              ; preds = %439
-  %444 = call i8* @dlmalloc(i64 204)
-  %445 = bitcast i8* %444 to %struct.Book*
-  store %struct.Book* %445, %struct.Book** %30, align 8
-  %446 = load %struct.Book*, %struct.Book** %30, align 8
-  %447 = getelementptr inbounds %struct.Book, %struct.Book* %446, i32 0, i32 0
-  %448 = getelementptr inbounds [50 x i8], [50 x i8]* %447, i64 0, i64 0
-  %449 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %450 = call i8* @strcpy(i8* %448, i8* %449) #1
-  %451 = load %struct.Book*, %struct.Book** %30, align 8
-  %452 = getelementptr inbounds %struct.Book, %struct.Book* %451, i32 0, i32 1
-  %453 = getelementptr inbounds [50 x i8], [50 x i8]* %452, i64 0, i64 0
-  %454 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %455 = call i8* @strcpy(i8* %453, i8* %454) #1
-  %456 = load %struct.Book*, %struct.Book** %30, align 8
-  %457 = getelementptr inbounds %struct.Book, %struct.Book* %456, i32 0, i32 2
-  %458 = getelementptr inbounds [100 x i8], [100 x i8]* %457, i64 0, i64 0
-  %459 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %460 = call i8* @strcpy(i8* %458, i8* %459) #1
-  %461 = load %struct.Book*, %struct.Book** %30, align 8
-  %462 = getelementptr inbounds %struct.Book, %struct.Book* %461, i32 0, i32 3
-  store i32 6495407, i32* %462, align 4
-  %463 = load %struct.Book*, %struct.Book** %30, align 8
-  %464 = load i32, i32* %29, align 4
-  %465 = sext i32 %464 to i64
-  %466 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %465
-  store %struct.Book* %463, %struct.Book** %466, align 8
-  br label %467
+424:                                              ; preds = %443, %423
+  %indvars.iv50 = phi i64 [ %indvars.iv.next51, %443 ], [ 0, %423 ]
+  %exitcond52 = icmp ne i64 %indvars.iv50, 1000000
+  br i1 %exitcond52, label %426, label %425
 
-467:                                              ; preds = %443
-  %468 = load i32, i32* %29, align 4
-  %469 = add nsw i32 %468, 1
-  store i32 %469, i32* %29, align 4
-  br label %439
+425:                                              ; preds = %424
+  br label %444
 
-470:                                              ; preds = %439
-  %471 = load i32, i32* %2, align 4
-  %472 = sub nsw i32 %471, 1
-  store i32 %472, i32* %31, align 4
+426:                                              ; preds = %424
+  %427 = call noalias i8* @malloc(i64 204) #2
+  %428 = bitcast i8* %427 to %struct.Book*
+  %429 = getelementptr inbounds %struct.Book, %struct.Book* %428, i32 0, i32 0
+  %430 = getelementptr inbounds [50 x i8], [50 x i8]* %429, i64 0, i64 0
+  %431 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %432 = call i8* @strcpy(i8* %430, i8* %431) #2
+  %433 = getelementptr inbounds %struct.Book, %struct.Book* %428, i32 0, i32 1
+  %434 = getelementptr inbounds [50 x i8], [50 x i8]* %433, i64 0, i64 0
+  %435 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %436 = call i8* @strcpy(i8* %434, i8* %435) #2
+  %437 = getelementptr inbounds %struct.Book, %struct.Book* %428, i32 0, i32 2
+  %438 = getelementptr inbounds [100 x i8], [100 x i8]* %437, i64 0, i64 0
+  %439 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %440 = call i8* @strcpy(i8* %438, i8* %439) #2
+  %441 = getelementptr inbounds %struct.Book, %struct.Book* %428, i32 0, i32 3
+  store i32 6495407, i32* %441, align 4, !tbaa !2
+  %442 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv50
+  store %struct.Book* %428, %struct.Book** %442, align 8, !tbaa !7
+  br label %443
+
+443:                                              ; preds = %426
+  %indvars.iv.next51 = add nuw nsw i64 %indvars.iv50, 1
+  br label %424
+
+444:                                              ; preds = %425
+  br label %445
+
+445:                                              ; preds = %452, %444
+  %indvars.iv48 = phi i64 [ %indvars.iv.next49, %452 ], [ 999999, %444 ]
+  %446 = icmp sge i64 %indvars.iv48, 0
+  br i1 %446, label %448, label %447
+
+447:                                              ; preds = %445
+  br label %453
+
+448:                                              ; preds = %445
+  %449 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv48
+  %450 = load %struct.Book*, %struct.Book** %449, align 8, !tbaa !7
+  %451 = bitcast %struct.Book* %450 to i8*
+  call void @free(i8* %451) #2
+  br label %452
+
+452:                                              ; preds = %448
+  %indvars.iv.next49 = add nsw i64 %indvars.iv48, -1
+  br label %445
+
+453:                                              ; preds = %447
+  br label %454
+
+454:                                              ; preds = %473, %453
+  %indvars.iv45 = phi i64 [ %indvars.iv.next46, %473 ], [ 0, %453 ]
+  %exitcond47 = icmp ne i64 %indvars.iv45, 1000000
+  br i1 %exitcond47, label %456, label %455
+
+455:                                              ; preds = %454
+  br label %474
+
+456:                                              ; preds = %454
+  %457 = call noalias i8* @malloc(i64 204) #2
+  %458 = bitcast i8* %457 to %struct.Book*
+  %459 = getelementptr inbounds %struct.Book, %struct.Book* %458, i32 0, i32 0
+  %460 = getelementptr inbounds [50 x i8], [50 x i8]* %459, i64 0, i64 0
+  %461 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %462 = call i8* @strcpy(i8* %460, i8* %461) #2
+  %463 = getelementptr inbounds %struct.Book, %struct.Book* %458, i32 0, i32 1
+  %464 = getelementptr inbounds [50 x i8], [50 x i8]* %463, i64 0, i64 0
+  %465 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %466 = call i8* @strcpy(i8* %464, i8* %465) #2
+  %467 = getelementptr inbounds %struct.Book, %struct.Book* %458, i32 0, i32 2
+  %468 = getelementptr inbounds [100 x i8], [100 x i8]* %467, i64 0, i64 0
+  %469 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %470 = call i8* @strcpy(i8* %468, i8* %469) #2
+  %471 = getelementptr inbounds %struct.Book, %struct.Book* %458, i32 0, i32 3
+  store i32 6495407, i32* %471, align 4, !tbaa !2
+  %472 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv45
+  store %struct.Book* %458, %struct.Book** %472, align 8, !tbaa !7
   br label %473
 
-473:                                              ; preds = %482, %470
-  %474 = load i32, i32* %31, align 4
-  %475 = icmp sge i32 %474, 0
-  br i1 %475, label %476, label %485
+473:                                              ; preds = %456
+  %indvars.iv.next46 = add nuw nsw i64 %indvars.iv45, 1
+  br label %454
 
-476:                                              ; preds = %473
-  %477 = load i32, i32* %31, align 4
-  %478 = sext i32 %477 to i64
-  %479 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %478
-  %480 = load %struct.Book*, %struct.Book** %479, align 8
+474:                                              ; preds = %455
+  br label %475
+
+475:                                              ; preds = %482, %474
+  %indvars.iv43 = phi i64 [ %indvars.iv.next44, %482 ], [ 999999, %474 ]
+  %476 = icmp sge i64 %indvars.iv43, 0
+  br i1 %476, label %478, label %477
+
+477:                                              ; preds = %475
+  br label %483
+
+478:                                              ; preds = %475
+  %479 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv43
+  %480 = load %struct.Book*, %struct.Book** %479, align 8, !tbaa !7
   %481 = bitcast %struct.Book* %480 to i8*
-  call void @dlfree(i8* %481)
+  call void @free(i8* %481) #2
   br label %482
 
-482:                                              ; preds = %476
-  %483 = load i32, i32* %31, align 4
-  %484 = add nsw i32 %483, -1
-  store i32 %484, i32* %31, align 4
-  br label %473
+482:                                              ; preds = %478
+  %indvars.iv.next44 = add nsw i64 %indvars.iv43, -1
+  br label %475
 
-485:                                              ; preds = %473
-  store i32 0, i32* %32, align 4
-  br label %486
+483:                                              ; preds = %477
+  br label %484
 
-486:                                              ; preds = %514, %485
-  %487 = load i32, i32* %32, align 4
-  %488 = load i32, i32* %2, align 4
-  %489 = icmp slt i32 %487, %488
-  br i1 %489, label %490, label %517
+484:                                              ; preds = %503, %483
+  %indvars.iv40 = phi i64 [ %indvars.iv.next41, %503 ], [ 0, %483 ]
+  %exitcond42 = icmp ne i64 %indvars.iv40, 1000000
+  br i1 %exitcond42, label %486, label %485
 
-490:                                              ; preds = %486
-  %491 = call i8* @dlmalloc(i64 204)
-  %492 = bitcast i8* %491 to %struct.Book*
-  store %struct.Book* %492, %struct.Book** %33, align 8
-  %493 = load %struct.Book*, %struct.Book** %33, align 8
-  %494 = getelementptr inbounds %struct.Book, %struct.Book* %493, i32 0, i32 0
-  %495 = getelementptr inbounds [50 x i8], [50 x i8]* %494, i64 0, i64 0
-  %496 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %497 = call i8* @strcpy(i8* %495, i8* %496) #1
-  %498 = load %struct.Book*, %struct.Book** %33, align 8
-  %499 = getelementptr inbounds %struct.Book, %struct.Book* %498, i32 0, i32 1
-  %500 = getelementptr inbounds [50 x i8], [50 x i8]* %499, i64 0, i64 0
-  %501 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %502 = call i8* @strcpy(i8* %500, i8* %501) #1
-  %503 = load %struct.Book*, %struct.Book** %33, align 8
-  %504 = getelementptr inbounds %struct.Book, %struct.Book* %503, i32 0, i32 2
-  %505 = getelementptr inbounds [100 x i8], [100 x i8]* %504, i64 0, i64 0
-  %506 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %507 = call i8* @strcpy(i8* %505, i8* %506) #1
-  %508 = load %struct.Book*, %struct.Book** %33, align 8
-  %509 = getelementptr inbounds %struct.Book, %struct.Book* %508, i32 0, i32 3
-  store i32 6495407, i32* %509, align 4
-  %510 = load %struct.Book*, %struct.Book** %33, align 8
-  %511 = load i32, i32* %32, align 4
-  %512 = sext i32 %511 to i64
-  %513 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %512
-  store %struct.Book* %510, %struct.Book** %513, align 8
+485:                                              ; preds = %484
+  br label %504
+
+486:                                              ; preds = %484
+  %487 = call noalias i8* @malloc(i64 204) #2
+  %488 = bitcast i8* %487 to %struct.Book*
+  %489 = getelementptr inbounds %struct.Book, %struct.Book* %488, i32 0, i32 0
+  %490 = getelementptr inbounds [50 x i8], [50 x i8]* %489, i64 0, i64 0
+  %491 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %492 = call i8* @strcpy(i8* %490, i8* %491) #2
+  %493 = getelementptr inbounds %struct.Book, %struct.Book* %488, i32 0, i32 1
+  %494 = getelementptr inbounds [50 x i8], [50 x i8]* %493, i64 0, i64 0
+  %495 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %496 = call i8* @strcpy(i8* %494, i8* %495) #2
+  %497 = getelementptr inbounds %struct.Book, %struct.Book* %488, i32 0, i32 2
+  %498 = getelementptr inbounds [100 x i8], [100 x i8]* %497, i64 0, i64 0
+  %499 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %500 = call i8* @strcpy(i8* %498, i8* %499) #2
+  %501 = getelementptr inbounds %struct.Book, %struct.Book* %488, i32 0, i32 3
+  store i32 6495407, i32* %501, align 4, !tbaa !2
+  %502 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv40
+  store %struct.Book* %488, %struct.Book** %502, align 8, !tbaa !7
+  br label %503
+
+503:                                              ; preds = %486
+  %indvars.iv.next41 = add nuw nsw i64 %indvars.iv40, 1
+  br label %484
+
+504:                                              ; preds = %485
+  br label %505
+
+505:                                              ; preds = %512, %504
+  %indvars.iv38 = phi i64 [ %indvars.iv.next39, %512 ], [ 999999, %504 ]
+  %506 = icmp sge i64 %indvars.iv38, 0
+  br i1 %506, label %508, label %507
+
+507:                                              ; preds = %505
+  br label %513
+
+508:                                              ; preds = %505
+  %509 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv38
+  %510 = load %struct.Book*, %struct.Book** %509, align 8, !tbaa !7
+  %511 = bitcast %struct.Book* %510 to i8*
+  call void @free(i8* %511) #2
+  br label %512
+
+512:                                              ; preds = %508
+  %indvars.iv.next39 = add nsw i64 %indvars.iv38, -1
+  br label %505
+
+513:                                              ; preds = %507
   br label %514
 
-514:                                              ; preds = %490
-  %515 = load i32, i32* %32, align 4
-  %516 = add nsw i32 %515, 1
-  store i32 %516, i32* %32, align 4
-  br label %486
+514:                                              ; preds = %533, %513
+  %indvars.iv36 = phi i64 [ %indvars.iv.next37, %533 ], [ 0, %513 ]
+  %exitcond = icmp ne i64 %indvars.iv36, 1000000
+  br i1 %exitcond, label %516, label %515
 
-517:                                              ; preds = %486
-  %518 = load i32, i32* %2, align 4
-  %519 = sub nsw i32 %518, 1
-  store i32 %519, i32* %34, align 4
-  br label %520
+515:                                              ; preds = %514
+  br label %534
 
-520:                                              ; preds = %529, %517
-  %521 = load i32, i32* %34, align 4
-  %522 = icmp sge i32 %521, 0
-  br i1 %522, label %523, label %532
-
-523:                                              ; preds = %520
-  %524 = load i32, i32* %34, align 4
-  %525 = sext i32 %524 to i64
-  %526 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %525
-  %527 = load %struct.Book*, %struct.Book** %526, align 8
-  %528 = bitcast %struct.Book* %527 to i8*
-  call void @dlfree(i8* %528)
-  br label %529
-
-529:                                              ; preds = %523
-  %530 = load i32, i32* %34, align 4
-  %531 = add nsw i32 %530, -1
-  store i32 %531, i32* %34, align 4
-  br label %520
-
-532:                                              ; preds = %520
-  store i32 0, i32* %35, align 4
+516:                                              ; preds = %514
+  %517 = call noalias i8* @malloc(i64 204) #2
+  %518 = bitcast i8* %517 to %struct.Book*
+  %519 = getelementptr inbounds %struct.Book, %struct.Book* %518, i32 0, i32 0
+  %520 = getelementptr inbounds [50 x i8], [50 x i8]* %519, i64 0, i64 0
+  %521 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
+  %522 = call i8* @strcpy(i8* %520, i8* %521) #2
+  %523 = getelementptr inbounds %struct.Book, %struct.Book* %518, i32 0, i32 1
+  %524 = getelementptr inbounds [50 x i8], [50 x i8]* %523, i64 0, i64 0
+  %525 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
+  %526 = call i8* @strcpy(i8* %524, i8* %525) #2
+  %527 = getelementptr inbounds %struct.Book, %struct.Book* %518, i32 0, i32 2
+  %528 = getelementptr inbounds [100 x i8], [100 x i8]* %527, i64 0, i64 0
+  %529 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
+  %530 = call i8* @strcpy(i8* %528, i8* %529) #2
+  %531 = getelementptr inbounds %struct.Book, %struct.Book* %518, i32 0, i32 3
+  store i32 6495407, i32* %531, align 4, !tbaa !2
+  %532 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv36
+  store %struct.Book* %518, %struct.Book** %532, align 8, !tbaa !7
   br label %533
 
-533:                                              ; preds = %561, %532
-  %534 = load i32, i32* %35, align 4
-  %535 = load i32, i32* %2, align 4
-  %536 = icmp slt i32 %534, %535
-  br i1 %536, label %537, label %564
+533:                                              ; preds = %516
+  %indvars.iv.next37 = add nuw nsw i64 %indvars.iv36, 1
+  br label %514
 
-537:                                              ; preds = %533
-  %538 = call i8* @dlmalloc(i64 204)
-  %539 = bitcast i8* %538 to %struct.Book*
-  store %struct.Book* %539, %struct.Book** %36, align 8
-  %540 = load %struct.Book*, %struct.Book** %36, align 8
-  %541 = getelementptr inbounds %struct.Book, %struct.Book* %540, i32 0, i32 0
-  %542 = getelementptr inbounds [50 x i8], [50 x i8]* %541, i64 0, i64 0
-  %543 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %544 = call i8* @strcpy(i8* %542, i8* %543) #1
-  %545 = load %struct.Book*, %struct.Book** %36, align 8
-  %546 = getelementptr inbounds %struct.Book, %struct.Book* %545, i32 0, i32 1
-  %547 = getelementptr inbounds [50 x i8], [50 x i8]* %546, i64 0, i64 0
-  %548 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %549 = call i8* @strcpy(i8* %547, i8* %548) #1
-  %550 = load %struct.Book*, %struct.Book** %36, align 8
-  %551 = getelementptr inbounds %struct.Book, %struct.Book* %550, i32 0, i32 2
-  %552 = getelementptr inbounds [100 x i8], [100 x i8]* %551, i64 0, i64 0
-  %553 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %554 = call i8* @strcpy(i8* %552, i8* %553) #1
-  %555 = load %struct.Book*, %struct.Book** %36, align 8
-  %556 = getelementptr inbounds %struct.Book, %struct.Book* %555, i32 0, i32 3
-  store i32 6495407, i32* %556, align 4
-  %557 = load %struct.Book*, %struct.Book** %36, align 8
-  %558 = load i32, i32* %35, align 4
-  %559 = sext i32 %558 to i64
-  %560 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %559
-  store %struct.Book* %557, %struct.Book** %560, align 8
-  br label %561
+534:                                              ; preds = %515
+  br label %535
 
-561:                                              ; preds = %537
-  %562 = load i32, i32* %35, align 4
-  %563 = add nsw i32 %562, 1
-  store i32 %563, i32* %35, align 4
-  br label %533
+535:                                              ; preds = %542, %534
+  %indvars.iv = phi i64 [ %indvars.iv.next, %542 ], [ 999999, %534 ]
+  %536 = icmp sge i64 %indvars.iv, 0
+  br i1 %536, label %538, label %537
 
-564:                                              ; preds = %533
-  %565 = load i32, i32* %2, align 4
-  %566 = sub nsw i32 %565, 1
-  store i32 %566, i32* %37, align 4
-  br label %567
+537:                                              ; preds = %535
+  br label %543
 
-567:                                              ; preds = %576, %564
-  %568 = load i32, i32* %37, align 4
-  %569 = icmp sge i32 %568, 0
-  br i1 %569, label %570, label %579
+538:                                              ; preds = %535
+  %539 = getelementptr inbounds %struct.Book*, %struct.Book** %3, i64 %indvars.iv
+  %540 = load %struct.Book*, %struct.Book** %539, align 8, !tbaa !7
+  %541 = bitcast %struct.Book* %540 to i8*
+  call void @free(i8* %541) #2
+  br label %542
 
-570:                                              ; preds = %567
-  %571 = load i32, i32* %37, align 4
-  %572 = sext i32 %571 to i64
-  %573 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %572
-  %574 = load %struct.Book*, %struct.Book** %573, align 8
-  %575 = bitcast %struct.Book* %574 to i8*
-  call void @dlfree(i8* %575)
-  br label %576
+542:                                              ; preds = %538
+  %indvars.iv.next = add nsw i64 %indvars.iv, -1
+  br label %535
 
-576:                                              ; preds = %570
-  %577 = load i32, i32* %37, align 4
-  %578 = add nsw i32 %577, -1
-  store i32 %578, i32* %37, align 4
-  br label %567
-
-579:                                              ; preds = %567
-  store i32 0, i32* %38, align 4
-  br label %580
-
-580:                                              ; preds = %608, %579
-  %581 = load i32, i32* %38, align 4
-  %582 = load i32, i32* %2, align 4
-  %583 = icmp slt i32 %581, %582
-  br i1 %583, label %584, label %611
-
-584:                                              ; preds = %580
-  %585 = call i8* @dlmalloc(i64 204)
-  %586 = bitcast i8* %585 to %struct.Book*
-  store %struct.Book* %586, %struct.Book** %39, align 8
-  %587 = load %struct.Book*, %struct.Book** %39, align 8
-  %588 = getelementptr inbounds %struct.Book, %struct.Book* %587, i32 0, i32 0
-  %589 = getelementptr inbounds [50 x i8], [50 x i8]* %588, i64 0, i64 0
-  %590 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %591 = call i8* @strcpy(i8* %589, i8* %590) #1
-  %592 = load %struct.Book*, %struct.Book** %39, align 8
-  %593 = getelementptr inbounds %struct.Book, %struct.Book* %592, i32 0, i32 1
-  %594 = getelementptr inbounds [50 x i8], [50 x i8]* %593, i64 0, i64 0
-  %595 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %596 = call i8* @strcpy(i8* %594, i8* %595) #1
-  %597 = load %struct.Book*, %struct.Book** %39, align 8
-  %598 = getelementptr inbounds %struct.Book, %struct.Book* %597, i32 0, i32 2
-  %599 = getelementptr inbounds [100 x i8], [100 x i8]* %598, i64 0, i64 0
-  %600 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %601 = call i8* @strcpy(i8* %599, i8* %600) #1
-  %602 = load %struct.Book*, %struct.Book** %39, align 8
-  %603 = getelementptr inbounds %struct.Book, %struct.Book* %602, i32 0, i32 3
-  store i32 6495407, i32* %603, align 4
-  %604 = load %struct.Book*, %struct.Book** %39, align 8
-  %605 = load i32, i32* %38, align 4
-  %606 = sext i32 %605 to i64
-  %607 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %606
-  store %struct.Book* %604, %struct.Book** %607, align 8
-  br label %608
-
-608:                                              ; preds = %584
-  %609 = load i32, i32* %38, align 4
-  %610 = add nsw i32 %609, 1
-  store i32 %610, i32* %38, align 4
-  br label %580
-
-611:                                              ; preds = %580
-  %612 = load i32, i32* %2, align 4
-  %613 = sub nsw i32 %612, 1
-  store i32 %613, i32* %40, align 4
-  br label %614
-
-614:                                              ; preds = %623, %611
-  %615 = load i32, i32* %40, align 4
-  %616 = icmp sge i32 %615, 0
-  br i1 %616, label %617, label %626
-
-617:                                              ; preds = %614
-  %618 = load i32, i32* %40, align 4
-  %619 = sext i32 %618 to i64
-  %620 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %619
-  %621 = load %struct.Book*, %struct.Book** %620, align 8
-  %622 = bitcast %struct.Book* %621 to i8*
-  call void @dlfree(i8* %622)
-  br label %623
-
-623:                                              ; preds = %617
-  %624 = load i32, i32* %40, align 4
-  %625 = add nsw i32 %624, -1
-  store i32 %625, i32* %40, align 4
-  br label %614
-
-626:                                              ; preds = %614
-  store i32 0, i32* %41, align 4
-  br label %627
-
-627:                                              ; preds = %655, %626
-  %628 = load i32, i32* %41, align 4
-  %629 = load i32, i32* %2, align 4
-  %630 = icmp slt i32 %628, %629
-  br i1 %630, label %631, label %658
-
-631:                                              ; preds = %627
-  %632 = call i8* @dlmalloc(i64 204)
-  %633 = bitcast i8* %632 to %struct.Book*
-  store %struct.Book* %633, %struct.Book** %42, align 8
-  %634 = load %struct.Book*, %struct.Book** %42, align 8
-  %635 = getelementptr inbounds %struct.Book, %struct.Book* %634, i32 0, i32 0
-  %636 = getelementptr inbounds [50 x i8], [50 x i8]* %635, i64 0, i64 0
-  %637 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %638 = call i8* @strcpy(i8* %636, i8* %637) #1
-  %639 = load %struct.Book*, %struct.Book** %42, align 8
-  %640 = getelementptr inbounds %struct.Book, %struct.Book* %639, i32 0, i32 1
-  %641 = getelementptr inbounds [50 x i8], [50 x i8]* %640, i64 0, i64 0
-  %642 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %643 = call i8* @strcpy(i8* %641, i8* %642) #1
-  %644 = load %struct.Book*, %struct.Book** %42, align 8
-  %645 = getelementptr inbounds %struct.Book, %struct.Book* %644, i32 0, i32 2
-  %646 = getelementptr inbounds [100 x i8], [100 x i8]* %645, i64 0, i64 0
-  %647 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %648 = call i8* @strcpy(i8* %646, i8* %647) #1
-  %649 = load %struct.Book*, %struct.Book** %42, align 8
-  %650 = getelementptr inbounds %struct.Book, %struct.Book* %649, i32 0, i32 3
-  store i32 6495407, i32* %650, align 4
-  %651 = load %struct.Book*, %struct.Book** %42, align 8
-  %652 = load i32, i32* %41, align 4
-  %653 = sext i32 %652 to i64
-  %654 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %653
-  store %struct.Book* %651, %struct.Book** %654, align 8
-  br label %655
-
-655:                                              ; preds = %631
-  %656 = load i32, i32* %41, align 4
-  %657 = add nsw i32 %656, 1
-  store i32 %657, i32* %41, align 4
-  br label %627
-
-658:                                              ; preds = %627
-  %659 = load i32, i32* %2, align 4
-  %660 = sub nsw i32 %659, 1
-  store i32 %660, i32* %43, align 4
-  br label %661
-
-661:                                              ; preds = %670, %658
-  %662 = load i32, i32* %43, align 4
-  %663 = icmp sge i32 %662, 0
-  br i1 %663, label %664, label %673
-
-664:                                              ; preds = %661
-  %665 = load i32, i32* %43, align 4
-  %666 = sext i32 %665 to i64
-  %667 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %666
-  %668 = load %struct.Book*, %struct.Book** %667, align 8
-  %669 = bitcast %struct.Book* %668 to i8*
-  call void @dlfree(i8* %669)
-  br label %670
-
-670:                                              ; preds = %664
-  %671 = load i32, i32* %43, align 4
-  %672 = add nsw i32 %671, -1
-  store i32 %672, i32* %43, align 4
-  br label %661
-
-673:                                              ; preds = %661
-  store i32 0, i32* %44, align 4
-  br label %674
-
-674:                                              ; preds = %702, %673
-  %675 = load i32, i32* %44, align 4
-  %676 = load i32, i32* %2, align 4
-  %677 = icmp slt i32 %675, %676
-  br i1 %677, label %678, label %705
-
-678:                                              ; preds = %674
-  %679 = call i8* @dlmalloc(i64 204)
-  %680 = bitcast i8* %679 to %struct.Book*
-  store %struct.Book* %680, %struct.Book** %45, align 8
-  %681 = load %struct.Book*, %struct.Book** %45, align 8
-  %682 = getelementptr inbounds %struct.Book, %struct.Book* %681, i32 0, i32 0
-  %683 = getelementptr inbounds [50 x i8], [50 x i8]* %682, i64 0, i64 0
-  %684 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %685 = call i8* @strcpy(i8* %683, i8* %684) #1
-  %686 = load %struct.Book*, %struct.Book** %45, align 8
-  %687 = getelementptr inbounds %struct.Book, %struct.Book* %686, i32 0, i32 1
-  %688 = getelementptr inbounds [50 x i8], [50 x i8]* %687, i64 0, i64 0
-  %689 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %690 = call i8* @strcpy(i8* %688, i8* %689) #1
-  %691 = load %struct.Book*, %struct.Book** %45, align 8
-  %692 = getelementptr inbounds %struct.Book, %struct.Book* %691, i32 0, i32 2
-  %693 = getelementptr inbounds [100 x i8], [100 x i8]* %692, i64 0, i64 0
-  %694 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %695 = call i8* @strcpy(i8* %693, i8* %694) #1
-  %696 = load %struct.Book*, %struct.Book** %45, align 8
-  %697 = getelementptr inbounds %struct.Book, %struct.Book* %696, i32 0, i32 3
-  store i32 6495407, i32* %697, align 4
-  %698 = load %struct.Book*, %struct.Book** %45, align 8
-  %699 = load i32, i32* %44, align 4
-  %700 = sext i32 %699 to i64
-  %701 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %700
-  store %struct.Book* %698, %struct.Book** %701, align 8
-  br label %702
-
-702:                                              ; preds = %678
-  %703 = load i32, i32* %44, align 4
-  %704 = add nsw i32 %703, 1
-  store i32 %704, i32* %44, align 4
-  br label %674
-
-705:                                              ; preds = %674
-  %706 = load i32, i32* %2, align 4
-  %707 = sub nsw i32 %706, 1
-  store i32 %707, i32* %46, align 4
-  br label %708
-
-708:                                              ; preds = %717, %705
-  %709 = load i32, i32* %46, align 4
-  %710 = icmp sge i32 %709, 0
-  br i1 %710, label %711, label %720
-
-711:                                              ; preds = %708
-  %712 = load i32, i32* %46, align 4
-  %713 = sext i32 %712 to i64
-  %714 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %713
-  %715 = load %struct.Book*, %struct.Book** %714, align 8
-  %716 = bitcast %struct.Book* %715 to i8*
-  call void @dlfree(i8* %716)
-  br label %717
-
-717:                                              ; preds = %711
-  %718 = load i32, i32* %46, align 4
-  %719 = add nsw i32 %718, -1
-  store i32 %719, i32* %46, align 4
-  br label %708
-
-720:                                              ; preds = %708
-  store i32 0, i32* %47, align 4
-  br label %721
-
-721:                                              ; preds = %749, %720
-  %722 = load i32, i32* %47, align 4
-  %723 = load i32, i32* %2, align 4
-  %724 = icmp slt i32 %722, %723
-  br i1 %724, label %725, label %752
-
-725:                                              ; preds = %721
-  %726 = call i8* @dlmalloc(i64 204)
-  %727 = bitcast i8* %726 to %struct.Book*
-  store %struct.Book* %727, %struct.Book** %48, align 8
-  %728 = load %struct.Book*, %struct.Book** %48, align 8
-  %729 = getelementptr inbounds %struct.Book, %struct.Book* %728, i32 0, i32 0
-  %730 = getelementptr inbounds [50 x i8], [50 x i8]* %729, i64 0, i64 0
-  %731 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %732 = call i8* @strcpy(i8* %730, i8* %731) #1
-  %733 = load %struct.Book*, %struct.Book** %48, align 8
-  %734 = getelementptr inbounds %struct.Book, %struct.Book* %733, i32 0, i32 1
-  %735 = getelementptr inbounds [50 x i8], [50 x i8]* %734, i64 0, i64 0
-  %736 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %737 = call i8* @strcpy(i8* %735, i8* %736) #1
-  %738 = load %struct.Book*, %struct.Book** %48, align 8
-  %739 = getelementptr inbounds %struct.Book, %struct.Book* %738, i32 0, i32 2
-  %740 = getelementptr inbounds [100 x i8], [100 x i8]* %739, i64 0, i64 0
-  %741 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %742 = call i8* @strcpy(i8* %740, i8* %741) #1
-  %743 = load %struct.Book*, %struct.Book** %48, align 8
-  %744 = getelementptr inbounds %struct.Book, %struct.Book* %743, i32 0, i32 3
-  store i32 6495407, i32* %744, align 4
-  %745 = load %struct.Book*, %struct.Book** %48, align 8
-  %746 = load i32, i32* %47, align 4
-  %747 = sext i32 %746 to i64
-  %748 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %747
-  store %struct.Book* %745, %struct.Book** %748, align 8
-  br label %749
-
-749:                                              ; preds = %725
-  %750 = load i32, i32* %47, align 4
-  %751 = add nsw i32 %750, 1
-  store i32 %751, i32* %47, align 4
-  br label %721
-
-752:                                              ; preds = %721
-  %753 = load i32, i32* %2, align 4
-  %754 = sub nsw i32 %753, 1
-  store i32 %754, i32* %49, align 4
-  br label %755
-
-755:                                              ; preds = %764, %752
-  %756 = load i32, i32* %49, align 4
-  %757 = icmp sge i32 %756, 0
-  br i1 %757, label %758, label %767
-
-758:                                              ; preds = %755
-  %759 = load i32, i32* %49, align 4
-  %760 = sext i32 %759 to i64
-  %761 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %760
-  %762 = load %struct.Book*, %struct.Book** %761, align 8
-  %763 = bitcast %struct.Book* %762 to i8*
-  call void @dlfree(i8* %763)
-  br label %764
-
-764:                                              ; preds = %758
-  %765 = load i32, i32* %49, align 4
-  %766 = add nsw i32 %765, -1
-  store i32 %766, i32* %49, align 4
-  br label %755
-
-767:                                              ; preds = %755
-  store i32 0, i32* %50, align 4
-  br label %768
-
-768:                                              ; preds = %796, %767
-  %769 = load i32, i32* %50, align 4
-  %770 = load i32, i32* %2, align 4
-  %771 = icmp slt i32 %769, %770
-  br i1 %771, label %772, label %799
-
-772:                                              ; preds = %768
-  %773 = call i8* @dlmalloc(i64 204)
-  %774 = bitcast i8* %773 to %struct.Book*
-  store %struct.Book* %774, %struct.Book** %51, align 8
-  %775 = load %struct.Book*, %struct.Book** %51, align 8
-  %776 = getelementptr inbounds %struct.Book, %struct.Book* %775, i32 0, i32 0
-  %777 = getelementptr inbounds [50 x i8], [50 x i8]* %776, i64 0, i64 0
-  %778 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %779 = call i8* @strcpy(i8* %777, i8* %778) #1
-  %780 = load %struct.Book*, %struct.Book** %51, align 8
-  %781 = getelementptr inbounds %struct.Book, %struct.Book* %780, i32 0, i32 1
-  %782 = getelementptr inbounds [50 x i8], [50 x i8]* %781, i64 0, i64 0
-  %783 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %784 = call i8* @strcpy(i8* %782, i8* %783) #1
-  %785 = load %struct.Book*, %struct.Book** %51, align 8
-  %786 = getelementptr inbounds %struct.Book, %struct.Book* %785, i32 0, i32 2
-  %787 = getelementptr inbounds [100 x i8], [100 x i8]* %786, i64 0, i64 0
-  %788 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %789 = call i8* @strcpy(i8* %787, i8* %788) #1
-  %790 = load %struct.Book*, %struct.Book** %51, align 8
-  %791 = getelementptr inbounds %struct.Book, %struct.Book* %790, i32 0, i32 3
-  store i32 6495407, i32* %791, align 4
-  %792 = load %struct.Book*, %struct.Book** %51, align 8
-  %793 = load i32, i32* %50, align 4
-  %794 = sext i32 %793 to i64
-  %795 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %794
-  store %struct.Book* %792, %struct.Book** %795, align 8
-  br label %796
-
-796:                                              ; preds = %772
-  %797 = load i32, i32* %50, align 4
-  %798 = add nsw i32 %797, 1
-  store i32 %798, i32* %50, align 4
-  br label %768
-
-799:                                              ; preds = %768
-  %800 = load i32, i32* %2, align 4
-  %801 = sub nsw i32 %800, 1
-  store i32 %801, i32* %52, align 4
-  br label %802
-
-802:                                              ; preds = %811, %799
-  %803 = load i32, i32* %52, align 4
-  %804 = icmp sge i32 %803, 0
-  br i1 %804, label %805, label %814
-
-805:                                              ; preds = %802
-  %806 = load i32, i32* %52, align 4
-  %807 = sext i32 %806 to i64
-  %808 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %807
-  %809 = load %struct.Book*, %struct.Book** %808, align 8
-  %810 = bitcast %struct.Book* %809 to i8*
-  call void @dlfree(i8* %810)
-  br label %811
-
-811:                                              ; preds = %805
-  %812 = load i32, i32* %52, align 4
-  %813 = add nsw i32 %812, -1
-  store i32 %813, i32* %52, align 4
-  br label %802
-
-814:                                              ; preds = %802
-  store i32 0, i32* %53, align 4
-  br label %815
-
-815:                                              ; preds = %843, %814
-  %816 = load i32, i32* %53, align 4
-  %817 = load i32, i32* %2, align 4
-  %818 = icmp slt i32 %816, %817
-  br i1 %818, label %819, label %846
-
-819:                                              ; preds = %815
-  %820 = call i8* @dlmalloc(i64 204)
-  %821 = bitcast i8* %820 to %struct.Book*
-  store %struct.Book* %821, %struct.Book** %54, align 8
-  %822 = load %struct.Book*, %struct.Book** %54, align 8
-  %823 = getelementptr inbounds %struct.Book, %struct.Book* %822, i32 0, i32 0
-  %824 = getelementptr inbounds [50 x i8], [50 x i8]* %823, i64 0, i64 0
-  %825 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %826 = call i8* @strcpy(i8* %824, i8* %825) #1
-  %827 = load %struct.Book*, %struct.Book** %54, align 8
-  %828 = getelementptr inbounds %struct.Book, %struct.Book* %827, i32 0, i32 1
-  %829 = getelementptr inbounds [50 x i8], [50 x i8]* %828, i64 0, i64 0
-  %830 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %831 = call i8* @strcpy(i8* %829, i8* %830) #1
-  %832 = load %struct.Book*, %struct.Book** %54, align 8
-  %833 = getelementptr inbounds %struct.Book, %struct.Book* %832, i32 0, i32 2
-  %834 = getelementptr inbounds [100 x i8], [100 x i8]* %833, i64 0, i64 0
-  %835 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %836 = call i8* @strcpy(i8* %834, i8* %835) #1
-  %837 = load %struct.Book*, %struct.Book** %54, align 8
-  %838 = getelementptr inbounds %struct.Book, %struct.Book* %837, i32 0, i32 3
-  store i32 6495407, i32* %838, align 4
-  %839 = load %struct.Book*, %struct.Book** %54, align 8
-  %840 = load i32, i32* %53, align 4
-  %841 = sext i32 %840 to i64
-  %842 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %841
-  store %struct.Book* %839, %struct.Book** %842, align 8
-  br label %843
-
-843:                                              ; preds = %819
-  %844 = load i32, i32* %53, align 4
-  %845 = add nsw i32 %844, 1
-  store i32 %845, i32* %53, align 4
-  br label %815
-
-846:                                              ; preds = %815
-  %847 = load i32, i32* %2, align 4
-  %848 = sub nsw i32 %847, 1
-  store i32 %848, i32* %55, align 4
-  br label %849
-
-849:                                              ; preds = %858, %846
-  %850 = load i32, i32* %55, align 4
-  %851 = icmp sge i32 %850, 0
-  br i1 %851, label %852, label %861
-
-852:                                              ; preds = %849
-  %853 = load i32, i32* %55, align 4
-  %854 = sext i32 %853 to i64
-  %855 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %854
-  %856 = load %struct.Book*, %struct.Book** %855, align 8
-  %857 = bitcast %struct.Book* %856 to i8*
-  call void @dlfree(i8* %857)
-  br label %858
-
-858:                                              ; preds = %852
-  %859 = load i32, i32* %55, align 4
-  %860 = add nsw i32 %859, -1
-  store i32 %860, i32* %55, align 4
-  br label %849
-
-861:                                              ; preds = %849
-  store i32 0, i32* %56, align 4
-  br label %862
-
-862:                                              ; preds = %890, %861
-  %863 = load i32, i32* %56, align 4
-  %864 = load i32, i32* %2, align 4
-  %865 = icmp slt i32 %863, %864
-  br i1 %865, label %866, label %893
-
-866:                                              ; preds = %862
-  %867 = call i8* @dlmalloc(i64 204)
-  %868 = bitcast i8* %867 to %struct.Book*
-  store %struct.Book* %868, %struct.Book** %57, align 8
-  %869 = load %struct.Book*, %struct.Book** %57, align 8
-  %870 = getelementptr inbounds %struct.Book, %struct.Book* %869, i32 0, i32 0
-  %871 = getelementptr inbounds [50 x i8], [50 x i8]* %870, i64 0, i64 0
-  %872 = getelementptr [14 x i8], [14 x i8]* @.str, i64 0, i64 0
-  %873 = call i8* @strcpy(i8* %871, i8* %872) #1
-  %874 = load %struct.Book*, %struct.Book** %57, align 8
-  %875 = getelementptr inbounds %struct.Book, %struct.Book* %874, i32 0, i32 1
-  %876 = getelementptr inbounds [50 x i8], [50 x i8]* %875, i64 0, i64 0
-  %877 = getelementptr [9 x i8], [9 x i8]* @.str.1, i64 0, i64 0
-  %878 = call i8* @strcpy(i8* %876, i8* %877) #1
-  %879 = load %struct.Book*, %struct.Book** %57, align 8
-  %880 = getelementptr inbounds %struct.Book, %struct.Book* %879, i32 0, i32 2
-  %881 = getelementptr inbounds [100 x i8], [100 x i8]* %880, i64 0, i64 0
-  %882 = getelementptr [23 x i8], [23 x i8]* @.str.2, i64 0, i64 0
-  %883 = call i8* @strcpy(i8* %881, i8* %882) #1
-  %884 = load %struct.Book*, %struct.Book** %57, align 8
-  %885 = getelementptr inbounds %struct.Book, %struct.Book* %884, i32 0, i32 3
-  store i32 6495407, i32* %885, align 4
-  %886 = load %struct.Book*, %struct.Book** %57, align 8
-  %887 = load i32, i32* %56, align 4
-  %888 = sext i32 %887 to i64
-  %889 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %888
-  store %struct.Book* %886, %struct.Book** %889, align 8
-  br label %890
-
-890:                                              ; preds = %866
-  %891 = load i32, i32* %56, align 4
-  %892 = add nsw i32 %891, 1
-  store i32 %892, i32* %56, align 4
-  br label %862
-
-893:                                              ; preds = %862
-  %894 = load i32, i32* %2, align 4
-  %895 = sub nsw i32 %894, 1
-  store i32 %895, i32* %58, align 4
-  br label %896
-
-896:                                              ; preds = %905, %893
-  %897 = load i32, i32* %58, align 4
-  %898 = icmp sge i32 %897, 0
-  br i1 %898, label %899, label %908
-
-899:                                              ; preds = %896
-  %900 = load i32, i32* %58, align 4
-  %901 = sext i32 %900 to i64
-  %902 = getelementptr inbounds %struct.Book*, %struct.Book** %62, i64 %901
-  %903 = load %struct.Book*, %struct.Book** %902, align 8
-  %904 = bitcast %struct.Book* %903 to i8*
-  call void @dlfree(i8* %904)
-  br label %905
-
-905:                                              ; preds = %899
-  %906 = load i32, i32* %58, align 4
-  %907 = add nsw i32 %906, -1
-  store i32 %907, i32* %58, align 4
-  br label %896
-
-908:                                              ; preds = %896
-  store i32 0, i32* %1, align 4
-  %909 = load i8*, i8** %3, align 8
-  call void @llvm.stackrestore(i8* %909)
-  %910 = load i32, i32* %1, align 4
-  ret i32 %910
+543:                                              ; preds = %537
+  call void @llvm.stackrestore(i8* %2)
+  ret i32 0
 }
 
-; Function Attrs: nounwind
-declare i8* @llvm.stacksave() #1
+; Function Attrs: argmemonly nounwind
+declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #1
 
 ; Function Attrs: nounwind
-declare dso_local noalias i8* @malloc(i64) #2
+declare i8* @llvm.stacksave() #2
 
 ; Function Attrs: nounwind
-declare dso_local i8* @strcpy(i8*, i8*) #2
+declare dso_local noalias i8* @malloc(i64) #3
 
 ; Function Attrs: nounwind
-declare dso_local void @free(i8*) #2
+declare dso_local i8* @strcpy(i8*, i8*) #3
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #1
 
 ; Function Attrs: nounwind
-declare void @llvm.stackrestore(i8*) #1
+declare dso_local void @free(i8*) #3
 
-declare i8* @dlmalloc(i64)
+; Function Attrs: nounwind
+declare void @llvm.stackrestore(i8*) #2
 
-declare void @dlfree(i8*)
-
-attributes #0 = { noinline nounwind optnone uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
-attributes #1 = { nounwind }
-attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #0 = { nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-frame-pointer-elim"="false" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { argmemonly nounwind }
+attributes #2 = { nounwind }
+attributes #3 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
 
 !llvm.module.flags = !{!0}
 !llvm.ident = !{!1}
 
 !0 = !{i32 1, !"wchar_size", i32 4}
 !1 = !{!"clang version 9.0.0 (git@github.com:scampanoni/LLVM_installer.git 713d2f6594d9a0b77e7f9a120aaa7c917715a640)"}
+!2 = !{!3, !6, i64 200}
+!3 = !{!"Book", !4, i64 0, !4, i64 50, !4, i64 100, !6, i64 200}
+!4 = !{!"omnipotent char", !5, i64 0}
+!5 = !{!"Simple C/C++ TBAA"}
+!6 = !{!"int", !4, i64 0}
+!7 = !{!8, !8, i64 0}
+!8 = !{!"any pointer", !4, i64 0}

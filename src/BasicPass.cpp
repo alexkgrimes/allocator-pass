@@ -11,14 +11,10 @@
 
 using namespace llvm::noelle;
 
-enum Allocator {
-  std_malloc, jemalloc, dlmalloc
-};
-
 static cl::opt<Allocator> SpecifiedAllocator(cl::desc("Specify which allocator to use."), 
   cl::values(
     clEnumVal(std_malloc , "Use malloc/free"),
-    clEnumVal(jemalloc, "Use jemalloc/jefree"),
+    clEnumVal(std_jemalloc, "Use jemalloc/jefree"),
     clEnumVal(dlmalloc, "Use dlmalloc/dlfree")));
 
 namespace {
@@ -46,7 +42,15 @@ namespace {
        */
       // auto insts = noelle.numberOfProgramInstructions();
 
-      bruteForceReplaceAlloc();
+      // using AlexAllocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>, 
+      //                                     Segregator<256, Mallocator, Jemallocator>>;
+
+      // AlexAllocator bestAllocator;
+
+      // auto m1 = bestAllocator.allocate(32);
+      // bestAllocator.deallocate(m1);
+
+      // bruteForceReplaceAlloc();
 
       return true;
     }
@@ -62,7 +66,7 @@ namespace {
         case std_malloc:
           return;
 
-        case jemalloc:
+        case std_jemalloc:
           mallocName = "jemalloc";
           freeName = "jefree";
           break;

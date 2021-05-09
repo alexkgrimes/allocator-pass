@@ -1,6 +1,8 @@
 
+rm -rf run
+mkdir run
+
 output="run/output.txt"
-rm $output
 touch $output
 echo "test_name, malloc_time, jemalloc_time, dlmalloc_time" &> $output
 
@@ -24,13 +26,13 @@ for filename in *.c; do
     output="output.txt";
 
     # compile to bitcode
-    clang -S -emit-llvm -o "$ex".ll ../code-samples/"$filename" -pthread;
+    clang -O1 -S -emit-llvm -Xclang -disable-llvm-passes -o "$ex".ll ../code-samples/"$filename" -pthread;
 
     # noelle norm
     noelle-norm "$ex".ll -o "$ex".ll;   
 
     # compile with jemalloc
-    noelle-load -S -load ~/CAT/lib/CAT.so -CAT -jemalloc "$ex".ll -o "$ex"-jemalloc.ll;
+    noelle-load -S -load ~/CAT/lib/CAT.so -CAT -std_jemalloc "$ex".ll -o "$ex"-jemalloc.ll;
     llc -filetype=obj "$ex"-jemalloc.ll -o "$ex"-jemalloc.o;
 
     clang "$ex"-jemalloc.o -o "$ex"-jemalloc -I`jemalloc-config --includedir` \
