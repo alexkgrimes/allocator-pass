@@ -16,7 +16,7 @@ for filename in *.c; do
     echo -n "$ex, " >> $output
 
     # compile program with malloc
-    clang -o "$ex" "$filename" -pthread;
+    clang -O1 -o "$ex" "$filename" -pthread;
 
     # run program with malloc
     perf stat ./$ex 2>&1 >/dev/null | tail -n 6 | sed 's/ \+//' | sed 's/ /, /' | head -n1 | sed -e 's/\s.*$//'| awk '{printf("%s ", $0)}' >> $output

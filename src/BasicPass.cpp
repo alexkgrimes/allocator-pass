@@ -42,13 +42,13 @@ namespace {
        */
       // auto insts = noelle.numberOfProgramInstructions();
 
-      // using AlexAllocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>, 
-      //                                     Segregator<256, Mallocator, Jemallocator>>;
+      using AlexAllocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>, 
+                                          Segregator<1248, Mallocator, Jemallocator>>;
+ 
+      AlexAllocator bestAllocator;
 
-      // AlexAllocator bestAllocator;
-
-      // auto m1 = bestAllocator.allocate(32);
-      // bestAllocator.deallocate(m1);
+      auto m1 = bestAllocator.allocate(32);
+      bestAllocator.deallocate(m1);
 
       // bruteForceReplaceAlloc();
 

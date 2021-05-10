@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <memory>
 #include <map>
+#include <iostream>
 #include "../../../alex/jemalloc/include/jemalloc/jemalloc.h"
 
 enum Allocator {
@@ -22,11 +23,11 @@ struct Block {
 };
 
 // MARK: - Mallocator
-
 class Mallocator {
   public:
 
-    Block allocate(size_t n) {
+    Block allocate(size_t n) noexcept {
+      std::cout << "Mallocator::allocate\n";
       Block result;
 
       if (n == 0) {
@@ -42,18 +43,19 @@ class Mallocator {
       return result;
     }
 
-    void deallocate(Block &b) {
+    void deallocate(Block &b) noexcept {
+      std::cout << "Mallocator::deallocate\n";
       free(b.ptr);
       b.reset();
     }
 };
 
 // MARK: - Jemallocator
-
 class Jemallocator {
   public:
 
-    Block allocate(size_t n) {
+    Block allocate(size_t n) noexcept {
+      std::cout << "Jemallocator::allocate\n";
       Block result;
 
       if (n == 0) {
@@ -69,19 +71,23 @@ class Jemallocator {
       return result;
     }
 
-    void deallocate(Block &b) {
+    void deallocate(Block &b) noexcept {
+      std::cout << "Jemallocator::deallocate\n";
       jefree(b.ptr);
       b.reset();
     }
 };
 
 template <size_t Threshold, class SmallAllocator, class LargeAllocator>
-  class Segregator : private SmallAllocator, private LargeAllocator {
+  class Segregator: private SmallAllocator, LargeAllocator {
     public:
+
+      // using SmallAllocator = VirtualSmallAllocator;
+      // using LargeAllocator = VirtualLargeAllocator;
 
       static constexpr size_t threshold = Threshold;
 
-      Block allocate(size_t n) {
+      Block allocate(size_t n) noexcept {
         Block result;
         if (n <= threshold) {
           result = SmallAllocator::allocate(n);
@@ -92,7 +98,7 @@ template <size_t Threshold, class SmallAllocator, class LargeAllocator>
         return result;
       }
 
-      void deallocate(Block &b) {
+      void deallocate(Block &b) noexcept {
 
         if (b.length <= Threshold) {
           return SmallAllocator::deallocate(b);
