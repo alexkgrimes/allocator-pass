@@ -6,11 +6,7 @@
 #include <memory>
 #include <map>
 #include <iostream>
-#include "../../../alex/jemalloc/include/jemalloc/jemalloc.h"
-
-enum Allocator {
-  std_malloc, std_jemalloc, dlmalloc
-};
+#include "../../../../alex/jemalloc/include/jemalloc/jemalloc.h"
 
 struct Block {
   void  *ptr;
@@ -106,6 +102,17 @@ template <size_t Threshold, class SmallAllocator, class LargeAllocator>
         return LargeAllocator::deallocate(b);
       }
   };
+
+  // int main() {
+  //    using AlexAllocator = Segregator<8, Segregator<1637, Mallocator, Jemallocator>, 
+  //                                         Segregator<2963, Mallocator, Jemallocator>>;
+ 
+  //     AlexAllocator bestAllocator;
+
+  //     auto m1 = bestAllocator.allocate(32);
+  //     bestAllocator.deallocate(m1);
+  //     return 0;
+  // }
 
 
 

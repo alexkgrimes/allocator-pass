@@ -5,17 +5,35 @@
 #include "llvm/Transforms/IPO/PassManagerBuilder.h"
 #include "llvm/Analysis/TargetLibraryInfo.h"
 #include "llvm/Support/CommandLine.h"
+#include <map>
 
 #include "Noelle.hpp"
-#include "Synthesizer.cpp"
 
 using namespace llvm::noelle;
+
+enum Allocator {
+  std_malloc, std_jemalloc, dlmalloc
+};
+
+enum PassType {
+  synthesize, replace_alloc
+};
 
 static cl::opt<Allocator> SpecifiedAllocator(cl::desc("Specify which allocator to use."), 
   cl::values(
     clEnumVal(std_malloc , "Use malloc/free"),
     clEnumVal(std_jemalloc, "Use jemalloc/jefree"),
     clEnumVal(dlmalloc, "Use dlmalloc/dlfree")));
+
+static cl::opt<PassType> SpecifiedPassType(cl::desc("Specify which whether we need analysis or replace allocs."), 
+  cl::values(
+    clEnumVal(synthesize, "Analyze allocations and create synthesized allocator"),
+    clEnumVal(replace_alloc, "Replace allocations with synthesized allocator")));
+
+enum AllocWeight {
+  weight_flat, weight_loop
+};
+static const char* weightNames[] = { "weight_flat", "weight_loop" };
 
 namespace {
 
@@ -31,28 +49,100 @@ namespace {
     }
 
     bool runOnModule (Module &M) override {
+      
+      switch (SpecifiedPassType) {
+        case synthesize: {
+          errs() << "synthesizing stage\n";
+          auto allocatorMap = collectAllocInfo();
+          print(allocatorMap);
 
-      /*
-       * Fetch NOELLE
-       */
+          std::ofstream outfile ("../src/Allocator.cpp");
+
+          outfile << "#include \"AllocatorLib.cpp\"\n\n"
+
+                      "class AlexAllocator {\n"
+                      "    using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,\n" 
+                      "                                          Segregator<1248, Mallocator, Jemallocator>>;\n\n"
+                      "    static alex_allocator bestAllocator;\n"
+                      "    static Block allocate(size_t n) {\n"
+                      "        return bestAllocator.allocate(n);\n"
+                      "    }\n\n"
+
+                      "    static void deallocate(Block &b) {\n"
+                      "        bestAllocator.deallocate(b);\n"
+                      "    }\n"
+                      "};" 
+                      << std::endl;
+
+          outfile.close();
+          break;
+        }
+        case replace_alloc:
+          errs() << "replace alloc stage\n";
+          // TODO
+          break;
+      }
+      
+
+      // using AlexAllocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>, 
+      //                                     Segregator<1248, Mallocator, Jemallocator>>;
+ 
+      // AlexAllocator bestAllocator;
+
+      // auto m1 = bestAllocator.allocate(32);
+      // bestAllocator.deallocate(m1);
+
+      if (SpecifiedAllocator != NULL) {
+        errs() << "Replacing all allocators with a general purpose\n";
+        bruteForceReplaceAlloc();
+      }
+      return true;
+    }
+
+    map<size_t, AllocWeight> collectAllocInfo() {
       auto& noelle = getAnalysis<Noelle>();
 
-      /*
-       * Use NOELLE
-       */
-      // auto insts = noelle.numberOfProgramInstructions();
+      map<size_t, AllocWeight> allocatorMap;
 
-      using AlexAllocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>, 
-                                          Segregator<1248, Mallocator, Jemallocator>>;
- 
-      AlexAllocator bestAllocator;
+      auto instIter = [&](Instruction *inst, AllocWeight weight) mutable -> void {
 
-      auto m1 = bestAllocator.allocate(32);
-      bestAllocator.deallocate(m1);
+        if (auto callInst = dyn_cast<CallInst>(inst)) {
+          if (callInst->getCalledFunction()->getName() == "malloc") {
+            auto parameter = callInst->getArgOperand(0);
+            if (llvm::ConstantInt* size = dyn_cast<llvm::ConstantInt>(parameter)) {
+              allocatorMap[size->getSExtValue()] = weight;
+            }
+          }
+        }
+      };
+           
 
-      // bruteForceReplaceAlloc();
+      for (auto &f : currentModule->functions()) {
+        for (auto &bb : f) {
+          for (auto &inst : bb) {
+            instIter(&inst, weight_flat);
+          }
+        }
+      }
 
-      return true;
+      auto loops = noelle.getLoops();
+      for (auto loop : *loops) {
+        auto LS = loop->getLoopStructure();
+        for (auto bb : LS->getBasicBlocks()) {
+          for (auto &inst : *bb) {
+            instIter(&inst, weight_loop);
+          }
+        }
+      }
+      return allocatorMap;
+    }
+
+    void print(map<size_t, AllocWeight> allocatorMap) {
+      errs() << "\n";
+      for (auto [size, weight] : allocatorMap) {
+        errs() << size << " : " << weightNames[weight] << "\n";
+      }
+      errs() << "\n";
     }
 
     void bruteForceReplaceAlloc() {
