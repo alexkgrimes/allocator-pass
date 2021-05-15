@@ -15,8 +15,9 @@ noelle-norm "$ex".ll -o "$ex".ll;
 noelle-load -S -load ~/CAT/lib/CAT.so -CAT -synthesize "$ex".ll -o "$ex".ll; 
 noelle-load -S -load ~/CAT/lib/CAT.so -CAT -replace_alloc "$ex".ll -o "$ex".ll; 
 
-llc -filetype=obj "$ex".ll;
-clang++ -g "$ex".o ../src/AllocatorLib.cpp ../src/Allocator.cpp;
+opt -O3 "$ex".ll -o "$ex".ll;
+clang -O3 -c -march=native "$ex".ll;
+clang++ -g -O3 "$ex".o ../src/AllocatorLib.cpp ../src/Allocator.cpp;
 ./a.out;
 
 cd ../..;
