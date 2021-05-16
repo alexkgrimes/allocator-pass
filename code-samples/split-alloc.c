@@ -46,4 +46,11 @@ int main (){
   struct Bear *bear2 = (struct Bear*) malloc(sizeof(struct Bear));
   strcpy(bear2->name, "Brown Bear");
   printf("Name: %s\n", bear2->name);
+
+  int* num = (int*) malloc(sizeof(int64_t));
+  *num = 86;
+  free(num);
+
+  free(bear);
+  free(bear2);
 }

@@ -7,15 +7,57 @@
 #include <map>
 #include <iostream>
 #include "../../../../alex/jemalloc/include/jemalloc/jemalloc.h"
+#include "memory-allocators/includes/StackAllocator.h"
 
 struct Block {
   void  *ptr;
   size_t length;
 
+  Block() {}
+
+  Block(void* p, size_t l) {
+    ptr = p;
+    length = l;
+  }
+
   void reset() {
     ptr = nullptr;
     length = 0;
   }
+};
+
+// MARK: - Stackocator
+template <size_t TotalSize>
+class Stackocator {
+  private: 
+
+    static constexpr size_t totalSize = TotalSize;
+    Allocator * stackAllocator = new StackAllocator(totalSize);
+
+  public:
+
+    Block allocate(size_t n) noexcept {
+      std::cout << "Stackocator::allocate\n";
+      Block result;
+
+      if (n == 0) {
+        return result;
+      }
+
+      auto p = stackAllocator->Allocate(n);
+      if (p != nullptr) {
+        result.ptr = p;
+        result.length = n;
+        return result;
+      }
+      return result;
+    }
+
+    void deallocate(Block b) noexcept {
+      std::cout << "Stackocator::deallocate\n";
+      stackAllocator->Free(b.ptr);
+      b.reset();
+    }
 };
 
 // MARK: - Mallocator
@@ -67,7 +109,7 @@ class Jemallocator {
       return result;
     }
 
-    void deallocate(Block &b) noexcept {
+    void deallocate(Block b) noexcept {
       std::cout << "Jemallocator::deallocate\n";
       jefree(b.ptr);
       b.reset();
@@ -77,9 +119,6 @@ class Jemallocator {
 template <size_t Threshold, class SmallAllocator, class LargeAllocator>
   class Segregator: private SmallAllocator, LargeAllocator {
     public:
-
-      // using SmallAllocator = VirtualSmallAllocator;
-      // using LargeAllocator = VirtualLargeAllocator;
 
       static constexpr size_t threshold = Threshold;
 
@@ -94,7 +133,7 @@ template <size_t Threshold, class SmallAllocator, class LargeAllocator>
         return result;
       }
 
-      void deallocate(Block &b) noexcept {
+      void deallocate(Block b) noexcept {
 
         if (b.length <= Threshold) {
           return SmallAllocator::deallocate(b);
@@ -102,38 +141,3 @@ template <size_t Threshold, class SmallAllocator, class LargeAllocator>
         return LargeAllocator::deallocate(b);
       }
   };
-
-  // int main() {
-  //    using AlexAllocator = Segregator<8, Segregator<1637, Mallocator, Jemallocator>, 
-  //                                         Segregator<2963, Mallocator, Jemallocator>>;
- 
-  //     AlexAllocator bestAllocator;
-
-  //     auto m1 = bestAllocator.allocate(32);
-  //     bestAllocator.deallocate(m1);
-  //     return 0;
-  // }
-
-
-
-
-// template<class AlexAllocator, class... Args>
-// // template<class M = Mallocator, class J = Jemallocator>
-// class AlexAllocator: private Mallocator, private Jemallocator {
-//   private:
-//     map<Block, Allocator> ownersMap;
-
-//   public:
-//     Block allocate(size_t n) {
-
-//     }
-
-//     void deallocate(Block &b) {
-
-//     }
-// };
-
-
-
-
-

@@ -49,6 +49,7 @@ namespace {
     }
 
     bool runOnModule (Module &M) override {
+      LLVMContext &context = M.getContext();
       
       switch (SpecifiedPassType) {
         case synthesize: {
@@ -62,13 +63,14 @@ namespace {
 
                       "class AlexAllocator {\n"
                       "    using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,\n" 
-                      "                                          Segregator<1248, Mallocator, Jemallocator>>;\n\n"
+                      "                                         Segregator<1248, Stackocator<20400>, Jemallocator>>;\n\n"
                       "    static alex_allocator bestAllocator;\n"
-                      "    static Block allocate(size_t n) {\n"
-                      "        return bestAllocator.allocate(n);\n"
+                      "    static void* allocate(size_t n) {\n"
+                      "        return bestAllocator.allocate(n).ptr;\n"
                       "    }\n\n"
 
-                      "    static void deallocate(Block &b) {\n"
+                      "    static void deallocate(void* p, size_t n) {\n"
+                      "        auto b = Block(p, n);\n"
                       "        bestAllocator.deallocate(b);\n"
                       "    }\n"
                       "};" 
@@ -79,24 +81,113 @@ namespace {
         }
         case replace_alloc:
           errs() << "replace alloc stage\n";
-          // TODO
+
+          auto voidPtr = PointerType::get(IntegerType::get(context, 8), 0);
+          auto voidPtrPtr = PointerType::get(voidPtr, 0);
+          auto sizeT = Type::getInt64Ty(context);
+
+          FunctionCallee allocateFunc = currentModule->getOrInsertFunction(
+            "_ZN13AlexAllocator8allocateEv", // name of function
+            voidPtr,                         // return type
+            sizeT                            // first parameter type
+          );
+
+          FunctionCallee deallocateFunc = currentModule->getOrInsertFunction(
+            "_ZN13AlexAllocator10deallocateEv", // name of function
+            Type::getVoidTy(context),           // return type
+            voidPtr,                            // first parameter type
+            sizeT
+          );
+
+          Value* allocate = allocateFunc.getCallee();
+          Value* deallocate = deallocateFunc.getCallee();
+
+          vector<Instruction*> instructionsToReplace;
+
+          for (auto &function : *currentModule) {
+            for (BasicBlock &bb : function) {
+              for (Instruction &inst : bb) {
+
+                if (isa<CallInst>(&inst)) {
+                  const CallInst* callInst = llvm::dyn_cast<CallInst>(&inst);
+                  auto functionName = callInst->getCalledFunction()->getName();
+
+                  if (functionName != "malloc" && functionName != "free") {
+                    continue;
+                  }
+
+                  instructionsToReplace.push_back(&inst);
+                }
+              }
+            }
+          }
+
+          for (auto inst : instructionsToReplace) {
+            const CallInst* callInst = llvm::dyn_cast<CallInst>(inst);
+            auto functionName = callInst->getCalledFunction()->getName();
+
+            std::vector<Value*> args;
+            for (auto i = 0; i < callInst->getNumArgOperands(); i++) {
+              auto argAddress = llvm::cast<Value>(callInst->getArgOperand(i));
+              args.push_back(argAddress);
+            }
+
+            BasicBlock::iterator ii(inst);
+
+            CallInst* replacementInst;
+            if (functionName == "malloc") {
+              replacementInst = CallInst::Create(allocate, ArrayRef<Value*>(args));
+            }
+
+            if (functionName == "free") {
+              /* Go through all the users and try to find the real type */
+              auto size = findSizeForFree(inst);
+              if (size == 0) {
+                errs() << "Aborting: Failed to find size for free inst\n";
+                return false;
+              }
+              ConstantInt* sizeConstant = ConstantInt::get(Type::getInt64Ty(context), size);
+              args.push_back(sizeConstant);
+
+              replacementInst = CallInst::Create(deallocate, ArrayRef<Value*>(args));
+            }
+
+            errs() << "Created replacement inst\n";
+
+            ReplaceInstWithInst(inst->getParent()->getInstList(), ii, replacementInst);
+          }
+
           break;
-      }
-      
-
-      // using AlexAllocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>, 
-      //                                     Segregator<1248, Mallocator, Jemallocator>>;
- 
-      // AlexAllocator bestAllocator;
-
-      // auto m1 = bestAllocator.allocate(32);
-      // bestAllocator.deallocate(m1);
+        }
 
       if (SpecifiedAllocator != NULL) {
         errs() << "Replacing all allocators with a general purpose\n";
         bruteForceReplaceAlloc();
       }
       return true;
+    }
+
+    size_t findSizeForFree(Instruction* inst) {
+      for (User::op_iterator i = inst->op_begin(), ie = inst->op_end(); i != ie; ++i) {
+        if (auto inst = dyn_cast<Value>(i)) {
+          // errs() << "Use: " << *inst << "\n";
+
+          if (auto bitcast = dyn_cast<BitCastInst>(inst)) {
+            auto arg = bitcast->getOperand(0);
+            auto type = arg->getType();
+            errs() << *type << "\n";
+            if (auto pointerType = dyn_cast<llvm::PointerType>(type)) {
+              auto containedType = pointerType->getElementType();
+                DataLayout* TD = new DataLayout(currentModule);
+                auto size = TD->getTypeAllocSize(containedType);
+                errs() << "data layout size: " << size << "\n";
+                return size;
+            }
+          }
+        }
+      }
+
+      return 0;
     }
 
     map<size_t, AllocWeight> collectAllocInfo() {
