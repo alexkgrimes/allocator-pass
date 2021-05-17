@@ -57,45 +57,60 @@ include src/CMakeFiles/CAT.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/CAT.dir/flags.make
 
+src/CMakeFiles/CAT.dir/Allocator.cpp.o: src/CMakeFiles/CAT.dir/flags.make
+src/CMakeFiles/CAT.dir/Allocator.cpp.o: ../src/Allocator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/CAT.dir/Allocator.cpp.o"
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -o CMakeFiles/CAT.dir/Allocator.cpp.o -c /home/akg434/noelle/examples/passes/allocator-pass/src/Allocator.cpp
+
+src/CMakeFiles/CAT.dir/Allocator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CAT.dir/Allocator.cpp.i"
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -E /home/akg434/noelle/examples/passes/allocator-pass/src/Allocator.cpp > CMakeFiles/CAT.dir/Allocator.cpp.i
+
+src/CMakeFiles/CAT.dir/Allocator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CAT.dir/Allocator.cpp.s"
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -S /home/akg434/noelle/examples/passes/allocator-pass/src/Allocator.cpp -o CMakeFiles/CAT.dir/Allocator.cpp.s
+
+src/CMakeFiles/CAT.dir/AllocatorLib.cpp.o: src/CMakeFiles/CAT.dir/flags.make
+src/CMakeFiles/CAT.dir/AllocatorLib.cpp.o: ../src/AllocatorLib.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/CAT.dir/AllocatorLib.cpp.o"
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -o CMakeFiles/CAT.dir/AllocatorLib.cpp.o -c /home/akg434/noelle/examples/passes/allocator-pass/src/AllocatorLib.cpp
+
+src/CMakeFiles/CAT.dir/AllocatorLib.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CAT.dir/AllocatorLib.cpp.i"
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -E /home/akg434/noelle/examples/passes/allocator-pass/src/AllocatorLib.cpp > CMakeFiles/CAT.dir/AllocatorLib.cpp.i
+
+src/CMakeFiles/CAT.dir/AllocatorLib.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CAT.dir/AllocatorLib.cpp.s"
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -S /home/akg434/noelle/examples/passes/allocator-pass/src/AllocatorLib.cpp -o CMakeFiles/CAT.dir/AllocatorLib.cpp.s
+
 src/CMakeFiles/CAT.dir/BasicPass.cpp.o: src/CMakeFiles/CAT.dir/flags.make
 src/CMakeFiles/CAT.dir/BasicPass.cpp.o: ../src/BasicPass.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/CAT.dir/BasicPass.cpp.o"
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs` -o CMakeFiles/CAT.dir/BasicPass.cpp.o -c /home/akg434/noelle/examples/passes/allocator-pass/src/BasicPass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/CAT.dir/BasicPass.cpp.o"
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -o CMakeFiles/CAT.dir/BasicPass.cpp.o -c /home/akg434/noelle/examples/passes/allocator-pass/src/BasicPass.cpp
 
 src/CMakeFiles/CAT.dir/BasicPass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CAT.dir/BasicPass.cpp.i"
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs` -E /home/akg434/noelle/examples/passes/allocator-pass/src/BasicPass.cpp > CMakeFiles/CAT.dir/BasicPass.cpp.i
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -E /home/akg434/noelle/examples/passes/allocator-pass/src/BasicPass.cpp > CMakeFiles/CAT.dir/BasicPass.cpp.i
 
 src/CMakeFiles/CAT.dir/BasicPass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CAT.dir/BasicPass.cpp.s"
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs` -S /home/akg434/noelle/examples/passes/allocator-pass/src/BasicPass.cpp -o CMakeFiles/CAT.dir/BasicPass.cpp.s
-
-src/CMakeFiles/CAT.dir/Synthesizer.cpp.o: src/CMakeFiles/CAT.dir/flags.make
-src/CMakeFiles/CAT.dir/Synthesizer.cpp.o: ../src/Synthesizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/CAT.dir/Synthesizer.cpp.o"
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs` -o CMakeFiles/CAT.dir/Synthesizer.cpp.o -c /home/akg434/noelle/examples/passes/allocator-pass/src/Synthesizer.cpp
-
-src/CMakeFiles/CAT.dir/Synthesizer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CAT.dir/Synthesizer.cpp.i"
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs` -E /home/akg434/noelle/examples/passes/allocator-pass/src/Synthesizer.cpp > CMakeFiles/CAT.dir/Synthesizer.cpp.i
-
-src/CMakeFiles/CAT.dir/Synthesizer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CAT.dir/Synthesizer.cpp.s"
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs` -S /home/akg434/noelle/examples/passes/allocator-pass/src/Synthesizer.cpp -o CMakeFiles/CAT.dir/Synthesizer.cpp.s
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && /project/extra/llvm/9.0.0/release/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -std=c++17 -S /home/akg434/noelle/examples/passes/allocator-pass/src/BasicPass.cpp -o CMakeFiles/CAT.dir/BasicPass.cpp.s
 
 # Object files for target CAT
 CAT_OBJECTS = \
-"CMakeFiles/CAT.dir/BasicPass.cpp.o" \
-"CMakeFiles/CAT.dir/Synthesizer.cpp.o"
+"CMakeFiles/CAT.dir/Allocator.cpp.o" \
+"CMakeFiles/CAT.dir/AllocatorLib.cpp.o" \
+"CMakeFiles/CAT.dir/BasicPass.cpp.o"
 
 # External object files for target CAT
 CAT_EXTERNAL_OBJECTS =
 
+CAT.so: src/CMakeFiles/CAT.dir/Allocator.cpp.o
+CAT.so: src/CMakeFiles/CAT.dir/AllocatorLib.cpp.o
 CAT.so: src/CMakeFiles/CAT.dir/BasicPass.cpp.o
-CAT.so: src/CMakeFiles/CAT.dir/Synthesizer.cpp.o
 CAT.so: src/CMakeFiles/CAT.dir/build.make
 CAT.so: src/CMakeFiles/CAT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared module ../CAT.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module ../CAT.so"
 	cd /home/akg434/noelle/examples/passes/allocator-pass/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CAT.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

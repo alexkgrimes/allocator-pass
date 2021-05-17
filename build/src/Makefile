@@ -201,6 +201,60 @@ install-CAT/fast:
 	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/install-CAT.dir/build.make src/CMakeFiles/install-CAT.dir/build
 .PHONY : install-CAT/fast
 
+Allocator.o: Allocator.cpp.o
+
+.PHONY : Allocator.o
+
+# target to build an object file
+Allocator.cpp.o:
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/Allocator.cpp.o
+.PHONY : Allocator.cpp.o
+
+Allocator.i: Allocator.cpp.i
+
+.PHONY : Allocator.i
+
+# target to preprocess a source file
+Allocator.cpp.i:
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/Allocator.cpp.i
+.PHONY : Allocator.cpp.i
+
+Allocator.s: Allocator.cpp.s
+
+.PHONY : Allocator.s
+
+# target to generate assembly for a file
+Allocator.cpp.s:
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/Allocator.cpp.s
+.PHONY : Allocator.cpp.s
+
+AllocatorLib.o: AllocatorLib.cpp.o
+
+.PHONY : AllocatorLib.o
+
+# target to build an object file
+AllocatorLib.cpp.o:
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/AllocatorLib.cpp.o
+.PHONY : AllocatorLib.cpp.o
+
+AllocatorLib.i: AllocatorLib.cpp.i
+
+.PHONY : AllocatorLib.i
+
+# target to preprocess a source file
+AllocatorLib.cpp.i:
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/AllocatorLib.cpp.i
+.PHONY : AllocatorLib.cpp.i
+
+AllocatorLib.s: AllocatorLib.cpp.s
+
+.PHONY : AllocatorLib.s
+
+# target to generate assembly for a file
+AllocatorLib.cpp.s:
+	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/AllocatorLib.cpp.s
+.PHONY : AllocatorLib.cpp.s
+
 BasicPass.o: BasicPass.cpp.o
 
 .PHONY : BasicPass.o
@@ -228,33 +282,6 @@ BasicPass.cpp.s:
 	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/BasicPass.cpp.s
 .PHONY : BasicPass.cpp.s
 
-Synthesizer.o: Synthesizer.cpp.o
-
-.PHONY : Synthesizer.o
-
-# target to build an object file
-Synthesizer.cpp.o:
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/Synthesizer.cpp.o
-.PHONY : Synthesizer.cpp.o
-
-Synthesizer.i: Synthesizer.cpp.i
-
-.PHONY : Synthesizer.i
-
-# target to preprocess a source file
-Synthesizer.cpp.i:
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/Synthesizer.cpp.i
-.PHONY : Synthesizer.cpp.i
-
-Synthesizer.s: Synthesizer.cpp.s
-
-.PHONY : Synthesizer.s
-
-# target to generate assembly for a file
-Synthesizer.cpp.s:
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/Synthesizer.cpp.s
-.PHONY : Synthesizer.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -270,12 +297,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
+	@echo "... Allocator.o"
+	@echo "... Allocator.i"
+	@echo "... Allocator.s"
+	@echo "... AllocatorLib.o"
+	@echo "... AllocatorLib.i"
+	@echo "... AllocatorLib.s"
 	@echo "... BasicPass.o"
 	@echo "... BasicPass.i"
 	@echo "... BasicPass.s"
-	@echo "... Synthesizer.o"
-	@echo "... Synthesizer.i"
-	@echo "... Synthesizer.s"
 .PHONY : help
 
 

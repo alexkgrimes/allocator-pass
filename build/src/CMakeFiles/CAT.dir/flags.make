@@ -8,7 +8,9 @@ CXX_DEFINES = -DGTEST_HAS_RTTI=0 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS
 
 CXX_INCLUDES = -I/project/extra/llvm/9.0.0/release/include -I/home/akg434/noelle/examples/passes/allocator-pass/src/../../../../install/include -I/home/akg434/noelle/examples/passes/allocator-pass/src/../../../../install/include/svf 
 
-# Custom flags: src/CMakeFiles/CAT.dir/BasicPass.cpp.o_FLAGS =  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs`
+# Custom flags: src/CMakeFiles/CAT.dir/Allocator.cpp.o_FLAGS =  -std=c++17
 
-# Custom flags: src/CMakeFiles/CAT.dir/Synthesizer.cpp.o_FLAGS =  -std=c++17 -I`jemalloc-config --includedir` -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` -ljemalloc `jemalloc-config --libs`
+# Custom flags: src/CMakeFiles/CAT.dir/AllocatorLib.cpp.o_FLAGS =  -std=c++17
+
+# Custom flags: src/CMakeFiles/CAT.dir/BasicPass.cpp.o_FLAGS =  -std=c++17
 

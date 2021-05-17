@@ -28,28 +28,28 @@ The CXX compiler identification is Clang, found in "/home/akg434/noelle/examples
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_e52e5/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_e52e5.dir/build.make CMakeFiles/cmTC_e52e5.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_3b2fb/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_3b2fb.dir/build.make CMakeFiles/cmTC_3b2fb.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e52e5.dir/testCCompiler.c.o
-/project/extra/llvm/9.0.0/release/bin/clang    -o CMakeFiles/cmTC_e52e5.dir/testCCompiler.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_e52e5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e52e5.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_e52e5.dir/testCCompiler.c.o  -o cmTC_e52e5 
+Building C object CMakeFiles/cmTC_3b2fb.dir/testCCompiler.c.o
+/project/extra/llvm/9.0.0/release/bin/clang    -o CMakeFiles/cmTC_3b2fb.dir/testCCompiler.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_3b2fb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b2fb.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_3b2fb.dir/testCCompiler.c.o  -o cmTC_3b2fb 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_793ea/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_793ea.dir/build.make CMakeFiles/cmTC_793ea.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_3949c/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_3949c.dir/build.make CMakeFiles/cmTC_3949c.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o
-/project/extra/llvm/9.0.0/release/bin/clang    -o CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_793ea
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_793ea.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang     -v CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o  -o cmTC_793ea 
+Building C object CMakeFiles/cmTC_3949c.dir/CMakeCCompilerABI.c.o
+/project/extra/llvm/9.0.0/release/bin/clang    -o CMakeFiles/cmTC_3949c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_3949c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3949c.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang     -v CMakeFiles/cmTC_3949c.dir/CMakeCCompilerABI.c.o  -o cmTC_3949c 
 clang version 9.0.0 (git@github.com:scampanoni/LLVM_installer.git 713d2f6594d9a0b77e7f9a120aaa7c917715a640)
 Target: x86_64-unknown-linux-gnu
 Thread model: posix
@@ -60,7 +60,7 @@ Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
 Candidate multilib: .;@m64
 Candidate multilib: 32;@m32
 Selected multilib: .;@m64
- "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_793ea /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
+ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3949c /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_3949c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
@@ -68,14 +68,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_793ea/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_793ea.dir/build.make CMakeFiles/cmTC_793ea.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_3949c/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_3949c.dir/build.make CMakeFiles/cmTC_3949c.dir/build]
   ignore line: [gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang    -o CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_793ea]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_793ea.dir/link.txt --verbose=1]
-  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang     -v CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o  -o cmTC_793ea ]
+  ignore line: [Building C object CMakeFiles/cmTC_3949c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang    -o CMakeFiles/cmTC_3949c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_3949c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3949c.dir/link.txt --verbose=1]
+  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang     -v CMakeFiles/cmTC_3949c.dir/CMakeCCompilerABI.c.o  -o cmTC_3949c ]
   ignore line: [clang version 9.0.0 (git@github.com:scampanoni/LLVM_installer.git 713d2f6594d9a0b77e7f9a120aaa7c917715a640)]
   ignore line: [Target: x86_64-unknown-linux-gnu]
   ignore line: [Thread model: posix]
@@ -89,7 +89,7 @@ Parsed C implicit link information from above output:
   ignore line: [@m32]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_793ea /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
+  link line: [ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3949c /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_3949c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
     arg [-m] ==> ignore
@@ -97,7 +97,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_793ea] ==> ignore
+    arg [cmTC_3949c] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [-L/project/extra/llvm/9.0.0/release/bin/../lib] ==> dir [/project/extra/llvm/9.0.0/release/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_793ea.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_3949c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -139,14 +139,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_6843a/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_6843a.dir/build.make CMakeFiles/cmTC_6843a.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_092ac/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_092ac.dir/build.make CMakeFiles/cmTC_092ac.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6843a.dir/feature_tests.c.o
-/project/extra/llvm/9.0.0/release/bin/clang   -std=c11 -o CMakeFiles/cmTC_6843a.dir/feature_tests.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_6843a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6843a.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_6843a.dir/feature_tests.c.o  -o cmTC_6843a 
+Building C object CMakeFiles/cmTC_092ac.dir/feature_tests.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -std=c11 -o CMakeFiles/cmTC_092ac.dir/feature_tests.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_092ac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_092ac.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_092ac.dir/feature_tests.c.o  -o cmTC_092ac 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
@@ -159,14 +159,14 @@ gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_86faa/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_86faa.dir/build.make CMakeFiles/cmTC_86faa.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_41682/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_41682.dir/build.make CMakeFiles/cmTC_41682.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_86faa.dir/feature_tests.c.o
-/project/extra/llvm/9.0.0/release/bin/clang   -std=c99 -o CMakeFiles/cmTC_86faa.dir/feature_tests.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_86faa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86faa.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_86faa.dir/feature_tests.c.o  -o cmTC_86faa 
+Building C object CMakeFiles/cmTC_41682.dir/feature_tests.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -std=c99 -o CMakeFiles/cmTC_41682.dir/feature_tests.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_41682
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41682.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_41682.dir/feature_tests.c.o  -o cmTC_41682 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
@@ -179,14 +179,14 @@ gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_d8f5f/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_d8f5f.dir/build.make CMakeFiles/cmTC_d8f5f.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_7c405/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_7c405.dir/build.make CMakeFiles/cmTC_7c405.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d8f5f.dir/feature_tests.c.o
-/project/extra/llvm/9.0.0/release/bin/clang   -std=c90 -o CMakeFiles/cmTC_d8f5f.dir/feature_tests.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d8f5f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8f5f.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_d8f5f.dir/feature_tests.c.o  -o cmTC_d8f5f 
+Building C object CMakeFiles/cmTC_7c405.dir/feature_tests.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -std=c90 -o CMakeFiles/cmTC_7c405.dir/feature_tests.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7c405
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c405.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang      CMakeFiles/cmTC_7c405.dir/feature_tests.c.o  -o cmTC_7c405 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
@@ -197,28 +197,28 @@ gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_42932/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_42932.dir/build.make CMakeFiles/cmTC_42932.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_9c50a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_9c50a.dir/build.make CMakeFiles/cmTC_9c50a.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_42932.dir/testCXXCompiler.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++     -o CMakeFiles/cmTC_42932.dir/testCXXCompiler.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_42932
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42932.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_42932.dir/testCXXCompiler.cxx.o  -o cmTC_42932 
+Building CXX object CMakeFiles/cmTC_9c50a.dir/testCXXCompiler.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++     -o CMakeFiles/cmTC_9c50a.dir/testCXXCompiler.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_9c50a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c50a.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_9c50a.dir/testCXXCompiler.cxx.o  -o cmTC_9c50a 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_9eccb/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_9eccb.dir/build.make CMakeFiles/cmTC_9eccb.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_5499d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_5499d.dir/build.make CMakeFiles/cmTC_5499d.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o
-/project/extra/llvm/9.0.0/release/bin/clang++     -o CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_9eccb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9eccb.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++      -v CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9eccb 
+Building CXX object CMakeFiles/cmTC_5499d.dir/CMakeCXXCompilerABI.cpp.o
+/project/extra/llvm/9.0.0/release/bin/clang++     -o CMakeFiles/cmTC_5499d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_5499d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5499d.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++      -v CMakeFiles/cmTC_5499d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5499d 
 clang version 9.0.0 (git@github.com:scampanoni/LLVM_installer.git 713d2f6594d9a0b77e7f9a120aaa7c917715a640)
 Target: x86_64-unknown-linux-gnu
 Thread model: posix
@@ -229,7 +229,7 @@ Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
 Candidate multilib: .;@m64
 Candidate multilib: 32;@m32
 Selected multilib: .;@m64
- "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9eccb /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
+ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5499d /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_5499d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
@@ -237,14 +237,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_9eccb/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_9eccb.dir/build.make CMakeFiles/cmTC_9eccb.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_5499d/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_5499d.dir/build.make CMakeFiles/cmTC_5499d.dir/build]
   ignore line: [gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang++     -o CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_9eccb]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9eccb.dir/link.txt --verbose=1]
-  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang++      -v CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9eccb ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_5499d.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang++     -o CMakeFiles/cmTC_5499d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_5499d]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5499d.dir/link.txt --verbose=1]
+  ignore line: [/project/extra/llvm/9.0.0/release/bin/clang++      -v CMakeFiles/cmTC_5499d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5499d ]
   ignore line: [clang version 9.0.0 (git@github.com:scampanoni/LLVM_installer.git 713d2f6594d9a0b77e7f9a120aaa7c917715a640)]
   ignore line: [Target: x86_64-unknown-linux-gnu]
   ignore line: [Thread model: posix]
@@ -258,7 +258,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [@m32]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9eccb /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
+  link line: [ "/usr/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5499d /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/project/extra/llvm/9.0.0/release/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_5499d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
     arg [-m] ==> ignore
@@ -266,7 +266,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_9eccb] ==> ignore
+    arg [cmTC_5499d] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o] ==> ignore
@@ -278,7 +278,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/project/extra/llvm/9.0.0/release/bin/../lib] ==> dir [/project/extra/llvm/9.0.0/release/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_9eccb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_5499d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -306,14 +306,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_631bd/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_631bd.dir/build.make CMakeFiles/cmTC_631bd.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_65c91/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_65c91.dir/build.make CMakeFiles/cmTC_65c91.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_631bd.dir/feature_tests.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++1z -o CMakeFiles/cmTC_631bd.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_631bd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_631bd.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_631bd.dir/feature_tests.cxx.o  -o cmTC_631bd 
+Building CXX object CMakeFiles/cmTC_65c91.dir/feature_tests.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++1z -o CMakeFiles/cmTC_65c91.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_65c91
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65c91.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_65c91.dir/feature_tests.cxx.o  -o cmTC_65c91 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
@@ -379,14 +379,14 @@ gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_01a4a/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_01a4a.dir/build.make CMakeFiles/cmTC_01a4a.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_8abd2/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_8abd2.dir/build.make CMakeFiles/cmTC_8abd2.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_01a4a.dir/feature_tests.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++14 -o CMakeFiles/cmTC_01a4a.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_01a4a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01a4a.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_01a4a.dir/feature_tests.cxx.o  -o cmTC_01a4a 
+Building CXX object CMakeFiles/cmTC_8abd2.dir/feature_tests.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++14 -o CMakeFiles/cmTC_8abd2.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8abd2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8abd2.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_8abd2.dir/feature_tests.cxx.o  -o cmTC_8abd2 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
@@ -452,14 +452,14 @@ gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_99e06/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_99e06.dir/build.make CMakeFiles/cmTC_99e06.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_fc650/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_fc650.dir/build.make CMakeFiles/cmTC_fc650.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_99e06.dir/feature_tests.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++11 -o CMakeFiles/cmTC_99e06.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_99e06
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99e06.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_99e06.dir/feature_tests.cxx.o  -o cmTC_99e06 
+Building CXX object CMakeFiles/cmTC_fc650.dir/feature_tests.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++11 -o CMakeFiles/cmTC_fc650.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_fc650
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc650.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_fc650.dir/feature_tests.cxx.o  -o cmTC_fc650 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
@@ -525,14 +525,14 @@ gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_f22b1/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_f22b1.dir/build.make CMakeFiles/cmTC_f22b1.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_14e7b/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_14e7b.dir/build.make CMakeFiles/cmTC_14e7b.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f22b1.dir/feature_tests.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++98 -o CMakeFiles/cmTC_f22b1.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f22b1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f22b1.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_f22b1.dir/feature_tests.cxx.o  -o cmTC_f22b1 
+Building CXX object CMakeFiles/cmTC_14e7b.dir/feature_tests.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -std=c++98 -o CMakeFiles/cmTC_14e7b.dir/feature_tests.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_14e7b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14e7b.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++       CMakeFiles/cmTC_14e7b.dir/feature_tests.cxx.o  -o cmTC_14e7b 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 
@@ -596,14 +596,14 @@ gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/
 Performing C++ SOURCE FILE Test LLVM_LIBSTDCXX_MIN succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_41b8b/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_41b8b.dir/build.make CMakeFiles/cmTC_41b8b.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_b7fee/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b7fee.dir/build.make CMakeFiles/cmTC_b7fee.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_41b8b.dir/src.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -DLLVM_LIBSTDCXX_MIN  -std=c++0x   -o CMakeFiles/cmTC_41b8b.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_41b8b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41b8b.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++   -DLLVM_LIBSTDCXX_MIN  -std=c++0x    CMakeFiles/cmTC_41b8b.dir/src.cxx.o  -o cmTC_41b8b 
+Building CXX object CMakeFiles/cmTC_b7fee.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -DLLVM_LIBSTDCXX_MIN  -std=c++0x   -o CMakeFiles/cmTC_b7fee.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b7fee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7fee.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -DLLVM_LIBSTDCXX_MIN  -std=c++0x    CMakeFiles/cmTC_b7fee.dir/src.cxx.o  -o cmTC_b7fee 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -625,14 +625,14 @@ int main() { ++chk; return 0; }
 Performing C++ SOURCE FILE Test LLVM_LIBSTDCXX_SOFT_ERROR succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_09362/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_09362.dir/build.make CMakeFiles/cmTC_09362.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_81fba/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_81fba.dir/build.make CMakeFiles/cmTC_81fba.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_09362.dir/src.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -DLLVM_LIBSTDCXX_SOFT_ERROR  -std=c++0x   -o CMakeFiles/cmTC_09362.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_09362
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09362.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++   -DLLVM_LIBSTDCXX_SOFT_ERROR  -std=c++0x    CMakeFiles/cmTC_09362.dir/src.cxx.o  -o cmTC_09362 
+Building CXX object CMakeFiles/cmTC_81fba.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -DLLVM_LIBSTDCXX_SOFT_ERROR  -std=c++0x   -o CMakeFiles/cmTC_81fba.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_81fba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81fba.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -DLLVM_LIBSTDCXX_SOFT_ERROR  -std=c++0x    CMakeFiles/cmTC_81fba.dir/src.cxx.o  -o cmTC_81fba 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -652,14 +652,14 @@ int main() { return 0; }
 Performing C SOURCE FILE Test C_SUPPORTS_FPIC succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_b9c95/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_b9c95.dir/build.make CMakeFiles/cmTC_b9c95.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_d1afa/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d1afa.dir/build.make CMakeFiles/cmTC_d1afa.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b9c95.dir/src.c.o
-/project/extra/llvm/9.0.0/release/bin/clang   -DC_SUPPORTS_FPIC   -Werror -fPIC -o CMakeFiles/cmTC_b9c95.dir/src.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_b9c95
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9c95.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang  -DC_SUPPORTS_FPIC    CMakeFiles/cmTC_b9c95.dir/src.c.o  -o cmTC_b9c95 
+Building C object CMakeFiles/cmTC_d1afa.dir/src.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -DC_SUPPORTS_FPIC   -Werror -fPIC -o CMakeFiles/cmTC_d1afa.dir/src.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d1afa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1afa.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang  -DC_SUPPORTS_FPIC    CMakeFiles/cmTC_d1afa.dir/src.c.o  -o cmTC_d1afa 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -667,14 +667,14 @@ int main(void) { return 0; }
 Performing C++ SOURCE FILE Test CXX_SUPPORTS_FPIC succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_244b2/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_244b2.dir/build.make CMakeFiles/cmTC_244b2.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_6d46e/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_6d46e.dir/build.make CMakeFiles/cmTC_6d46e.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_244b2.dir/src.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -DCXX_SUPPORTS_FPIC   -Werror -fPIC -o CMakeFiles/cmTC_244b2.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_244b2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_244b2.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++   -DCXX_SUPPORTS_FPIC    CMakeFiles/cmTC_244b2.dir/src.cxx.o  -o cmTC_244b2 
+Building CXX object CMakeFiles/cmTC_6d46e.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -DCXX_SUPPORTS_FPIC   -Werror -fPIC -o CMakeFiles/cmTC_6d46e.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6d46e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d46e.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -DCXX_SUPPORTS_FPIC    CMakeFiles/cmTC_6d46e.dir/src.cxx.o  -o cmTC_6d46e 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -682,14 +682,14 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_6cdfe/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_6cdfe.dir/build.make CMakeFiles/cmTC_6cdfe.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_1072d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_1072d.dir/build.make CMakeFiles/cmTC_1072d.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6cdfe.dir/src.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_6cdfe.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_6cdfe
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6cdfe.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG    CMakeFiles/cmTC_6cdfe.dir/src.cxx.o  -o cmTC_6cdfe 
+Building CXX object CMakeFiles/cmTC_1072d.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_1072d.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_1072d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1072d.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG    CMakeFiles/cmTC_1072d.dir/src.cxx.o  -o cmTC_1072d 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -697,14 +697,14 @@ int main() { return 0; }
 Performing C SOURCE FILE Test C_SUPPORTS_WERROR_DATE_TIME succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_72c8a/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_72c8a.dir/build.make CMakeFiles/cmTC_72c8a.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_5d58d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_5d58d.dir/build.make CMakeFiles/cmTC_5d58d.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_72c8a.dir/src.c.o
-/project/extra/llvm/9.0.0/release/bin/clang   -fPIC -DC_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_72c8a.dir/src.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_72c8a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72c8a.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang  -fPIC -DC_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_72c8a.dir/src.c.o  -o cmTC_72c8a 
+Building C object CMakeFiles/cmTC_5d58d.dir/src.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -fPIC -DC_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_5d58d.dir/src.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5d58d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d58d.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang  -fPIC -DC_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_5d58d.dir/src.c.o  -o cmTC_5d58d 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -712,14 +712,14 @@ int main(void) { return 0; }
 Performing C++ SOURCE FILE Test CXX_SUPPORTS_WERROR_DATE_TIME succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_b89cf/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_b89cf.dir/build.make CMakeFiles/cmTC_b89cf.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_8fc44/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_8fc44.dir/build.make CMakeFiles/cmTC_8fc44.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b89cf.dir/src.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_b89cf.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_b89cf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b89cf.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_b89cf.dir/src.cxx.o  -o cmTC_b89cf 
+Building CXX object CMakeFiles/cmTC_8fc44.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_8fc44.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8fc44
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fc44.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_8fc44.dir/src.cxx.o  -o cmTC_8fc44 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -727,14 +727,14 @@ int main() { return 0; }
 Performing C SOURCE FILE Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_c25b2/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_c25b2.dir/build.make CMakeFiles/cmTC_c25b2.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_b36aa/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b36aa.dir/build.make CMakeFiles/cmTC_b36aa.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c25b2.dir/src.c.o
-/project/extra/llvm/9.0.0/release/bin/clang   -fPIC -Werror=date-time -DC_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW   -Werror -Werror=unguarded-availability-new -o CMakeFiles/cmTC_c25b2.dir/src.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_c25b2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c25b2.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang  -fPIC -Werror=date-time -DC_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW    CMakeFiles/cmTC_c25b2.dir/src.c.o  -o cmTC_c25b2 
+Building C object CMakeFiles/cmTC_b36aa.dir/src.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -fPIC -Werror=date-time -DC_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW   -Werror -Werror=unguarded-availability-new -o CMakeFiles/cmTC_b36aa.dir/src.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b36aa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b36aa.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang  -fPIC -Werror=date-time -DC_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW    CMakeFiles/cmTC_b36aa.dir/src.c.o  -o cmTC_b36aa 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -742,14 +742,14 @@ int main(void) { return 0; }
 Performing C++ SOURCE FILE Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_236fb/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_236fb.dir/build.make CMakeFiles/cmTC_236fb.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_2a8e1/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_2a8e1.dir/build.make CMakeFiles/cmTC_2a8e1.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_236fb.dir/src.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW   -Werror -Werror=unguarded-availability-new -o CMakeFiles/cmTC_236fb.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_236fb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_236fb.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW    CMakeFiles/cmTC_236fb.dir/src.cxx.o  -o cmTC_236fb 
+Building CXX object CMakeFiles/cmTC_2a8e1.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW   -Werror -Werror=unguarded-availability-new -o CMakeFiles/cmTC_2a8e1.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2a8e1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a8e1.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW    CMakeFiles/cmTC_2a8e1.dir/src.cxx.o  -o cmTC_2a8e1 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -757,14 +757,14 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test CXX_SUPPORTS_CXX_STD succeeded with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_3632e/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_3632e.dir/build.make CMakeFiles/cmTC_3632e.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_f4d26/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_f4d26.dir/build.make CMakeFiles/cmTC_f4d26.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3632e.dir/src.cxx.o
-/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -DCXX_SUPPORTS_CXX_STD   -std=c++11 -o CMakeFiles/cmTC_3632e.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_3632e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3632e.dir/link.txt --verbose=1
-/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -DCXX_SUPPORTS_CXX_STD    CMakeFiles/cmTC_3632e.dir/src.cxx.o  -o cmTC_3632e 
+Building CXX object CMakeFiles/cmTC_f4d26.dir/src.cxx.o
+/project/extra/llvm/9.0.0/release/bin/clang++    -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -DCXX_SUPPORTS_CXX_STD   -std=c++11 -o CMakeFiles/cmTC_f4d26.dir/src.cxx.o -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f4d26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4d26.dir/link.txt --verbose=1
+/project/extra/llvm/9.0.0/release/bin/clang++   -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -DCXX_SUPPORTS_CXX_STD    CMakeFiles/cmTC_f4d26.dir/src.cxx.o  -o cmTC_f4d26 
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
 
 Source file was:

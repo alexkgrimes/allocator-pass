@@ -20,7 +20,7 @@ define dso_local i32 @main() local_unnamed_addr #0 {
 
 2:                                                ; preds = %0, %2
   %indvars.iv42 = phi i64 [ 0, %0 ], [ %indvars.iv.next5, %2 ]
-  %3 = tail call i8* @_ZN13AlexAllocator8allocateEv(i64 204) #3
+  %3 = tail call i8* @allocate(i64 204) #3
   tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %3, i8* align 1 getelementptr inbounds ([14 x i8], [14 x i8]* @.str, i64 0, i64 0), i64 14, i1 false)
   %4 = getelementptr inbounds i8, i8* %3, i64 50
   tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* nonnull align 1 %4, i8* align 1 getelementptr inbounds ([9 x i8], [9 x i8]* @.str.1, i64 0, i64 0), i64 9, i1 false)
@@ -45,32 +45,32 @@ define dso_local i32 @main() local_unnamed_addr #0 {
   %12 = getelementptr inbounds [100 x %struct.Book*], [100 x %struct.Book*]* %1, i64 0, i64 %indvars.iv1
   %13 = bitcast %struct.Book** %12 to i8**
   %14 = load i8*, i8** %13, align 8, !tbaa !7
-  tail call void @_ZN13AlexAllocator10deallocateEv(i8* %14, i64 204) #3
+  tail call void @deallocate(i8* %14, i64 204) #3
   %indvars.iv.next = add nsw i64 %indvars.iv1, -1
   %15 = icmp eq i64 %indvars.iv1, 0
   br i1 %15, label %16, label %11
 
 16:                                               ; preds = %11
-  %17 = tail call i8* @_ZN13AlexAllocator8allocateEv(i64 50) #3
+  %17 = tail call i8* @allocate(i64 50) #3
   tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %17, i8* align 1 getelementptr inbounds ([9 x i8], [9 x i8]* @.str.4, i64 0, i64 0), i64 9, i1 false)
-  %18 = tail call i8* @_ZN13AlexAllocator8allocateEv(i64 50) #3
+  %18 = tail call i8* @allocate(i64 50) #3
   tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %18, i8* align 1 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.5, i64 0, i64 0), i64 11, i1 false)
   %19 = tail call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.6, i64 0, i64 0), i8* %18)
-  %20 = tail call i8* @_ZN13AlexAllocator8allocateEv(i64 8) #3
+  %20 = tail call i8* @allocate(i64 8) #3
   %21 = bitcast i8* %20 to i32*
   store i32 86, i32* %21, align 4, !tbaa !9
-  tail call void @_ZN13AlexAllocator10deallocateEv(i8* %20, i64 4) #3
-  tail call void @_ZN13AlexAllocator10deallocateEv(i8* %17, i64 50) #3
-  tail call void @_ZN13AlexAllocator10deallocateEv(i8* %18, i64 50) #3
+  tail call void @deallocate(i8* %20, i64 4) #3
+  tail call void @deallocate(i8* %17, i64 50) #3
+  tail call void @deallocate(i8* %18, i64 50) #3
   ret i32 0
 }
 
 ; Function Attrs: nofree nounwind
 declare dso_local i32 @printf(i8* nocapture readonly, ...) local_unnamed_addr #1
 
-declare i8* @_ZN13AlexAllocator8allocateEv(i64) local_unnamed_addr
+declare i8* @allocate(i64) local_unnamed_addr
 
-declare void @_ZN13AlexAllocator10deallocateEv(i8*, i64) local_unnamed_addr
+declare void @deallocate(i8*, i64) local_unnamed_addr
 
 ; Function Attrs: argmemonly nounwind
 declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture readonly, i64, i1 immarg) #2

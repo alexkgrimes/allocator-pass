@@ -1,18 +1,18 @@
 Determining if the os_signpost_interval_begin exist failed with the following output:
 Change Dir: /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_d42aa/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_d42aa.dir/build.make CMakeFiles/cmTC_d42aa.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_b9fad/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b9fad.dir/build.make CMakeFiles/cmTC_b9fad.dir/build
 gmake[1]: Entering directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d42aa.dir/CheckSymbolExists.c.o
-/project/extra/llvm/9.0.0/release/bin/clang   -fPIC -Werror=date-time -Werror=unguarded-availability-new -w    -o CMakeFiles/cmTC_d42aa.dir/CheckSymbolExists.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_b9fad.dir/CheckSymbolExists.c.o
+/project/extra/llvm/9.0.0/release/bin/clang   -fPIC -Werror=date-time -Werror=unguarded-availability-new -w    -o CMakeFiles/cmTC_b9fad.dir/CheckSymbolExists.c.o   -c /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: 'os/signpost.h' file not found
 #include <os/signpost.h>
          ^~~~~~~~~~~~~~~
 1 error generated.
-gmake[1]: *** [CMakeFiles/cmTC_d42aa.dir/build.make:66: CMakeFiles/cmTC_d42aa.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: *** [CMakeFiles/cmTC_b9fad.dir/build.make:66: CMakeFiles/cmTC_b9fad.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory '/home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:126: cmTC_d42aa/fast] Error 2
+gmake: *** [Makefile:126: cmTC_b9fad/fast] Error 2
 
 File /home/akg434/noelle/examples/passes/allocator-pass/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */

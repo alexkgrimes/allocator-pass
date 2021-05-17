@@ -59,12 +59,16 @@ namespace {
 
           std::ofstream outfile ("../src/Allocator.cpp");
 
-          outfile << "#include \"AllocatorLib.cpp\"\n\n"
+          outfile << "#include \"AllocatorLib.cpp\"\n\n"    
+                     "class AlexAllocator;\n\n"
+
+                      "using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,\n"
+                      "                    Segregator<1248, Mallocator, Jemallocator>>;\n\n"
+                      "static alex_allocator bestAllocator;\n"               
 
                       "class AlexAllocator {\n"
-                      "    using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,\n" 
-                      "                                         Segregator<1248, Stackocator<20400>, Jemallocator>>;\n\n"
-                      "    static alex_allocator bestAllocator;\n"
+                      "  public:\n"
+
                       "    static void* allocate(size_t n) {\n"
                       "        return bestAllocator.allocate(n).ptr;\n"
                       "    }\n\n"
@@ -73,10 +77,23 @@ namespace {
                       "        auto b = Block(p, n);\n"
                       "        bestAllocator.deallocate(b);\n"
                       "    }\n"
-                      "};" 
+                      "};\n" 
+
+                      "extern \"C\" void* allocate(size_t n) {\n"
+                      "    return AlexAllocator::allocate(n);\n"
+                      "}\n\n"
+
+                      "extern \"C\" void deallocate(void* p, size_t n) {\n"
+                      "    return AlexAllocator::deallocate(p, n);\n"
+                      "}\n\n"   
                       << std::endl;
 
           outfile.close();
+
+          std::ofstream header {"../src/Allocator.h"};
+
+          header.close();
+
           break;
         }
         case replace_alloc:
@@ -87,13 +104,15 @@ namespace {
           auto sizeT = Type::getInt64Ty(context);
 
           FunctionCallee allocateFunc = currentModule->getOrInsertFunction(
-            "_ZN13AlexAllocator8allocateEv", // name of function
+            // "_ZN13AlexAllocator8allocateEv", // name of function
+            "allocate",
             voidPtr,                         // return type
             sizeT                            // first parameter type
           );
 
           FunctionCallee deallocateFunc = currentModule->getOrInsertFunction(
-            "_ZN13AlexAllocator10deallocateEv", // name of function
+            // "_ZN13AlexAllocator10deallocateEv", // name of function
+            "deallocate",
             Type::getVoidTy(context),           // return type
             voidPtr,                            // first parameter type
             sizeT
