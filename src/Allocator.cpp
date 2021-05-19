@@ -1,11 +1,10 @@
-#include "AllocatorLib.cpp"
-
-class AlexAllocator;
+#include "AllocatorLib.h"
 
 using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,
-                    Segregator<1248, Mallocator, Jemallocator>>;
+                    Segregator<1248, Stackocator<20400>, Jemallocator>>;
 
 static alex_allocator bestAllocator;
+
 class AlexAllocator {
   public:
     static void* allocate(size_t n) {

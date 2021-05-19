@@ -57,40 +57,59 @@ namespace {
           auto allocatorMap = collectAllocInfo();
           print(allocatorMap);
 
-          std::ofstream outfile ("../src/Allocator.cpp");
+          // std::ofstream outfile ("../src/Allocator.cpp");
 
-          outfile << "#include \"AllocatorLib.cpp\"\n\n"    
-                     "class AlexAllocator;\n\n"
+          // outfile << 
+          // "#include \"Allocator.h\"\n\n"
+          // "#include \"AllocatorLib.h\"\n" 
+          
+          // "using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,\n"
+          // "                    Segregator<1248, Stackocator<20400>, Jemallocator>>;\n\n"
+          // "static alex_allocator bestAllocator;\n\n"               
 
-                      "using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,\n"
-                      "                    Segregator<1248, Mallocator, Jemallocator>>;\n\n"
-                      "static alex_allocator bestAllocator;\n"               
+          // "    void* AlexAllocator::allocate(size_t n) {\n"
+          // "        return bestAllocator.allocate(n).ptr;\n"
+          // "    }\n\n"
 
-                      "class AlexAllocator {\n"
-                      "  public:\n"
+          // "    void AlexAllocator::deallocate(void* p, size_t n) {\n"
+          // "        auto b = Block(p, n);\n"
+          // "        bestAllocator.deallocate(b);\n"
+          // "    }\n" 
+          // << std::endl;
 
-                      "    static void* allocate(size_t n) {\n"
-                      "        return bestAllocator.allocate(n).ptr;\n"
-                      "    }\n\n"
+          // outfile.close();
 
-                      "    static void deallocate(void* p, size_t n) {\n"
-                      "        auto b = Block(p, n);\n"
-                      "        bestAllocator.deallocate(b);\n"
-                      "    }\n"
-                      "};\n" 
+          std::ofstream header {"../src/Allocator.cpp"};
 
-                      "extern \"C\" void* allocate(size_t n) {\n"
-                      "    return AlexAllocator::allocate(n);\n"
-                      "}\n\n"
+          header <<
+          "#include \"AllocatorLib.h\"\n\n"
 
-                      "extern \"C\" void deallocate(void* p, size_t n) {\n"
-                      "    return AlexAllocator::deallocate(p, n);\n"
-                      "}\n\n"   
-                      << std::endl;
+          "using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,\n"
+          "                    Segregator<1248, Stackocator<20400>, Jemallocator>>;\n\n"
+          "static alex_allocator bestAllocator;\n\n" 
+          
+          "class AlexAllocator {\n"
 
-          outfile.close();
+          "  public:\n"
 
-          std::ofstream header {"../src/Allocator.h"};
+          "    static void* allocate(size_t n) {\n"
+          "        return bestAllocator.allocate(n).ptr;\n"
+          "    }\n\n"
+
+          "    static void deallocate(void* p, size_t n) {\n"
+          "        auto b = Block(p, n);\n"
+          "        bestAllocator.deallocate(b);\n"
+          "    }\n" 
+          "};\n"
+
+          "extern \"C\" void* allocate(size_t n) {\n"
+          "    return AlexAllocator::allocate(n);\n"
+          "}\n\n"
+
+          "extern \"C\" void deallocate(void* p, size_t n) {\n"
+          "    return AlexAllocator::deallocate(p, n);\n"
+          "}\n\n"   
+          << std::endl;
 
           header.close();
 

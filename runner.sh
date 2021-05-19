@@ -17,14 +17,21 @@ noelle-load -S -load ~/CAT/lib/CAT.so -CAT -replace_alloc "$ex".ll -o "$ex".ll;
 
 clang -O1 -S -emit-llvm "$ex".ll -o "$ex".ll ;
 clang -O1 -c -march=native "$ex".ll ;
-clang++ -O3 -c -o Allocator.o ../src/Allocator.cpp;
+# clang++ -O3 -v -o Allocator.o ../src/Allocator.cpp ../src/AllocatorLib.cpp  \
+    # -I../src/memory-allocators/includes/ \
+    # -I`jemalloc-config --includedir` \
+    # -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` \
+    # -ljemalloc `jemalloc-config --libs`;
 
+# clang++ -shared -fPIC -o libAllocator.so ../src/Allocator.cpp;
+# ar ru libAllocator.a Allocator.o;
 
-llvm-ar rc Allocator.a Allocator.o;
-clang++ -g -O1 "$ex".o Allocator.a \
+clang -v -g -O1 "$ex".o \
+    ../src/Allocator.cpp ../src/AllocatorLib.cpp \
+    ../src/memory-allocators/src/StackAllocator.cpp \
     -I`jemalloc-config --includedir` \
     -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` \
     -ljemalloc `jemalloc-config --libs`;
-./a.out;
+# ./a.out;
 
 cd ../..;

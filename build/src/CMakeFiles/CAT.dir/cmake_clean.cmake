@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CAT.dir/Allocator.cpp.o"
   "CMakeFiles/CAT.dir/AllocatorLib.cpp.o"
   "CMakeFiles/CAT.dir/BasicPass.cpp.o"
   "../CAT.pdb"
