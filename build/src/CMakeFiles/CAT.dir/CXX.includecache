@@ -1068,10 +1068,6 @@ limits.h
 strings.h
 -
 
-/home/akg434/noelle/examples/passes/allocator-pass/src/Allocator.cpp
-AllocatorLib.cpp
-/home/akg434/noelle/examples/passes/allocator-pass/src/AllocatorLib.cpp
-
 /home/akg434/noelle/examples/passes/allocator-pass/src/AllocatorLib.cpp
 utility
 -

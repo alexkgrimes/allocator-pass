@@ -2,9 +2,7 @@
 
 class AlexAllocator;
 
-using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,
-                    Segregator<1248, Mallocator, Jemallocator>>;
-
+using alex_allocator = Segregator<128, Jemallocator, Stackocator<20400>>;
 static alex_allocator bestAllocator;
 class AlexAllocator {
   public:

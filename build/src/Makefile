@@ -201,33 +201,6 @@ install-CAT/fast:
 	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/install-CAT.dir/build.make src/CMakeFiles/install-CAT.dir/build
 .PHONY : install-CAT/fast
 
-Allocator.o: Allocator.cpp.o
-
-.PHONY : Allocator.o
-
-# target to build an object file
-Allocator.cpp.o:
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/Allocator.cpp.o
-.PHONY : Allocator.cpp.o
-
-Allocator.i: Allocator.cpp.i
-
-.PHONY : Allocator.i
-
-# target to preprocess a source file
-Allocator.cpp.i:
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/Allocator.cpp.i
-.PHONY : Allocator.cpp.i
-
-Allocator.s: Allocator.cpp.s
-
-.PHONY : Allocator.s
-
-# target to generate assembly for a file
-Allocator.cpp.s:
-	cd /home/akg434/noelle/examples/passes/allocator-pass/build && $(MAKE) -f src/CMakeFiles/CAT.dir/build.make src/CMakeFiles/CAT.dir/Allocator.cpp.s
-.PHONY : Allocator.cpp.s
-
 AllocatorLib.o: AllocatorLib.cpp.o
 
 .PHONY : AllocatorLib.o
@@ -297,9 +270,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
-	@echo "... Allocator.o"
-	@echo "... Allocator.i"
-	@echo "... Allocator.s"
 	@echo "... AllocatorLib.o"
 	@echo "... AllocatorLib.i"
 	@echo "... AllocatorLib.s"

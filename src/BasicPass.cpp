@@ -62,8 +62,7 @@ namespace {
           outfile << "#include \"AllocatorLib.cpp\"\n\n"    
                      "class AlexAllocator;\n\n"
 
-                      "using alex_allocator = Segregator<8, Segregator<128, Mallocator, Jemallocator>,\n"
-                      "                    Segregator<1248, Mallocator, Jemallocator>>;\n\n"
+                      "using alex_allocator = Segregator<128, Jemallocator, Stackocator<20400>>;\n"
                       "static alex_allocator bestAllocator;\n"               
 
                       "class AlexAllocator {\n"
@@ -90,9 +89,9 @@ namespace {
 
           outfile.close();
 
-          std::ofstream header {"../src/Allocator.h"};
+          // std::ofstream header {"../src/Allocator.h"};
 
-          header.close();
+          // header.close();
 
           break;
         }
