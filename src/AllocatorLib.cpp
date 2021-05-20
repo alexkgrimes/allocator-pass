@@ -32,12 +32,12 @@ class Stackocator {
   private: 
 
     static constexpr size_t totalSize = TotalSize;
-    Allocator * stackAllocator = new StackAllocator(totalSize);
+    StackAllocator * stackAllocator = new StackAllocator(totalSize);
 
   public:
 
     Block allocate(size_t n) noexcept {
-      std::cout << "Stackocator::allocate\n";
+      // std::cout << "Stackocator::allocate\n";
       Block result;
 
       if (n == 0) {
@@ -54,8 +54,8 @@ class Stackocator {
     }
 
     void deallocate(Block b) noexcept {
-      std::cout << "Stackocator::deallocate\n";
-      stackAllocator->Free(b.ptr);
+      // std::cout << "Stackocator::deallocate\n";
+      stackAllocator->Free(b.ptr, b.length);
       b.reset();
     }
 };
@@ -65,7 +65,7 @@ class Mallocator {
   public:
 
     Block allocate(size_t n) noexcept {
-      std::cout << "Mallocator::allocate\n";
+      // std::cout << "Mallocator::allocate\n";
       Block result;
 
       if (n == 0) {
@@ -82,7 +82,7 @@ class Mallocator {
     }
 
     void deallocate(Block &b) noexcept {
-      std::cout << "Mallocator::deallocate\n";
+      // std::cout << "Mallocator::deallocate\n";
       free(b.ptr);
       b.reset();
     }
@@ -93,7 +93,7 @@ class Jemallocator {
   public:
 
     Block allocate(size_t n) noexcept {
-      std::cout << "Jemallocator::allocate\n";
+      // std::cout << "Jemallocator::allocate\n";
       Block result;
 
       if (n == 0) {
@@ -110,7 +110,7 @@ class Jemallocator {
     }
 
     void deallocate(Block b) noexcept {
-      std::cout << "Jemallocator::deallocate\n";
+      // std::cout << "Jemallocator::deallocate\n";
       jefree(b.ptr);
       b.reset();
     }

@@ -4,7 +4,7 @@ filename="split-alloc.c"
 ex=$(echo "$filename" | cut -f 1 -d '.')
 
 clang -O1 $filename;
-./a.out;
+perf stat ./a.out;
 
 ### APPLY TRANSFORMATION ###
 
@@ -26,6 +26,8 @@ clang -g -O1 "$ex".o \
     -I`jemalloc-config --includedir` \
     -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` \
     -ljemalloc `jemalloc-config --libs`;
-./a.out;
+perf stat ./a.out;
+
+rm ../src/Allocator.cpp;
 
 cd ../..;
