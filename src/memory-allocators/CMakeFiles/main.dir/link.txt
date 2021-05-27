@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/main.dir/src/Allocator.cpp.o CMakeFiles/main.dir/src/CAllocator.cpp.o CMakeFiles/main.dir/src/LinearAllocator.cpp.o CMakeFiles/main.dir/src/StackAllocator.cpp.o CMakeFiles/main.dir/src/PoolAllocator.cpp.o CMakeFiles/main.dir/src/FreeListAllocator.cpp.o CMakeFiles/main.dir/src/Benchmark.cpp.o CMakeFiles/main.dir/src/main.cpp.o  -o main 
