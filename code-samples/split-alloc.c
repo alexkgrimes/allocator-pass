@@ -14,30 +14,30 @@ struct Bear {
 };
 
 int main (){
-  int iter_num = 100;
+  int iter_num = 200;
 
   struct Book *array[iter_num];
+  
+  for (int i = 0; i < 10000; i++) {
+    for (int i=0; i < iter_num; i++) {
+      struct Book *b;
+      b = (struct Book*) malloc(sizeof(struct Book));
 
-  for (int i=0; i < iter_num; i++) {
-    struct Book *b;
-    b = (struct Book*) malloc(sizeof(struct Book));
+      strcpy(b->title, "C Programming");
+      strcpy(b->author, "Nuha Ali"); 
+      strcpy(b->subject, "C Programming Tutorial");
+      b->book_id = 6495407;
 
-    strcpy(b->title, "C Programming");
-    strcpy(b->author, "Nuha Ali"); 
-    strcpy(b->subject, "C Programming Tutorial");
-    b->book_id = 6495407;
+      array[i] = b;
+    }
 
-    array[i] = b;
-  }
+    // for (int i = 0; i < iter_num; i++) {
+    //   printf("Author: %s\n", array[i]->author);
+    // }
 
-  int counter = 0;
-  for (int i = 0; i < iter_num; i++) {
-    counter += 1;
-  }
-  printf("counter: %d\n", counter);
-
-  for (int i = iter_num - 1; i >= 0; i--) {
-    free(array[i]);
+    for (int i = iter_num - 1; i >= 0; i--) {
+      free(array[i]);
+    }
   }
 
   struct Bear *bear = (struct Bear*) malloc(sizeof(struct Bear));

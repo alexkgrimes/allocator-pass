@@ -59,21 +59,35 @@ namespace {
 
           std::ofstream outfile ("../src/Allocator.cpp");
 
-          outfile << "#include \"AllocatorLib.cpp\"\n\n"    
+          outfile << "#include <string.h>\n"
+                     "#include \"AllocatorLib.cpp\"\n\n"  
                      "class AlexAllocator;\n\n"
 
-                      "using alex_allocator = Segregator<128, Jemallocator, Stackocator<4096>>;\n"
-                      "static alex_allocator bestAllocator;\n"               
+                      "using alex_allocator = Segregator<128, Jemallocator, Stackocator<424000>>;\n"
+                      "static alex_allocator bestAllocator;\n"             
 
                       "class AlexAllocator {\n"
                       "  public:\n"
 
                       "    static void* allocate(size_t n) {\n"
-                      "        return bestAllocator.allocate(n).ptr;\n"
+                      "        auto newN = n + sizeof(size_t);\n"
+                      "        auto ptr = bestAllocator.allocate(newN).ptr;\n\n"
+
+                      "        // Write the original size to the first 8 bytes\n"
+                      "        size_t* originalSizePtr = (size_t*)ptr;\n"
+                      "        *originalSizePtr = n;\n"
+                      "        size_t returnAddress = (size_t)ptr + sizeof(size_t);\n"
+
+                      "        return (void*)returnAddress;\n"
                       "    }\n\n"
 
-                      "    static void deallocate(void* p, size_t n) {\n"
-                      "        auto b = Block(p, n);\n"
+                      "    static void deallocate(void* ptr) {\n"
+                      "        // Get the size in the first 8 bytes\n"
+                      "        size_t beginAddress = (size_t)ptr - 8;\n"
+                      "        void* beginPtr = (void*)beginAddress;\n"
+                      "        size_t originalSize = *(size_t*)beginPtr;\n"
+
+                      "        auto b = Block(beginPtr, originalSize + 8);\n"
                       "        bestAllocator.deallocate(b);\n"
                       "    }\n"
                       "};\n" 
@@ -82,16 +96,12 @@ namespace {
                       "    return AlexAllocator::allocate(n);\n"
                       "}\n\n"
 
-                      "extern \"C\" void deallocate(void* p, size_t n) {\n"
-                      "    return AlexAllocator::deallocate(p, n);\n"
+                      "extern \"C\" void deallocate(void* p) {\n"
+                      "    return AlexAllocator::deallocate(p);\n"
                       "}\n\n"   
                       << std::endl;
 
           outfile.close();
-
-          // std::ofstream header {"../src/Allocator.h"};
-
-          // header.close();
 
           break;
         }
@@ -103,18 +113,15 @@ namespace {
           auto sizeT = Type::getInt64Ty(context);
 
           FunctionCallee allocateFunc = currentModule->getOrInsertFunction(
-            // "_ZN13AlexAllocator8allocateEv", // name of function
-            "allocate",
-            voidPtr,                         // return type
-            sizeT                            // first parameter type
+            "allocate",       // name of function
+            voidPtr,          // return type
+            sizeT             // first parameter type
           );
 
           FunctionCallee deallocateFunc = currentModule->getOrInsertFunction(
-            // "_ZN13AlexAllocator10deallocateEv", // name of function
-            "deallocate",
-            Type::getVoidTy(context),           // return type
-            voidPtr,                            // first parameter type
-            sizeT
+            "deallocate",               // name of function
+            Type::getVoidTy(context),   // return type
+            voidPtr                     // first parameter type
           );
 
           Value* allocate = allocateFunc.getCallee();
@@ -158,15 +165,6 @@ namespace {
             }
 
             if (functionName == "free") {
-              /* Go through all the users and try to find the real type */
-              auto size = findSizeForFree(inst);
-              if (size == 0) {
-                errs() << "Aborting: Failed to find size for free inst\n";
-                return false;
-              }
-              ConstantInt* sizeConstant = ConstantInt::get(Type::getInt64Ty(context), size);
-              args.push_back(sizeConstant);
-
               replacementInst = CallInst::Create(deallocate, ArrayRef<Value*>(args));
             }
 

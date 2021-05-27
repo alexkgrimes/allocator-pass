@@ -31,13 +31,13 @@ void* StackAllocator::Allocate(const std::size_t size, const std::size_t alignme
 
     // std::size_t padding = Utils::CalculatePaddingWithHeader(currentAddress, alignment, sizeof (AllocationHeader));
     if (m_offset + size > m_totalSize) {
-        std::cout << "Returning null pointer" << std::endl;
+        std::cout << "ERROR: Stack allocator is out of space!" << std::endl;
         return nullptr;
     }
     // m_offset += padding;
 
     // const std::size_t nextAddress = currentAddress + padding;
-    const std::size_t nextAddress = currentAddress;
+    // const std::size_t nextAddress = currentAddress;
     // const std::size_t headerAddress = nextAddress - sizeof (AllocationHeader);
     // AllocationHeader allocationHeader{padding};
     // AllocationHeader * headerPtr = (AllocationHeader*) headerAddress;
@@ -51,7 +51,7 @@ void* StackAllocator::Allocate(const std::size_t size, const std::size_t alignme
     m_used = m_offset;
     m_peak = std::max(m_peak, m_used);
 
-    return (void*) nextAddress;
+    return (void*) currentAddress;
 }
 
 void StackAllocator::Free(void *ptr) {
@@ -71,9 +71,12 @@ void StackAllocator::Free(void *ptr) {
 
 void StackAllocator::Free(void *ptr, size_t size) {
     const std::size_t currentAddress = (std::size_t) ptr;
-    if (currentAddress == m_offset) {
+    if (currentAddress == ((std::size_t)m_start_ptr + m_offset - size)) {
         m_offset -= size;
+    } else {
+        std::cout << "ERROR: Not freeing on call to free" << std::endl;
     }
+    
 }
 
 void StackAllocator::Reset() {
