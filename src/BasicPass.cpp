@@ -63,7 +63,7 @@ namespace {
                      "#include \"AllocatorLib.cpp\"\n\n"  
                      "class AlexAllocator;\n\n"
 
-                      "using alex_allocator = Segregator<128, Jemallocator, Stackocator<424000>>;\n"
+                      "using alex_allocator = Segregator<128, Jemallocator, Stackocator<4240000>>;\n"
                       "static alex_allocator bestAllocator;\n"             
 
                       "class AlexAllocator {\n"

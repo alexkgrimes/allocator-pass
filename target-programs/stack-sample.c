@@ -7,6 +7,7 @@ struct Book {
   char  author[50];
   char  subject[100];
   int   book_id;
+  double book_rating;
 };
 
 struct Bear {
@@ -14,12 +15,15 @@ struct Bear {
 };
 
 int main (){
-  int iter_num = 200;
+  int64_t iter_num = 1000000;
+  int list_size = 200;
 
-  struct Book *array[iter_num];
+  struct Book *array[list_size];
+
+  int64_t sum_ratings = 0;
   
-  for (int i = 0; i < 1000000; i++) {
-    for (int i=0; i < iter_num; i++) {
+  for (int i = 0; i < iter_num; i++) {
+    for (int i = 0; i < list_size; i++) {
       struct Book *b;
       b = (struct Book*) malloc(sizeof(struct Book));
 
@@ -27,18 +31,22 @@ int main (){
       strcpy(b->author, "Nuha Ali"); 
       strcpy(b->subject, "C Programming Tutorial");
       b->book_id = 6495407;
+      b->book_rating = rand() % 5;
 
       array[i] = b;
     }
+    
+    for (int i = 0; i < list_size; i++) {
+      sum_ratings += array[i]->book_rating;
+    }
 
-    // for (int i = 0; i < iter_num; i++) {
-    //   printf("Author: %s\n", array[i]->author);
-    // }
-
-    for (int i = iter_num - 1; i >= 0; i--) {
+    for (int i = list_size - 1; i >= 0; i--) {
       free(array[i]);
     }
   }
+
+  double average_rating = sum_ratings / (iter_num + list_size);
+  printf("average rating: %f", average_rating);
 
   struct Bear *bear = (struct Bear*) malloc(sizeof(struct Bear));
   strcpy(bear->name, "Big Bear");
