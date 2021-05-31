@@ -8,6 +8,7 @@
 #include <iostream>
 #include "../../../../alex/jemalloc/include/jemalloc/jemalloc.h"
 #include "memory-allocators/includes/StackAllocator.h"
+#include "memory-allocators/includes/PoolAllocator.h"
 
 struct Block {
   void  *ptr;
@@ -24,6 +25,40 @@ struct Block {
     ptr = nullptr;
     length = 0;
   }
+};
+
+// MARK: - Poolocator
+template <size_t TotalSize, size_t ChunkSize>
+class Poolocator {
+  private: 
+
+    static constexpr size_t totalSize = TotalSize;
+    static constexpr size_t chunkSize = ChunkSize;
+    PoolAllocator* poolAllocator = new PoolAllocator(totalSize, chunkSize);
+
+  public:
+
+    Block allocate(size_t n) noexcept {
+      printf("Poolocator::allocate\n");
+      Block result;
+
+      if (n == 0) {
+        return result;
+      }
+
+      auto p = poolAllocator->Allocate(n);
+      if (p != nullptr) {
+        result.ptr = p;
+        result.length = n;
+        return result;
+      }
+      return result;
+    }
+
+    void deallocate(Block b) noexcept {
+      poolAllocator->Free(b.ptr);
+      b.reset();
+    }
 };
 
 // MARK: - Stackocator

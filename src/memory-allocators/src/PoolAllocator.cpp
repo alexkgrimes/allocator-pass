@@ -3,15 +3,14 @@
 #include <stdint.h>
 #include <stdlib.h>     /* malloc, free */
 #include <algorithm>    //max
-#ifdef _DEBUG
 #include <iostream>
-#endif
 
 PoolAllocator::PoolAllocator(const std::size_t totalSize, const std::size_t chunkSize)
 : Allocator(totalSize) {
     assert(chunkSize >= 8 && "Chunk size must be greater or equal to 8");
     assert(totalSize % chunkSize == 0 && "Total Size must be a multiple of Chunk Size");
     this->m_chunkSize = chunkSize;
+    Init();
 }
 
 void PoolAllocator::Init() {
@@ -24,6 +23,7 @@ PoolAllocator::~PoolAllocator() {
 }
 
 void *PoolAllocator::Allocate(const std::size_t allocationSize, const std::size_t alignment) {
+    std::cout << "allocation size: " << allocationSize << std::endl;
     assert(allocationSize == this->m_chunkSize && "Allocation size must be equal to chunk size");
 
     Node * freePosition = m_freeList.pop();

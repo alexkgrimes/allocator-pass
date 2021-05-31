@@ -1,10 +1,10 @@
 cd target-programs;
 
-filename="stack-sample.c"
+filename="pool-sample.c"
 ex=$(echo "$filename" | cut -f 1 -d '.')
 
 clang -O3 $filename;
-perf stat -r 10 ./a.out > output.txt;
+perf stat ./a.out > output.txt;
 
 ### APPLY TRANSFORMATION ###
 
@@ -23,10 +23,11 @@ clang -O3 -c -march=native "$ex".ll ;
 clang -g -O3 "$ex".o \
     ../src/Allocator.cpp ../src/AllocatorLib.cpp \
     ../src/memory-allocators/src/StackAllocator.cpp \
+    ../src/memory-allocators/src/PoolAllocator.cpp \
     -I`jemalloc-config --includedir` \
     -L`jemalloc-config --libdir` -Wl,-rpath,`jemalloc-config --libdir` \
     -ljemalloc `jemalloc-config --libs`;
-perf stat -r 10 ./a.out > output.txt;
+perf stat ./a.out > output.txt;
 
 rm ../src/Allocator.cpp;
 
