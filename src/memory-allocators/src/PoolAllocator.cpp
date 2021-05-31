@@ -23,7 +23,7 @@ PoolAllocator::~PoolAllocator() {
 }
 
 void *PoolAllocator::Allocate(const std::size_t allocationSize, const std::size_t alignment) {
-    std::cout << "allocation size: " << allocationSize << std::endl;
+    // std::cout << "allocation size: " << allocationSize << std::endl;
     assert(allocationSize == this->m_chunkSize && "Allocation size must be equal to chunk size");
 
     Node * freePosition = m_freeList.pop();
@@ -40,6 +40,7 @@ void *PoolAllocator::Allocate(const std::size_t allocationSize, const std::size_
 }
 
 void PoolAllocator::Free(void * ptr) {
+    // std::cout << "Freeing" << std::endl;
     m_used -= m_chunkSize;
 
     m_freeList.push((Node *) ptr);

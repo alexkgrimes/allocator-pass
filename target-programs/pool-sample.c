@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+// using alex_allocator = Segregator<128, Jemallocator, Poolocator<224000, 224>>
+
 struct Book {
   char  title[50];
   char  author[50];
@@ -15,8 +17,8 @@ struct Bear {
 };
 
 int main (){
-  int64_t iter_num = 1000;
-  int list_size = 20;
+  int64_t iter_num = 100000;
+  int list_size = 1000;
 
   struct Book *array[list_size];
 

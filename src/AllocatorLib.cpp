@@ -39,7 +39,6 @@ class Poolocator {
   public:
 
     Block allocate(size_t n) noexcept {
-      printf("Poolocator::allocate\n");
       Block result;
 
       if (n == 0) {

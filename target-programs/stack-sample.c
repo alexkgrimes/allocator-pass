@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+// using alex_allocator =  Segregator<128, Jemallocator, Stackocator<22400, 224>>;
+
 struct Book {
   char  title[50];
   char  author[50];
